@@ -1,0 +1,1295 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>9. T4. Centralización de datasets y modelos: Huggingface, OpenAI &#8212; Minería de Textos</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/estilos.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. T5. Auto Machine Learning(AutoML)" href="bloque3_t5_automl.html" />
+    <link rel="prev" title="8. T3. Métricas de Evaluación" href="bloque3_t3.1_metricas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo-master-ca.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Minería de Textos</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Materiales de Minería de Textos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque1.html">
+   1. Introducción. Minería de textos y procesamiento del lenguaje natural
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque1_Practica1.html">
+   2. Práctica 1a: PLN con SpaCy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque1_Practica2.html">
+   3. Práctica 1b :
+   <em>
+    Topic modeling
+   </em>
+   .
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque 2
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3.html">
+   4. Aplicaciones de la minería de textos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_t1_aplicaciones.html">
+   5. T1. Aplicaciones generales
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_t2_subaplicaciones-benchmarks.html">
+   6. T2. Aplicaciones específicas y Benchmacks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_t2.1_analisis_sentimientos.html">
+   7. T2.1. Aplicaciones específicas. Análisis de Sentimientos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_t3.1_metricas.html">
+   8. T3. Métricas de Evaluación
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. T4. Centralización de datasets y modelos: Huggingface, OpenAI
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_t5_automl.html">
+   10. T5. Auto Machine Learning(AutoML)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_t5.1_autogoal.html">
+   11. T5.1. AutoGOAL
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_p1_SA-Pipeline-Reviews.html">
+   12. P1.1. Pipeline simple
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_p2_SA-Transformers-Basic.html">
+   13. P1.2. APIs Transformers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_p3_SA-Transformers-Training-FineTuning.html">
+   14. P2. Reajustar modelos Transformers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_p4_SA-Transformers-Training-Custom.html">
+   15. P3. Composición de vectores de características
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_p5-SA-Ensemble.html">
+   16. P4. Ensemble de pipelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque3_ev.html">
+   17. Ev. Evaluación de prácticas del Bloque 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bloque 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bloque2.html">
+   18. Técnicas para la minería de textos
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Utilidades
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="doc_utils/creditosColab/web.html">
+   19. Uso de Google Colab con una VM personalizada
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/bloque3_t4_centralizacion.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion">
+   9.1. Introducción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repositorio-de-datasets">
+   9.2. Repositorio de Datasets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listar-datasets-disponibles-en-el-repositorio">
+     9.2.1. Listar datasets disponibles en el repositorio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-cargar-datasets">
+     9.2.2. ¿Cómo cargar datasets?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tareas-subtareas-e-idiomas-de-datasets">
+     9.2.3. Tareas, subtareas e idiomas de datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repositorio-de-modelos-pre-entrenados">
+   9.3. Repositorio de Modelos pre-entrenados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listado-de-pipelines">
+     9.3.1. Listado de Pipelines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma">
+     9.3.2. ¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configuraciones-de-modelos-trasnformers">
+     9.3.3. Configuraciones de modelos trasnformers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tecnologias-de-generacion">
+   9.4. Tecnologías de generación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gpt">
+     9.4.1. GPT
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#entrenamiento-del-gpt">
+       9.4.1.1. Entrenamiento del GPT
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ventajas">
+       9.4.1.2. Ventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#desventajas">
+       9.4.1.3. Desventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#decodificacion-de-gpt">
+       9.4.1.4. Decodificación de GPT
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copilot">
+     9.4.2. Copilot
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       9.4.2.1. Ventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       9.4.2.2. Desventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alternativas-a-copilot">
+       9.4.2.3. Alternativas a Copilot
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chatgpt">
+     9.4.3. ChatGPT
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejemplo-de-uso-de-la-api-chatgpt">
+       9.4.3.1. Ejemplo de uso de la API ChatGPT:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       9.4.3.2. Ventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       9.4.3.3. Desventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alternativas-a-chatgpt">
+       9.4.3.4. Alternativas a ChatGPT
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrucion-de-modelos">
+     9.4.4. Instrución de modelos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#flan">
+       9.4.4.1. FLAN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cuaderno-de-ejemplo-de-instruction-tuning">
+       9.4.4.2. Cuaderno de ejemplo de instruction-tuning
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliografia">
+   9.5. Bibliografía
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>T4. Centralización de datasets y modelos: Huggingface, OpenAI</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion">
+   9.1. Introducción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repositorio-de-datasets">
+   9.2. Repositorio de Datasets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listar-datasets-disponibles-en-el-repositorio">
+     9.2.1. Listar datasets disponibles en el repositorio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-cargar-datasets">
+     9.2.2. ¿Cómo cargar datasets?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tareas-subtareas-e-idiomas-de-datasets">
+     9.2.3. Tareas, subtareas e idiomas de datasets
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repositorio-de-modelos-pre-entrenados">
+   9.3. Repositorio de Modelos pre-entrenados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#listado-de-pipelines">
+     9.3.1. Listado de Pipelines
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma">
+     9.3.2. ¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#configuraciones-de-modelos-trasnformers">
+     9.3.3. Configuraciones de modelos trasnformers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tecnologias-de-generacion">
+   9.4. Tecnologías de generación
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gpt">
+     9.4.1. GPT
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#entrenamiento-del-gpt">
+       9.4.1.1. Entrenamiento del GPT
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ventajas">
+       9.4.1.2. Ventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#desventajas">
+       9.4.1.3. Desventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#decodificacion-de-gpt">
+       9.4.1.4. Decodificación de GPT
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copilot">
+     9.4.2. Copilot
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id1">
+       9.4.2.1. Ventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id2">
+       9.4.2.2. Desventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alternativas-a-copilot">
+       9.4.2.3. Alternativas a Copilot
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chatgpt">
+     9.4.3. ChatGPT
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejemplo-de-uso-de-la-api-chatgpt">
+       9.4.3.1. Ejemplo de uso de la API ChatGPT:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id3">
+       9.4.3.2. Ventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id4">
+       9.4.3.3. Desventajas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#alternativas-a-chatgpt">
+       9.4.3.4. Alternativas a ChatGPT
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#instrucion-de-modelos">
+     9.4.4. Instrución de modelos
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#flan">
+       9.4.4.1. FLAN
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cuaderno-de-ejemplo-de-instruction-tuning">
+       9.4.4.2. Cuaderno de ejemplo de instruction-tuning
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliografia">
+   9.5. Bibliografía
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="t4-centralizacion-de-datasets-y-modelos-huggingface-openai">
+<h1><span class="section-number">9. </span>T4. Centralización de datasets y modelos: Huggingface, OpenAI<a class="headerlink" href="#t4-centralizacion-de-datasets-y-modelos-huggingface-openai" title="Permalink to this headline">#</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<p>Lee con atención el tema 4 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondoentes a la sesión. <strong>El plazo para realizar las lecturas y el cuestionario es: ** Cierre 23:59 del 13/03/2024</strong> (el día anterior a la clase presencial).</p>
+<p>Tiempo de dedicación: 2 horas (asíncrona) + 2 horas trabajo independiente</p>
+</div>
+<p>Contenidos:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#introduccion">Huggingface: Introducción</a></p></li>
+<li><p><a class="reference external" href="#repositorio-de-datasets">Huggingface: Repositorio de Datasets</a></p></li>
+<li><p><a class="reference external" href="#repositorio-de-modelos-pre-entrenados">Huggingface: Repositorio de Modelos pre-entrenados</a></p></li>
+<li><p><a class="reference external" href="#tecnologias-de-generacion">Tecnologías de Generación (GPT, Copilot, ChatGPT)</a></p></li>
+</ul>
+<section id="introduccion">
+<h2><span class="section-number">9.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="http://Huggingface.co">Huggingface.co</a> una compañía centrada en el PLN la cual ha desarrollado las <a class="reference external" href="https://huggingface.co/transformers/"><strong>librerías Transformers</strong></a>, <strong>centralizado datasets</strong> y ha <strong>creado modelos de aprendizaje pre-entrenados</strong> disponibles a través de sus librerías de programación.
+Las librerías de Huggingface actualmente dan soporte a empresas muy importantes del mercado tecnológico. Ver <a class="reference external" href="https://huggingface.co/">https://huggingface.co/</a>.</p>
+</section>
+<section id="repositorio-de-datasets">
+<h2><span class="section-number">9.2. </span>Repositorio de Datasets<a class="headerlink" href="#repositorio-de-datasets" title="Permalink to this headline">#</a></h2>
+<p>Proporciona conjuntos de datos para muchas tareas de PLN como clasificación de texto, respuesta a preguntas, modelado de lenguaje, etc.<br />
+Instalación de librería de manipulación de datasets
+Para la <strong>instalación</strong> de la librería de manipulación de datasets se debe ejecutar la siguiente instrucción pip:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pip</span> <span class="n">install</span> <span class="n">datasets</span>
+</pre></div>
+</div>
+<p>Para asegurarnos de que Transformers dataset se ha instalado correctamente es necesario ejecutar la siguiente instrucción:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;from datasets import load_dataset; print(load_dataset(&#39;squad&#39;, split=&#39;train&#39;)[0])&quot;</span>
+
+</pre></div>
+</div>
+<p>Esta instrucción debe descargar la versión 1 del conjunto de datos de respuesta a preguntas de Stanford, cargar su división de entrenamiento e imprimir el primer ejemplo de entrenamiento de la siguiente manera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;5733be284776f41900661182&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;University_of_Notre_Dame&#39;</span><span class="p">,</span> <span class="s1">&#39;context&#39;</span><span class="p">:</span> <span class="s1">&#39;Architecturally, the school has a Catholic character. Atop the Main Building</span><span class="se">\&#39;</span><span class="s1">s gold dome is a golden statue of the Virgin Mary. Immediately in front of the Main Building and facing it, is a copper statue of Christ with arms upraised with the legend &quot;Venite Ad Me Omnes&quot;...&#39;</span><span class="p">,</span> <span class="s1">&#39;question&#39;</span><span class="p">:</span> <span class="s1">&#39;To whom did the Virgin Mary allegedly appear in 1858 in Lourdes France?&#39;</span><span class="p">,</span> <span class="s1">&#39;answers&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;text&#39;</span><span class="p">:</span> <span class="n">array</span><span class="p">([</span><span class="s1">&#39;Saint Bernadette Soubirous&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">),</span> <span class="s1">&#39;answer_start&#39;</span><span class="p">:</span> <span class="n">array</span><span class="p">([</span><span class="mi">515</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">int32</span><span class="p">)}}</span>
+</pre></div>
+</div>
+<section id="listar-datasets-disponibles-en-el-repositorio">
+<h3><span class="section-number">9.2.1. </span>Listar datasets disponibles en el repositorio<a class="headerlink" href="#listar-datasets-disponibles-en-el-repositorio" title="Permalink to this headline">#</a></h3>
+<p>Para listar los conjuntos de datos disponibles es necesario ejecutar la siguiente función <code class="docutils literal notranslate"><span class="pre">datasets.list_datasets</span> <span class="pre">()</span></code> que pertenece a la clase <code class="docutils literal notranslate"><span class="pre">datasets</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">list_datasets</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">datasets_list</span> <span class="o">=</span> <span class="n">list_datasets</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">len</span><span class="p">(</span><span class="n">datasets_list</span><span class="p">)</span>
+<span class="go">656</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dataset</span> <span class="k">for</span> <span class="n">dataset</span> <span class="ow">in</span> <span class="n">datasets_list</span><span class="p">))</span>
+<span class="go">aeslc, ag_news, ai2_arc, allocine, anli, arcd, art, billsum, blended_skill_talk, blimp, blog_authorship_corpus, bookcorpus, boolq, break_data,</span>
+<span class="go">c4, cfq, civil_comments, cmrc2018, cnn_dailymail, coarse_discourse, com_qa, commonsense_qa, compguesswhat, coqa, cornell_movie_dialog, cos_e,</span>
+<span class="go">cosmos_qa, crime_and_punish, csv, definite_pronoun_resolution, discofuse, docred, drop, eli5, empathetic_dialogues, eraser_multi_rc, esnli,</span>
+<span class="go">event2Mind, fever, flores, fquad, gap, germeval_14, ghomasHudson/cqc, gigaword, glue, …</span>
+</pre></div>
+</div>
+<p>Otra alternativa es:</p>
+<ol class="simple">
+<li><p>Ir a la web <a class="reference external" href="https://huggingface.co">https://huggingface.co</a></p></li>
+<li><p>Seleccionar el menú Datasets: <a class="reference external" href="https://huggingface.co/datasets">https://huggingface.co/datasets</a></p></li>
+<li><p>Filtrar por categoría, idioma, tarea y/o licencia</p></li>
+</ol>
+</section>
+<section id="como-cargar-datasets">
+<h3><span class="section-number">9.2.2. </span>¿Cómo cargar datasets?<a class="headerlink" href="#como-cargar-datasets" title="Permalink to this headline">#</a></h3>
+<p>Haciendo uso de la función <code class="docutils literal notranslate"><span class="pre">load_dataset</span></code> se nos permite recuperar cualquier dataset registrado en el repositorio. Por ejemplo, el dataset <strong>MRPC</strong> que ha sido proporcionado en el índice de referencia GLUE (<a class="reference external" href="https://gluebenchmark.com/leaderboard">https://gluebenchmark.com/leaderboard</a>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;glue&#39;</span><span class="p">,</span> <span class="s1">&#39;mrpc&#39;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>O podemos ver otro ejemplo como el de <a class="reference external" href="https://knowledge-learning.github.io/ehealthkd-2020/"><strong>eHealth-KD</strong></a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;ehealth_kd&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No obstante, la librería <code class="docutils literal notranslate"><span class="pre">datasets</span></code> permite además <strong>cargar conjuntos de datos propios</strong> que no formen parte del repositorio. Por ejemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;csv&#39;</span><span class="p">,</span> <span class="n">data_files</span><span class="o">=</span><span class="s1">&#39;my_file.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Para más detalles sobre las distintas funciones y parámetros permitidos para manipular datasets ver la siguiente documentación:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://huggingface.co/docs/datasets/quicktour.html">https://huggingface.co/docs/datasets/quicktour.html</a></p></li>
+</ul>
+</section>
+<section id="tareas-subtareas-e-idiomas-de-datasets">
+<h3><span class="section-number">9.2.3. </span>Tareas, subtareas e idiomas de datasets<a class="headerlink" href="#tareas-subtareas-e-idiomas-de-datasets" title="Permalink to this headline">#</a></h3>
+<p><strong>Categorías:</strong>
+En este repositorio podemos encontrar un amplio catalogo de tareas(categorías) por las cuales filtrar y y especificar el tipo de dateset que estamos buscando. Hemos de resaltar que estos datasets existen originalmente en diferentes formatos, nos obstante en una vez incluido en este repositorio, el formato es estandar. Por tal motivo, a través de las librías de manipulación (las mencionadas enteriormente) que ofrece Huggingface, podemos acceder a ellos y gestionarlos. Además, estos datasets se encuentran caracterizados por <strong>idioma</strong>, <strong>subtarea</strong> en la que se puede utilizar y la <strong>licencia de uso</strong>.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/hf_dataset_categoria.jpg"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/hf_dataset_categoria.jpg" style="width: 300px;" /></a>
+<p>Figura 1. Categorías generales(o tareas) que permiten el filtro de datasets</p>
+<p><strong>Más de 134 tareas y más de 194 idiomas:</strong></p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/hf_dataset_tareas_idiomas.jpg"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/hf_dataset_tareas_idiomas.jpg" style="width: 300px;" /></a>
+<p>Figura 2. Idiomas de los datasets</p>
+</section>
+</section>
+<section id="repositorio-de-modelos-pre-entrenados">
+<h2><span class="section-number">9.3. </span>Repositorio de Modelos pre-entrenados<a class="headerlink" href="#repositorio-de-modelos-pre-entrenados" title="Permalink to this headline">#</a></h2>
+<p>La biblioteca de Transformers permite el <strong>uso de modelos previamente entrenados</strong> para tareas de Comprensión del lenguaje natural (NLU), i.e. como analizar el sentimiento de un texto, y Generación del lenguaje natural (NLG), i.e. como completar un mensaje con texto nuevo o traducir a otro idioma.
+A groso modo listamos los modelos que nos podemos encontrar</p>
+<ul class="simple">
+<li><p><strong>Análisis de sentimiento</strong>: Conocer si un texto es positivo o negativo</p></li>
+<li><p><strong>Generación de texto</strong> (en inglés): proporcionar un mensaje para el cual el modelo generará un texto.</p></li>
+<li><p><strong>Reconocimiento de entidades nombradas</strong> (NER): Dado en una oración de entrada se etiqueta cada palabra con la entidad que esta representa (persona, lugar, organización, etc.)</p></li>
+<li><p><strong>Respuesta a preguntas</strong>: Teniendo en cuenta un modelo de un contexto determinado, dado un pregunta se obtiene una respuesta.</p></li>
+<li><p><strong>Relleno de texto con máscara</strong>: Dado un texto con palabras enmascaradas (p. Ej., Reemplazado por [MÁSCARA]), completar los espacios en blanco.</p></li>
+<li><p><strong>Resumen</strong>: Generación de un resumen a partir de texto extenso.</p></li>
+<li><p><strong>Traducción</strong>: Traducción de un texto a otro idioma.</p></li>
+<li><p><strong>Extracción de características</strong>: Obtener una representación tensorial del texto.
+Tomado de <a class="reference external" href="https://huggingface.co/transformers/quicktour.html">https://huggingface.co/transformers/quicktour.html</a></p></li>
+</ul>
+<p><strong>Listado de tareas tal y como las podemos encontrar en el repositorio:</strong>
+El listado de tareas, como categorías, en las que podemos filtar los distintos modelos preentrenados que ofrece el repositorio Huggingface, es igual de amplio que el de los datasets. Como podemos observar, a partir de 2022 tal y como se describe más adelante, en el siguiente imagen este repositorio no solo ofrece modelos prentrenados para el modelado del lenguaje, sino también para desarrollar tareas de distintas modalidades: multimodal, lenguaje, audio, visión(imagen), datos estructurados(tabulados), y otros.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/hf_modelos_tareas.jpg"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/hf_modelos_tareas.jpg" style="width: 300px;" /></a>
+<p>Figura 3. Tareas filtro modelos</p>
+<p><strong>Idiomas para los que se han entrenado los modelos:</strong>
+El listado de idiomas,como categorías, en las que podemos filtar los distintos modelos preentrenados que ofrece el repositorio Huggingface, es igual de amplio que el de los datasets.</p>
+<p>Una explicación detallada sobre cada una de estas tareas y ejemplos de uso con Huggingface Transformer la podemos encontrar en el siguiente enlace:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://huggingface.co/transformers/task_summary.html">https://huggingface.co/transformers/task_summary.html</a></p></li>
+</ul>
+<p><strong>Huggingface a partir de 2022</strong>
+A mediados de 2022 esta plataforma federativa da un paso agigantado expandiendo datasets y modelos preentrenados de solo ofrecer recursos para la modalidad de Procesamiento del Lenguaje Natural, a ofrecer recursos Multimodales, Visión por Computadora, Procesamiento de Audio, Procesamiento de datos Tabulares y  para Aprendisaje por reforzamiento.</p>
+<p>En la mayoría de los casos se ofrece una ejemplo de uso y documentación. Poner en marcha cualquiera de estas tareas, reajustando o no los modelos prentrenados que se ofrecen en esta plataforma, se encuentra bien documentado y ejemplificado en ella: Ver Categorías <a class="reference external" href="https://huggingface.co/tasks">https://huggingface.co/tasks</a></p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/doc-tareas-hf.jpg"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/doc-tareas-hf.jpg" style="width: 600px;" /></a>
+<p>Figura 4. Categorías de documentaciones agrupadas por tareas y modalidades</p>
+<p>Ejemplo de Análisis de Sentimientos con Huggingface Transformer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classifier</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span><span class="s1">&#39;sentiment-analysis&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classifier</span><span class="p">(</span><span class="s1">&#39;We are very happy to show you the 🤗 Transformers library.&#39;</span><span class="p">)</span>
+<span class="go">[{&#39;label&#39;: &#39;POSITIVE&#39;, &#39;score&#39;: 0.9997795224189758}]</span>
+</pre></div>
+</div>
+<p>Si os fijáis hemos cargado un modelo pre-entrenado a través del pipeline  <code class="docutils literal notranslate"><span class="pre">sentiment-analysis</span></code> para utilizarlo como clasificador. Este <strong>modelo</strong> se puede <strong>reentrenar</strong> a escenarios específicos si queremos realizando un ajuste sobre un nuevo corpus. Para <strong>más detalles ver la clase práctica</strong> <a class="reference external" href="https://jaspock.github.io/mtextos/bloque3_p3_SA-Transformers-Training-FineTuning.html"><code class="docutils literal notranslate"><span class="pre">bloque3_p3_SA-Transformers-Training-FineTuning</span></code></a></p>
+<p>Si queremos que el pipeline sea multilingue, podemos indicar el modelo exacto que contemple un diccionario de este tipo y el pipeline lo ensamblará internamente. Mirad el siguiente ejemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classifier</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span><span class="s1">&#39;sentiment-analysis&#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;nlptown/bert-base-multilingual-uncased-sentiment&#39;</span> <span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">classifier</span><span class="p">(</span><span class="s1">&#39;Estoy muy triste&#39;</span><span class="p">)</span>
+<span class="go">[{&#39;label&#39;: &#39;1 star&#39;, &#39;score&#39;: 0.7241697907447815}]</span>
+</pre></div>
+</div>
+<p>Para otras tareas como Rellenado de Máscaras podemos ver como podemos simplemente indicar el tipo de tarea para que el pipeline seleccione el tipo de configuración más adecuada a esta y el modelo que queremos aplicarle. Con solo cambiar el modelo base podemos hacer esta tarea unilingue a multilingue o cambiar de idioma. Ver el ejemplo a continuación:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">AutoModelWithLMHead</span><span class="p">,</span> <span class="n">AutoTokenizer</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelWithLMHead</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;mrm8488/RuPERTa-base&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;mrm8488/RuPERTa-base&quot;</span><span class="p">,</span> <span class="n">do_lower_case</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pipeline_fill_mask</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span><span class="s2">&quot;fill-mask&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">tokenizer</span><span class="o">=</span><span class="n">tokenizer</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pipeline_fill_mask</span><span class="p">(</span><span class="s2">&quot;España es un país muy &lt;mask&gt; en la UE&quot;</span><span class="p">)</span>
+
+<span class="go">[{&#39;score&#39;: 0.19951821863651276,</span>
+<span class="go">  &#39;sequence&#39;: &#39;España es un país muy importante en la UE&#39;,</span>
+<span class="go">  &#39;token&#39;: 1560,</span>
+<span class="go">  &#39;token_str&#39;: &#39; importante&#39;},</span>
+<span class="go"> {&#39;score&#39;: 0.04137842729687691,</span>
+<span class="go">  &#39;sequence&#39;: &#39;España es un país muy grande en la UE&#39;,</span>
+<span class="go">  &#39;token&#39;: 2741,</span>
+<span class="go">  &#39;token_str&#39;: &#39; grande&#39;},</span>
+<span class="go"> {&#39;score&#39;: 0.029216745868325233,</span>
+<span class="go">  &#39;sequence&#39;: &#39;España es un país muy pequeño en la UE&#39;,</span>
+<span class="go">  &#39;token&#39;: 2948,</span>
+<span class="go">  &#39;token_str&#39;: &#39; pequeño&#39;},</span>
+<span class="go"> {&#39;score&#39;: 0.02563760057091713,</span>
+<span class="go">  &#39;sequence&#39;: &#39;España es un país muy popular en la UE&#39;,</span>
+<span class="go">  &#39;token&#39;: 5782,</span>
+<span class="go">  &#39;token_str&#39;: &#39; popular&#39;},</span>
+<span class="go"> {&#39;score&#39;: 0.022264542058110237,</span>
+<span class="go">  &#39;sequence&#39;: &#39;España es un país muy antiguo en la UE&#39;,</span>
+<span class="go">  &#39;token&#39;: 5240,</span>
+<span class="go">  &#39;token_str&#39;: &#39; antiguo&#39;}]</span>
+</pre></div>
+</div>
+<section id="listado-de-pipelines">
+<h3><span class="section-number">9.3.1. </span>Listado de Pipelines<a class="headerlink" href="#listado-de-pipelines" title="Permalink to this headline">#</a></h3>
+<p>En Huggingface podemos encontrar una serie de Pipelines ya preparados para enfrentar tareas concretas a los cuales les podemos suministrar distintos modelos y tokenizadores transformes. Ver ejemplos: <a class="reference external" href="https://huggingface.co/transformers/main_classes/pipelines.html">https://huggingface.co/transformers/main_classes/pipelines.html</a></p>
+</section>
+<section id="como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma">
+<h3><span class="section-number">9.3.2. </span>¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?<a class="headerlink" href="#como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma" title="Permalink to this headline">#</a></h3>
+<p>A continuación, se listan los pasos a seguir:</p>
+<ol class="simple">
+<li><p>Dirigirse al repositorio <a class="reference external" href="https://huggingface.co/">https://huggingface.co/</a></p></li>
+<li><p>Seleccionar el menú <code class="docutils literal notranslate"><span class="pre">models</span></code> que nos llevará a <a class="reference external" href="https://huggingface.co/models">https://huggingface.co/models</a></p></li>
+<li><p>Filtrar el listado de modelos según la tarea, idioma, librería (Pytorch o TensorFlow), dataset sobre el que fue entrenado, o licencia. Por ejemplo:  tarea <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Classification</span></code>; idioma <code class="docutils literal notranslate"><span class="pre">es</span></code>.</p></li>
+<li><p>Elegir un modelo de la lista. Por ejemplo: <code class="docutils literal notranslate"><span class="pre">bert-base-multilingual-uncased-sentiment</span></code></p></li>
+<li><p>Obtendremos la documentación necesaria para utilizar el modelo.</p></li>
+</ol>
+<p><strong>Conociendo el nombre del modelo</strong> a utilizar entonces podemos <strong>hacer uso</strong> de este a través de la librería <strong>Transformer</strong>.
+En la propia documentación se aporta el <strong>código de ejemplo</strong> para hacer uso del modelo y en algunos casos una <a class="reference external" href="https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment"><strong>interfaz para probarlo</strong></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">AutoTokenizer</span><span class="p">,</span> <span class="n">AutoModelForSequenceClassification</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">AutoTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;nlptown/bert-base-multilingual-uncased-sentiment&quot;</span><span class="p">)</span>  <span class="c1"># cargando el toquenizador basado en el modelo preentrenado</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">AutoModelForSequenceClassification</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s2">&quot;nlptown/bert-base-multilingual-uncased-sentiment&quot;</span><span class="p">)</span> <span class="c1"># cargando del modelo preentrenado</span>
+</pre></div>
+</div>
+</section>
+<section id="configuraciones-de-modelos-trasnformers">
+<h3><span class="section-number">9.3.3. </span>Configuraciones de modelos trasnformers<a class="headerlink" href="#configuraciones-de-modelos-trasnformers" title="Permalink to this headline">#</a></h3>
+<p>Los <strong>modelos pre-entrenados</strong> que se brindan en el repositorio se <strong>basan</strong> en alguna de las <strong>arquitecturas Transformers</strong> descrita en la documentación del repositorio (<a class="reference external" href="https://huggingface.co/docs">https://huggingface.co/docs</a>).
+Si tomamos como referencia la arquitectura de modelo Transformer <a class="reference external" href="https://huggingface.co/transformers/model_doc/distilbert.html#overview">DistilBERT</a> podemos conocer cómo <strong>gestionar</strong> los distintos <strong>parámetros</strong>, <a class="reference external" href="https://huggingface.co/transformers/model_doc/distilbert.html#distilbertconfig"><strong>configuraciones de red neuronal</strong></a>, <a class="reference external" href="https://huggingface.co/transformers/model_doc/distilbert.html#distilberttokenizer"><strong>tokenizador</strong></a> y <strong>ejemplos documentados</strong> para cada tipo de tarea, tal y como podemos encontrar en el siguiente enlace (<a class="reference external" href="https://huggingface.co/course/chapter7/">https://huggingface.co/course/chapter7/</a>).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># !pip install transformers</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">DistilBertTokenizer</span><span class="p">,</span> <span class="n">DistilBertModel</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tokenizer</span> <span class="o">=</span> <span class="n">DistilBertTokenizer</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;distilbert-base-uncased&#39;</span><span class="p">)</span> <span class="c1"># cargando de toquenizador basado en el modelo preentrenado</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">model</span> <span class="o">=</span> <span class="n">DistilBertModel</span><span class="o">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s1">&#39;distilbert-base-uncased&#39;</span><span class="p">)</span> <span class="c1"># cargando el modelo preentrenado</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">inputs</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">(</span><span class="s2">&quot;Hello, my dog is cute&quot;</span><span class="p">,</span> <span class="n">return_tensors</span><span class="o">=</span><span class="s2">&quot;pt&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="o">**</span><span class="n">inputs</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">last_hidden_states</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">last_hidden_state</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">last_hidden_states</span><span class="p">)</span>
+
+<span class="go">tensor([[[-1.8296e-01, -7.4054e-02,  5.0267e-02,  ..., -1.1261e-01,</span>
+<span class="go">           4.4493e-01,  4.0941e-01],</span>
+<span class="go">         [ 7.0631e-04,  1.4825e-01,  3.4328e-01,  ..., -8.6039e-02,</span>
+<span class="go">           6.9475e-01,  4.3353e-02],</span>
+<span class="go">         [-5.0721e-01,  5.3086e-01,  3.7163e-01,  ..., -5.6287e-01,</span>
+<span class="go">           1.3756e-01,  2.8475e-01],</span>
+<span class="go">         ...,</span>
+<span class="go">         [-4.2251e-01,  5.7314e-02,  2.4338e-01,  ..., -1.5223e-01,</span>
+<span class="go">           2.4462e-01,  6.4155e-01],</span>
+<span class="go">         [-4.9384e-01, -1.8895e-01,  1.2641e-01,  ...,  6.3241e-02,</span>
+<span class="go">           3.6913e-01, -5.8252e-02],</span>
+<span class="go">         [ 8.3269e-01,  2.4948e-01, -4.5440e-01,  ...,  1.1998e-01,</span>
+<span class="go">          -3.9257e-01, -2.7785e-01]]], grad_fn=&lt;NativeLayerNormBackward&gt;)</span>
+
+</pre></div>
+</div>
+<p>Es importante conocer que las <strong>configuraciones</strong> de modelos Transformer ya <strong>cuentan</strong> con <strong>modelos base pre-entrenados</strong>. En el caso de <code class="docutils literal notranslate"><span class="pre">DistilBERT</span></code> podemos encontrar <code class="docutils literal notranslate"><span class="pre">distilbert-base-uncased</span></code>.</p>
+</section>
+</section>
+<section id="tecnologias-de-generacion">
+<h2><span class="section-number">9.4. </span>Tecnologías de generación<a class="headerlink" href="#tecnologias-de-generacion" title="Permalink to this headline">#</a></h2>
+<section id="gpt">
+<h3><span class="section-number">9.4.1. </span>GPT<a class="headerlink" href="#gpt" title="Permalink to this headline">#</a></h3>
+<p>GPT significa “Generative Pretrained Transformer”. Es un modelo de lenguaje que utiliza técnicas de deep learning para generar texto de manera autónoma. GPT ha sido entrenado en una amplia cantidad de contenido textual. !Es <strong>orientado a liberías</strong>! Es decir, se puede incorporar el componente en tu propia aplicación.</p>
+<ul class="simple">
+<li><p>GPT-1: Es la primera versión de GPT, <a class="reference external" href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">entrenado con 117 millones de parámetros</a>. Aunque es significativamente más limitada que las versiones posteriores, aún es capaz de generar texto aceptable en muchos contextos.
+La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transformadores decodificadores colocados uno tras otro(ej. 12x ver la imagen). Los datos de texto se codifican mediante una <a class="reference external" href="https://arxiv.org/pdf/1508.07909.pdf">codificación de pares de bytes</a> adaptada a caracteres. La <a class="reference external" href="https://arxiv.org/pdf/1706.03762.pdf">incrustación de posición es aprendida, en lugar de la típica sinusoidal estática</a>. La longitud máxima para tokens consecutivos es 512. La capa superior es simplemente una capa softmax adaptada a la tarea de aprendizaje específica.</p></li>
+<li><p>GPT-2: Es la segunda versión de GPT, con solo <a class="reference external" href="https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf">1.5 mil millones de parámetros</a>. Es capaz de generar texto coherente y a menudo convincente. GPT-2 tiene básicamente la misma arquitectura que GPT-1, pero el modelo más grande contiene 48 bloques(48x ver la imagen) de transformadores. La segunda capa de normalización se mueve a la primera posición en un bloque y el último bloque contiene una capa de normalización adicional. Los pesos se inicializan de forma ligeramente diferente y se aumenta el tamaño del vocabulario. El número de tokens consecutivos se incrementa a 1024.</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/2005.14165">GPT-3</a>: Es la tercera versión de GPT y es uno de los modelos de lenguaje más grandes y avanzados jamás entrenados. Tiene más de <a class="reference external" href="https://arxiv.org/abs/2005.14165">175 mil millones de parámetros</a>, lo que le permite generar texto muy convincente en una amplia variedad de contextos. GPT-3 tiene la misma arquitectura que GPT-2, pero el número de bloques aumentó a 96 en el modelo más grande y el tamaño del contexto (número de tokens consecutivos) aumentó a 2048. Las <a class="reference external" href="https://arxiv.org/pdf/1904.10509.pdf">capas de autoatención de varios cabezales se alternan entre los típicos densos los escasos y los dispersos</a>.</p></li>
+</ul>
+<p>GPT-1 se entrena de manera autosupervisada (aprende a predecir la siguiente palabra en datos de texto) y se ajusta de manera de aprendizaje supervisado. GPT-2 se entrena de forma totalmente autosupervisada, centrándose en la transferencia de <em>zero-shot</em> y GPT-3 se entrena previamente de manera autosupervisada explorando un poco más <em>few-shots fine-tuning</em>.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/GPT-1-2-3_architecture.png"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/GPT-1-2-3_architecture.png" style="width: 600px;" /></a>
+<p>Figura 5. Arquitecturas GPT. Fuente <a class="reference external" href="https://newsletter.theaiedge.io/p/the-chatgpt-models-family">https://newsletter.theaiedge.io/p/the-chatgpt-models-family</a></p>
+<p>Además de estas versiones, también existen variantes más pequeñas de GPT para diferentes usos, como GPT-3 Lite y GPT-2 Medium. Cada una de estas variantes tiene un tamaño y capacidad diferente, lo que las hace más adecuadas para diferentes aplicaciones y escenarios.</p>
+<section id="entrenamiento-del-gpt">
+<h4><span class="section-number">9.4.1.1. </span>Entrenamiento del GPT<a class="headerlink" href="#entrenamiento-del-gpt" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>GPT-1 está preentrenado en el conjunto de datos de BooksCorpus, que contiene ~7000 libros que suman ~5 GB de datos: <a class="reference external" href="https://huggingface.co/datasets/bookcorpus">https://huggingface.co/datasets/bookcorpus</a>.</p></li>
+<li><p>GPT-2 se entrena previamente con el conjunto de datos de WebText, que es un conjunto más diverso de datos de Internet que contiene ~8 millones de documentos para aproximadamente ~40 GB de datos: <a class="reference external" href="https://huggingface.co/datasets/openwebtext">https://huggingface.co/datasets/openwebtext</a></p></li>
+<li><p>GPT-3 utiliza una versión ampliada del conjunto de datos de WebText, dos corpus de libros basados en Internet que no se divulgan y la Wikipedia en inglés que constituyó ~600 GB de datos.</p></li>
+</ul>
+<p>La implementación de GPT-2 se puede encontrar en los siguientes repositorios:</p>
+<ul class="simple">
+<li><p>TensorFlow por OpenAI: <a class="reference external" href="https://github.com/openai/gpt-2/blob/master/src/model.py">https://github.com/openai/gpt-2/blob/master/src/model.py</a></p></li>
+<li><p>PyTorch por Andrej Karpathy: <a class="reference external" href="https://github.com/karpathy/minGPT/blob/master/mingpt/model.py">https://github.com/karpathy/minGPT/blob/master/mingpt/model.py</a></p></li>
+</ul>
+<p>A continuación se muestra un ejemplo de uso de GPT2 en un Pipeline:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">set_seed</span>
+<span class="n">generator</span> <span class="o">=</span> <span class="n">pipeline</span><span class="p">(</span><span class="s1">&#39;text-generation&#39;</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s1">&#39;gpt2&#39;</span><span class="p">)</span>
+<span class="n">set_seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">generator</span><span class="p">(</span><span class="s2">&quot;My name is&quot;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">num_return_sequences</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>GPT-3 API se encuentra disponible en el siguiente enlace: <a class="reference external" href="https://platform.openai.com/docs/introduction/overview">https://platform.openai.com/docs/introduction/overview</a></p>
+</section>
+<section id="ventajas">
+<h4><span class="section-number">9.4.1.2. </span>Ventajas<a class="headerlink" href="#ventajas" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Alto rendimiento en tareas de lenguaje natural: GPT está entrenado en una gran cantidad de texto en internet, lo que le permite desarrollar una comprensión profunda del lenguaje natural y su uso en diferentes contextos. Esto hace que mejore la capacidad de rendimiento y calidad en tareas como la traducción automática, la generación de texto y la respuesta a preguntas.</p></li>
+<li><p>Facilidad de uso: GPT es un modelo pre-entrenado, lo que significa que no es necesario entrenarlo desde cero para cada tarea específica. Esto significa que es más fácil de usar para los desarrolladores y requiere menos recursos de hardware y tiempo de entrenamiento.</p></li>
+<li><p>Adaptabilidad: GPT puede ser finetuneado o adaptado a diferentes tareas y contextos específicos. Esto permite que el modelo se ajuste a los requisitos específicos de cada proyecto y mejore su rendimiento.</p></li>
+<li><p>Capacidad generativa: GPT es un modelo generativo, lo que significa que es capaz de generar texto de forma autónoma. Esto es útil en una variedad de aplicaciones, como la generación de contenido, la creación de diálogos virtuales y la respuesta a preguntas.</p></li>
+</ul>
+</section>
+<section id="desventajas">
+<h4><span class="section-number">9.4.1.3. </span>Desventajas<a class="headerlink" href="#desventajas" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Bias y desigualdades: Al estar entrenado en una gran cantidad de texto en internet, GPT puede incorporar los sesgos y desigualdades presentes en la fuente de datos.</p></li>
+<li><p>Inseguridad: GPT es un modelo de aprendizaje automático, lo que significa que su rendimiento puede ser afectado por la calidad y la representatividad de la fuente de datos utilizada para su entrenamiento. Además, el modelo puede ser <strong>vulnerable a ataques y manipulaciones</strong>, como la generación de texto falsificado o la respuesta a preguntas inapropiadas.</p></li>
+<li><p>Costos computacionales: GPT es un modelo grande y complejo que requiere una gran cantidad de recursos computacionales para su entrenamiento y uso. Esto puede resultar en costos elevados para el hardware y la energía, lo que puede ser un obstáculo para algunos usuarios.</p></li>
+<li><p>Limitaciones en la comprensión del contexto: Aunque GPT ha sido entrenado en una gran cantidad de texto, todavía puede tener dificultades para comprender el contexto en el que se utiliza el lenguaje natural. Esto puede resultar en respuestas poco precisas o inapropiadas en ciertos contextos.</p></li>
+</ul>
+</section>
+<section id="decodificacion-de-gpt">
+<h4><span class="section-number">9.4.1.4. </span>Decodificación de GPT<a class="headerlink" href="#decodificacion-de-gpt" title="Permalink to this headline">#</a></h4>
+<p>La decodificación de GPT es el proceso de generar texto a partir de un modelo de lenguaje pre-entrenado.
+Existen dos estrategias:</p>
+<ul class="simple">
+<li><p>Determinísticas</p></li>
+<li><p>Estocáticas</p></li>
+</ul>
+<p>En el siguiente material &lt;&lt;<a class="reference external" href="https://medium.com/&#64;shravankoninti/decoding-strategies-of-all-decoder-only-models-gpt-631faa4c449a">Decoding Strategies of all Decoder only Models (GPT)</a>&gt;&gt; se presenta un exaustiva expliación de cada una de ellas. Dicho material es se obligatorio estudio.</p>
+<p><img alt="Alt text" src="_images/GPT_estrategias.png" />
+Figura 6. Estrategias de decodificación modelos GPT.</p>
+<p>En el siguiente <a class="reference external" href="https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/decoderGPT.ipynb">cuaderno de trabajo</a> se utiliza GPT-2 para generar texto de diferentes alternativas de texto.</p>
+<p>Se resumen a continuación esas formas de decodificación:</p>
+<ul class="simple">
+<li><p><strong>Greedy Search</strong>: En el método de búsqueda greedy (avaricioso), se selecciona la palabra con la probabilidad más alta en cada paso. Este método es rápido, pero puede generar texto que no es coherente o relevante. Este método elige la palabra con la probabilidad más alta en cada paso.</p></li>
+<li><p><strong>Beam Search</strong>: En el método de búsqueda de haz, se basa en la búsqueda avariciosa, pero en lugar de seleccionar la palabra con la probabilidad más alta en cada paso, se seleccionan las k palabras con la probabilidad más alta y se generan k secuencias parciales. Luego, se selecciona la secuencia parcial con la probabilidad más alta en cada paso. Se define el parámetro <code class="docutils literal notranslate"><span class="pre">num_beams</span></code> para controlar el número de secuencias parciales generadas en cada paso. Además, este método permite definir parámetros como <code class="docutils literal notranslate"><span class="pre">no_repeat_ngram_size</span></code> para evitar la repetición de n-gramas en el texto generado o <code class="docutils literal notranslate"><span class="pre">num_return_sequences</span></code> para controlar el número de secuencias generadas.</p></li>
+<li><p><strong>Sampling</strong>: El método de muestreo selecciona la palabra en cada paso de acuerdo con su probabilidad. Se define el parámetro <code class="docutils literal notranslate"><span class="pre">temperature</span></code> para controlar la aleatoriedad en la selección de palabras. Un valor más alto de <code class="docutils literal notranslate"><span class="pre">temperature</span></code> aumenta la aleatoriedad y un valor más bajo disminuye la aleatoriedad.</p></li>
+<li><p><strong>Top-K Sampling</strong>: El método de muestreo Top-K selecciona las palabras en cada paso de acuerdo con su probabilidad, pero solo considera las k palabras con la probabilidad más alta. Se define el parámetro <code class="docutils literal notranslate"><span class="pre">top_k</span></code> para controlar el número de palabras consideradas en cada paso. Este método, por tanto, elimina las palabras con baja probabilidad que suelen ser las que producen texto incoherente.</p></li>
+<li><p><strong>Top-P Sampling</strong>: Mientras que el método de muestreo Top-K selecciona las palabras en cada paso de acuerdo con su probabilidad, pero solo considera las k palabras con la probabilidad más alta, el método de muestreo Top-P selecciona las palabras en cada paso de acuerdo con su probabilidad, pero solo considera las palabras cuya probabilidad acumulada sea mayor que un cierto umbral p. Se define el parámetro <code class="docutils literal notranslate"><span class="pre">top_p</span></code> para controlar el umbral de probabilidad acumulada.</p></li>
+</ul>
+<p>En el cuaderno referenciado al principio podrás ver ejemplos de generación de texto con cada uno de estos métodos, para así ver los problemas de coherencia y repetición que pueden surgir con cada uno de ellos.</p>
+</section>
+</section>
+<section id="copilot">
+<h3><span class="section-number">9.4.2. </span>Copilot<a class="headerlink" href="#copilot" title="Permalink to this headline">#</a></h3>
+<p>Es asistente de inteligencia artificial diseñado, por OpenAI, para ayudar enel completamiento de código mediante el uso de la conversación natural. Copilot utiliza modelos de lenguaje avanzados para comprender tus necesidades y brindarte la información y la ayuda que necesitas. Puedes interactuar con Copilot en una variedad de plataformas y dispositivos, incluyendo mensajería, aplicaciones de chat, aplicaciones de escritorio y más. !Es <strong>orientado a servicios en la nube</strong>! Es decir, se se accede a los servicios online a través de una API.</p>
+<p>Copilot está diseñado para ayudarte a realizar una amplia gama de tareas y responder preguntas de forma eficiente y precisa. Algunos ejemplos de las tareas que puedes realizar con Copilot incluyen:</p>
+<ul class="simple">
+<li><p><strong>Consultar información</strong> sobre el clima, la hora actual y otras condiciones meteorológicas.</p></li>
+<li><p>Obtener información sobre <strong>eventos actuales, noticias y tendencias</strong>.</p></li>
+<li><p>Realizar <strong>búsquedas en línea</strong> y encontrar información sobre temas específicos.</p></li>
+<li><p><strong>Programar recordatorios y citas</strong>.</p></li>
+<li><p><strong>Obtener recomendaciones</strong> de restaurantes, películas y otras formas de entretenimiento.</p></li>
+<li><p><strong>Traducir</strong> palabras y frases a otros idiomas.</p></li>
+<li><p><strong>Obtener información sobre la bolsa de valores</strong>, la tasa de cambio y otras cotizaciones financieras.</p></li>
+<li><p><strong>Resolver problemas</strong> <strong>matemáticos</strong> y <strong>responder preguntas</strong> sobre <strong>conceptos científicos</strong> y <strong>tecnológicos</strong>.</p></li>
+</ul>
+<p>Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y responder preguntas de una manera conveniente y rápida. Ejemplo de ello, lo podemos encontrar en la integración de pluggins en <a class="reference external" href="https://docs.github.com/en/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-visual-studio-code">Visual Studio Code</a> para la completación de códigos.</p>
+<section id="id1">
+<h4><span class="section-number">9.4.2.1. </span>Ventajas<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Copilot utiliza una <strong>interfaz de conversación natural</strong> (Visual y API) para interactuar con los usuarios, lo que hace que sea fácil y agradable de usar.</p></li>
+<li><p>Está entrenado en una amplia gama de información y puede <strong>ayudar a los usuarios a encontrar y proporcionar información sobre una amplia variedad de temas</strong>.</p></li>
+<li><p>Puede ayudar a los usuarios a realizar tareas y <strong>obtener información de manera más rápida y eficiente</strong>, lo que les <strong>permite ser más productivos</strong>.</p></li>
+<li><p>Está <strong>diseñado para proporcionar una experiencia de usuario amigable y personalizada</strong>, lo que puede mejorar la satisfacción del usuario y fidelización.</p></li>
+<li><p>Puede <strong>integrarse con otros servicios en línea</strong> para proporcionar una experiencia de usuario más completa.</p></li>
+</ul>
+</section>
+<section id="id2">
+<h4><span class="section-number">9.4.2.2. </span>Desventajas<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p>Costo: Copilot es un producto de OpenAI(empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.</p></li>
+<li><p>Accesibilidad limitada: <strong>Solo está disponible como una API</strong>, por lo que solo puede ser utilizado por desarrolladores y no está disponible directamente para el público en general.</p></li>
+<li><p>Capacidad limitada: Aunque Copilot está entrenado en una amplia gama de información, <strong>todavía hay límites en su capacidad para comprender y responder</strong> a todas las preguntas y tareas.</p></li>
+<li><p>Confidencialidad y privacidad: Al usar Copilot, <strong>debes compartir tus datos y preocuparte por la privacidad y seguridad de ellos</strong>.</p></li>
+<li><p>Requiere habilidades técnicas: Para <strong>integrar esta tecnología</strong> en tus aplicaciones y servicios, <strong>debes tener habilidades</strong> técnicas y conocimientos en programación.</p></li>
+</ul>
+</section>
+<section id="alternativas-a-copilot">
+<h4><span class="section-number">9.4.2.3. </span>Alternativas a Copilot<a class="headerlink" href="#alternativas-a-copilot" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p><strong>Dialogflow</strong>: Una plataforma de Google que permite a los desarrolladores crear chatbots y aplicaciones de conversación.</p></li>
+<li><p>**IBM Watson Assistant: Una plataforma de inteligencia artificial de IBM que permite a los desarrolladores crear chatbots y aplicaciones de conversación.</p></li>
+<li><p><strong>Microsoft Bot Framework</strong>: Un marco de trabajo de Microsoft que permite a los desarrolladores crear chatbots y aplicaciones de conversación para varias plataformas, incluidas las aplicaciones de mensajería, los sitios web y las aplicaciones de escritorio.</p></li>
+<li><p><strong>Amazon Lex</strong>: Un servicio de Amazon Web Services que permite a los desarrolladores crear chatbots y aplicaciones de conversación.</p></li>
+<li><p><strong>Rasa</strong>: Un marco de software de código abierto que permite a los desarrolladores crear chatbots y aplicaciones de conversación.</p></li>
+</ul>
+</section>
+</section>
+<section id="chatgpt">
+<h3><span class="section-number">9.4.3. </span>ChatGPT<a class="headerlink" href="#chatgpt" title="Permalink to this headline">#</a></h3>
+<p>Es un modelo de lenguaje entrenado utilizando una gran cantidad de texto en internet. Se trata de una tecnología de procesamiento del lenguaje natural que permite a los usuarios interactuar con el modelo mediante el uso de conversaciones naturales. !Es <strong>orientado a servicios en la nube</strong>! Es decir, se se accede a los servicios online a través de una API.</p>
+<p>Algunas de las funcionalidades más destacadas incluyen:</p>
+<ul class="simple">
+<li><p><strong>Responder preguntas</strong>: ChatGPT puede responder preguntas sobre una amplia gama de temas, incluyendo <strong>historia, geografía, ciencias, tecnología, programación y mucho más</strong>.</p></li>
+<li><p><strong>Completar oraciones o fragmentos de texto</strong>: ChatGPT puede utilizar el contexto y la información previa para completar oraciones o fragmentos de texto de manera eficiente.</p></li>
+<li><p><strong>Generar texto</strong>: ChatGPT puede generar texto en una variedad de formatos, como descripciones de productos, reseñas de películas y mucho más.</p></li>
+<li><p><strong>Traducción de idiomas</strong>: ChatGPT puede traducir palabras y frases a otros idiomas, lo que lo hace ideal para aquellos que desean comunicarse en un idioma distinto al suyo.</p></li>
+<li><p><strong>Resumen de texto</strong>: ChatGPT puede resumir grandes cantidades de texto en una forma concisa y fácil de entender.</p></li>
+<li><p><strong>Análisis de sentimientos</strong>: ChatGPT puede analizar el contenido de un texto para determinar el sentimiento que se expresa en él, como por ejemplo si es positivo, negativo o neutral.</p></li>
+</ul>
+<p>En la web oficial de OpenAI podemos ver un amplio listado de ejemplos de aplicaciones de esta tecnología:</p>
+<ul class="simple">
+<li><p>Q&amp;A</p></li>
+<li><p>Corrección gramtical</p></li>
+<li><p>Resumir un texto</p></li>
+<li><p>Traducir un texto complejo en un simple concepto.</p></li>
+<li><p>Llamadas a APIs para usar técnicas de PLN</p></li>
+<li><p>Generar comandos de programación a partir de instrucciones en lenguaje natural</p></li>
+<li><p>Traducción automática</p></li>
+<li><p>Generar codificación de programación: para llamar APIs, sentencias SQL, estructuras de programación, etc., desde instrucciones en lenguaje natural</p></li>
+<li><p>Crear tabulaciones a àrtir de texto</p></li>
+<li><p>Separar contenido no estructurado</p></li>
+<li><p>Tareas de clasificación.</p>
+<ul>
+<li><p>Extracción de categorías implícitas en textos</p></li>
+</ul>
+</li>
+<li><p>Generar descripciones y explicaciones a partir de códigos Python</p></li>
+<li><p>Convertir el título de una película en un emoji</p></li>
+<li><p>Hallar la complejidad computacional de una función</p></li>
+<li><p>Traducir de un lenguaje de programación a otro</p></li>
+<li><p>Detección de sentimientos para un fragmento de texto.</p></li>
+<li><p>Explicar una pieza complicada de código.</p></li>
+<li><p>Extraer palabras clave de un bloque de texto.</p></li>
+<li><p>Convertir la descripción de un producto en un texto publicitario.</p></li>
+<li><p>Generador de nombres de productos</p></li>
+<li><p>Solucionar de errores de Python</p>
+<ul>
+<li><p>Encontrar y corregir errores en el código fuente.</p></li>
+</ul>
+</li>
+<li><p>Crear de hojas de cálculo</p></li>
+<li><p>Responder preguntas de JavaScript</p></li>
+<li><p>Responder preguntas sobre modelos de lenguaje</p></li>
+<li><p>Crear una lista de elementos para un tema determinado.</p></li>
+<li><p>Extracción de información</p></li>
+<li><p>Crear  microhistorias</p></li>
+<li><p>Convertir texto en de tercera persona</p></li>
+<li><p>Generar esquemas para un tema.</p></li>
+<li><p>Conversación abierta con un asistente de IA.</p></li>
+</ul>
+<p>A continuación se muestra la evolución de modelos hasta lo que hoy conocemos como ChatGPT:</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="_images/GPT-1-2-3_datasources.png"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/GPT-1-2-3_datasources.png" style="width: 600px;" /></a>
+<p>Figura 7. Evolución de GPT hasta llegar a ChatGPT. Fuente <a class="reference external" href="https://newsletter.theaiedge.io/p/the-chatgpt-models-family">https://newsletter.theaiedge.io/p/the-chatgpt-models-family</a></p>
+<section id="ejemplo-de-uso-de-la-api-chatgpt">
+<h4><span class="section-number">9.4.3.1. </span>Ejemplo de uso de la API ChatGPT:<a class="headerlink" href="#ejemplo-de-uso-de-la-api-chatgpt" title="Permalink to this headline">#</a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">openai</span>
+
+<span class="c1"># Inicializar la API de OpenAI</span>
+<span class="n">openai</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;tu_api_key_aqui&quot;</span>
+
+<span class="c1"># Hacer una pregunta a ChatGPT</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">openai</span><span class="o">.</span><span class="n">Completion</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;text-davinci-002&quot;</span><span class="p">,</span> <span class="c1"># asignamos el nombre del modelo a utilizar. Ejemplo: &quot;text-davinci-003&quot;, &quot;text-davinci-002&quot;, &quot;text-davinci-001&quot;, &quot;code-davinci-002&quot;, ...</span>
+    <span class="n">prompt</span><span class="o">=</span><span class="s2">&quot;Qué es el sol?&quot;</span><span class="p">,</span> <span class="c1"># Entrada</span>
+    <span class="n">max_tokens</span><span class="o">=</span><span class="mi">1024</span><span class="p">,</span> <span class="c1"># Dimensionalidad de la ventana </span>
+    <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">stop</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">temperature</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="c1"># Imprimir la respuesta</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">[</span><span class="s2">&quot;choices&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;text&quot;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;El sol es una estrella.&quot;</span>
+</pre></div>
+</div>
+<p>Nótese que para poder utilizar esta librería se ha de emplear un servicio en la nube del cual se ha de requerir una clave de acceso. Las instruciones para conseguirlas las podéis encontrar en el siguiente enlace: <a class="reference external" href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></p>
+</section>
+<section id="id3">
+<h4><span class="section-number">9.4.3.2. </span>Ventajas<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p><strong>Gran capacidad de comprensión del lenguaje natural</strong>: ChatGPT ha sido entrenado en una amplia variedad de textos y ha desarrollado una comprensión profunda del lenguaje humano, lo que le permite responder de manera fluida y natural a las preguntas y comentarios de los usuarios.</p></li>
+<li><p><strong>Personalización</strong>: Puede ser personalizado para diferentes aplicaciones y usos, lo que lo hace ideal para una amplia variedad de industrias.</p></li>
+<li><p><strong>Alta disponibilidad</strong>: Está <strong>disponible en la nube</strong> y puede ser accedido desde cualquier lugar con una conexión a Internet, lo que lo hace muy accesible para los usuarios.</p></li>
+<li><p><strong>Rapidez y eficiencia</strong>: Es <strong>capaz de procesar grandes cantidades de información</strong> en un tiempo muy corto, lo que lo hace ideal para aplicaciones en tiempo real.</p></li>
+<li><p><strong>Mejora continua</strong>: Está en constante desarrollo y mejora por parte de OpenAI, lo que significa que sus capacidades y funciones continúan mejorando con el tiempo.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h4><span class="section-number">9.4.3.3. </span>Desventajas<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<ul class="simple">
+<li><p><strong>Limitaciones en la comprensión del contexto</strong>: Aunque ChatGPT ha sido entrenado en una amplia variedad de textos, todavía puede tener dificultades para comprender el contexto completo de una conversación, especialmente en situaciones más complejas.</p></li>
+<li><p><strong>Responsabilidad por la precisión de la información</strong>: Puede proporcionar información que no sea precisa o que sea engañosa. Es responsabilidad del usuario verificar la información proporcionada por ChatGPT antes de tomar decisiones o acciones importantes.</p></li>
+<li><p><strong>Requisitos de infraestructura</strong>: Para utilizar ChatGPT, es <strong>necesario tener acceso a la infraestructura</strong> y los recursos necesarios para conectarse y comunicarse con el modelo. Esto <strong>puede ser un obstáculo para algunos usuarios que no cuenten con la infraestructura adecuada</strong>. <strong>Acceso a internet obligatorio!!!</strong></p></li>
+<li><p><strong>Costo</strong>: Su uso <strong>puede requerir una inversión significativa en términos de costos de licenciamiento</strong> y recursos de infraestructura.</p></li>
+</ul>
+</section>
+<section id="alternativas-a-chatgpt">
+<h4><span class="section-number">9.4.3.4. </span>Alternativas a ChatGPT<a class="headerlink" href="#alternativas-a-chatgpt" title="Permalink to this headline">#</a></h4>
+<p>Algunas alternativas son:</p>
+<ul class="simple">
+<li><p><span class="xref myst"><strong>PEER de Meta AI</strong></span>: un lenguaje entrenado para <strong>imitar el proceso de escritura</strong>. Está entrenado en los <a class="reference external" href="https://dumps.wikimedia.org/enwiki/">datos del historial de edición de Wikipedia</a>. Se especializa en predecir ediciones y explicar las razones de esas ediciones. Es capaz de citar y citar documentos de referencia para respaldar las afirmaciones que genera. Es un transformador de 11 billones de parámetros con la arquitectura típica de codificador-decodificador, y está superando a GPT-3 en la tarea en la que se especializa.</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/pdf/2201.08239.pdf"><strong>LaMDA de Google AI</strong></a>: un modelo de lenguaje entrenado para <strong>aplicaciones de diálogo</strong>. Está pre-entrenado en de ~3 billones de documentos y ~1 billones de diálogos y ajustado en datos generados por humanos para mejorar la calidad, la seguridad y la veracidad del texto generado. También está ajustado para aprender a llamar a un sistema externo de recuperación de información, como la Búsqueda de Google, una calculadora y un traductor, lo que lo convierte en un candidato mucho más fuerte para reemplazar la Búsqueda de Google que ChatGPT. Es un decodificador de  135 billones parámetros solo el transformer.</p></li>
+<li><p><a class="reference external" href="https://arxiv.org/pdf/2204.02311.pdf"><strong>PaLM de Google AI</strong></a> - El más grande de todos: ¡540 billlones de parámetros! Con capacidades innovadoras en aritmética y razonamiento de sentido común. Está entrenado en 780 mil millones de tokens provenientes de conversaciones en redes sociales multilingües, páginas web multilingües filtradas, libros, repositorios de GitHub, Wikipedia multilingüe y noticias.</p></li>
+<li><p><a class="reference external" href="https://huggingface.co/chat/"><strong>HuggingChat</strong></a> es una alternativa de código abierto a ChatGPT, desarrollada por Hugging Face. A diferencia de ChatGPT, HuggingChat está disponible para todos y se basa en los mejores modelos de chat de la comunidad. Su modelo actual es <a class="reference external" href="https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1">mistralai/Mixtral-8x7B-Instruct-v0.1</a></p></li>
+</ul>
+</section>
+</section>
+<section id="instrucion-de-modelos">
+<h3><span class="section-number">9.4.4. </span>Instrución de modelos<a class="headerlink" href="#instrucion-de-modelos" title="Permalink to this headline">#</a></h3>
+<p>La técnica de instrucción de modelos (Instruction-Tuning,IT) es crucial para mejorar las capacidades y la controlabilidad de los modelos de lenguaje grandes (LLMs).</p>
+<ul class="simple">
+<li><p><strong>Metodología general de IT</strong>: El ajuste de instrucciones implica entrenar aún más los LLMs utilizando pares de datos de (instrucción, salida). Estos pares consisten en instrucciones humanas y las salidas generadas por el modelo. El objetivo es cerrar la brecha entre la predicción de la siguiente palabra por parte de los LLMs y el objetivo de los usuarios de que los LLMs sigan instrucciones humanas.</p></li>
+<li><p><strong>Construcción de conjuntos de datos de IT</strong>: Se crean los conjuntos de datos para el ajuste de instrucciones. Estos conjuntos contienen ejemplos de instrucciones junto con las salidas esperadas. Ver figura 8.</p></li>
+<li><p><strong>Entrenamiento de modelos de IT</strong>: Son técnicas de entrenamiento específicas utilizadas para ajustar los LLMs según las instrucciones proporcionadas.</p></li>
+<li><p><strong>Aplicaciones en diferentes modalidades y dominios</strong>: El ajuste de instrucciones se aplica a diversas áreas, como texto, imágenes y otros tipos de datos.</p></li>
+<li><p><strong>Factores que influyen en los resultados de IT</strong>: El tamaño del conjunto de datos de instrucciones y la generación de salidas de instrucciones son algunos de los factores que afectan los resultados del ajuste de instrucciones.</p></li>
+</ul>
+<p><img alt="Alt text" src="_images/GPT_instrucciones.png" />
+Figura 9. Arquitectura de instrucciones GPT.</p>
+<p>En el siguiente artículo <a class="reference external" href="https://arxiv.org/pdf/2308.10792.pdf">&lt;&lt;<em>Instruction Tuning for Large Language Models: A Survey</em>&gt;&gt;</a> se revisan las posibles dificultades del IT y las críticas en su contra, además de señalar las deficiencias actuales de las estrategias existentes y sugerir posibles áreas de investigación futura.</p>
+<p><img alt="Alt text" src="_images/GPT_IT_ejemplo.png" />
+Figura 10. Ejemplo de instrucciones GPT.</p>
+<section id="flan">
+<h4><span class="section-number">9.4.4.1. </span>FLAN<a class="headerlink" href="#flan" title="Permalink to this headline">#</a></h4>
+<p>FLAN (Fine-tuned LAnguage Net) es una “arquitectura” para realizar un instruction-tuning a un modelo de lenguaje pre-entrenado. El objetivo es que usando un pequeño número de actualizaciones sobre un modelo pre-entrenado, el modelo resultante sea capaz de realizar tareas específicas que antes no era capaz de realizar.</p>
+<p>Para ese instruction-tuning, FLAN define una serie de plantillas, estando estas organizadas en las diferentes tareas para los que se quiere realizar el instruction-tuning (text classification, named entity recognition, etc.). Estas plantillas son utilizadas para generar ejemplos de entrenamiento a partir de los cuales se realiza el instruction-tuning.</p>
+<p>En la imagen siguiente se muestran los datasets que se utilizan, teniendo FLAN para todos ellos definidas las plantillas para así generar los conjuntos de instrucciones. Verás que todos los datasets están agrupados en las diferentes tareas que se pretenden realizar.</p>
+<p><img alt="alt text" src="_images/GPT_IT_datasets.png" />
+Figura 11. Datasets de instrucciones.</p>
+<p>Estas plantillas se definen para generar instrucciones tanto de <em>zero-shot</em> como de <em>few-shot</em>. ¿Qué significa esto?</p>
+<ul>
+<li><p><em>Zero-shot</em>: En este tipo de <em>promts</em> no se especifica ningún ejemplo, sino que directamente se le pide que realice algo. Por ejemplo, si estamos en la tarea de análisis de sentimientos, un prompt de <em>zero-shot</em> podría ser</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;No me ha gustado la película Dune parte 2&quot;?. Sentimiento:
+</pre></div>
+</div>
+</li>
+<li><p><em>Few-shot</em>: Sobre las plantillas de <em>zero-shot</em>, FLAN construye plantillas <em>few-shot</em>. En este caso, estas plantillas sí que incluyen algún ejemplo. Volviendo al ejemplo anterior, una plantilla <em>few-shot</em> podría ser:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&quot;No me ha gustado la película Dune parte 2&quot;?. Sentimiento: negativo.
+&quot;Me ha gustado la película Kung Fu Panda 4&quot;. Sentimiento:
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Google tras proponer FLAN, realizó un reentrenamiento de T5, figura 12, con FLAN, estando publicado este modelo en diferentes tamaños en una <a class="reference external" href="https://huggingface.co/collections/google/flan-t5-release-65005c39e3201fff885e22fb">colección de Hugging Face</a>. En el siguiente artículo <a class="reference external" href="https://paperswithcode.com/method/t5">&lt;&lt;<em>Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</em>&gt;&gt;</a>, se exploran las técnicas de aprendizaje por transferencia para NLP y se introducen un marco unificado que convierte todos los problemas de lenguaje basados en texto en un formato texto-a-texto.</p>
+<p><img alt="alt text" src="_images/Transformer5.png" />
+Figura 12. Text-to-Text Transfer Transformer(T5)</p>
+</section>
+<section id="cuaderno-de-ejemplo-de-instruction-tuning">
+<h4><span class="section-number">9.4.4.2. </span>Cuaderno de ejemplo de instruction-tuning<a class="headerlink" href="#cuaderno-de-ejemplo-de-instruction-tuning" title="Permalink to this headline">#</a></h4>
+<p>Hemos visto que un modelo se puede reentrenar con instrucciones. En <a class="reference external" href="https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/practicaFlan.ipynb">este <strong>cuaderno de trabajo</strong></a> podrás ver un ejemplo usando un pequeño dataset con anotaciones de enfermedades.</p>
+<p>Puedes ver que se realiza una plantilla y se realiza un instruction-tuning al modelo <a class="reference external" href="https://huggingface.co/docs/transformers/model_doc/t5">T5</a> en su versión pequeña.</p>
+<p>Revisa el cuaderno y date cuenta de las librerías que usamos. Especialmente en lo importado de la librería <em>transformers</em>.</p>
+<p>Este cuaderno puedes fácilmente adaptarlo para realizar un instruction-tuning usando otro dataset y/u otras plantillas.</p>
+</section>
+</section>
+</section>
+<section id="bibliografia">
+<h2><span class="section-number">9.5. </span>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this headline">#</a></h2>
+<p>[1] <a class="reference external" href="https://huggingface.co/">https://huggingface.co/</a></p>
+<p>[2] <a class="reference external" href="https://openai.com/blog/chatgpt/">https://openai.com/blog/chatgpt/</a></p>
+<p>[3] Zhang, Y., Sun, S., Galley, M., Chen, Y. C., Brockett, C., Gao, X., … &amp; Dolan, B. (2019). Dialogpt: Large-scale generative pre-training for conversational response generation. arXiv preprint arXiv:1911.00536.</p>
+<p>[4] <a class="reference external" href="https://newsletter.theaiedge.io/p/the-chatgpt-models-family">https://newsletter.theaiedge.io/p/the-chatgpt-models-family</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="bloque3_t3.1_metricas.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>T3. Métricas de Evaluación</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="bloque3_t5_automl.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>T5. Auto Machine Learning(AutoML)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Universitat d'Alacant<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
