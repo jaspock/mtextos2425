@@ -20,7 +20,7 @@ Novedades
 :widths: 10 90
 :class: tablita
 
-* - 25 Ene 
+* - 15 Ene 
   - Se ha publicado la primera versión de los materiales de la asignatura. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
 
 `````
