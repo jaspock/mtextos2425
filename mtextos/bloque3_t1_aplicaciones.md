@@ -5,7 +5,7 @@ T1. Aplicaciones generales
 
 ```{admonition} Nota
 :class: note
-Lee con atención el tema 1 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2. En la clase presencial repasaremos los conceptos teóricos principales correspondoentes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: Apertura el 16/02/2024- Cierre 23:59 del 21/02/2024** (el día anterior a la clase presencial).
+Lee con atención el tema 1 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2. En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: Apertura el 16/02/2024- Cierre 23:59 del 21/02/2024** (el día anterior a la clase presencial).
 
 Tiempo de dedicación: 2 horas (asíncrona) + 2 horas trabajo independiente
 ```
@@ -76,23 +76,23 @@ Estas áreas **involucran** temas tales como:
 
 - **Information Retrieval** (Recuperación de Información)
 - **Information Extraction** (Extracción de Información)
-- **Text Clasification** (Clasificación de textos)
+- **Text Classification** (Clasificación de Textos)
 - **Text Generation** (Generación de Textos)
 - **Text Sumarization** (Resúmenes de Textos)
 - **Question Answering** (Preguntas y Respuestas)
-- **Machine Translation** (Máquinas de traducción)
+- **Machine Translation** (Máquinas de Traducción)
 
 A menudo, es **necesario uno o más de los problemas** centrales con éxito y **aplicar** esas **ideas y procedimientos** para resolver **problemas prácticos**. Actualmente, la **PLN** es principalmente un campo **basado en datos** que utiliza cálculos **estadísticos y probabilísticos** junto con el **aprendizaje automático**.
 
 **Métodos clásicos**:
 
 - Naive Bayes;
-- K Near Neibours (K vecinos cercanos);
+- K-Nearest Neighbors (K vecinos cercanos);
 - Modelos Ocultos de Markov;
-- Conditional Ramdom Fields (campos aleatorios condicionales);
-- Áboles de decisión;
-- Ramdom Forest (bosques aleatorios) ;
-- y Suport Vector Machine (máquinas soporte vectorial).
+- Conditional Random Fields (campos aleatorios condicionales);
+- Árboles de decisión;
+- Random Forest (bosques aleatorios);
+- y Support Vector Machine (máquinas de soporte vectorial).
 
 **DeepLearning:**
 En los **últimos años**, ha habido una **transformación** total, y estos **enfoques** han sido **reemplazados** por completo, o al menos mejorados, por **modelos neuronales** y **aprendizaje profundo**.
@@ -131,7 +131,7 @@ Podríamos enmarcar las aplicaciones del **PLN** en **cinco grandes áreas** que
 
 El **propósito** de los sistemas de recuperación de información (**IR**) es **ayudar** a las personas a **encontrar la información** correcta (**la más útil**) en el **formato** correcto (**más conveniente**) en el **momento adecuado** (cuando la necesitan). 
 
-Entre muchos problemas de IR, un **problema principal** que debe abordarse es el de **clasificar los documentos** con **respecto** a una cadena de **consulta**, en términos de relevancia para tareas de recuperación ad-hoc(hecha a medida), **similar** a lo que sucede en un **motor de búsqueda**.
+Entre muchos problemas de IR, un **problema principal** que debe abordarse es el de **clasificar los documentos** con **respecto** a una cadena de **consulta**, en términos de relevancia para tareas de recuperación ad-hoc (hecha a medida), **similar** a lo que sucede en un **motor de búsqueda**.
 
 Las **búsquedas** se pueden **basar** en el **texto completo** o en otra **indexación** basada en **contenido**. La ***recuperación de información es la ciencia de buscar información en un documento***, buscar los **propios documentos** y también **buscar los metadatos** que describen los datos y las **bases de datos** de textos, imágenes o sonidos.
 
@@ -232,7 +232,7 @@ El sistema debe ser **capaz de**:
 3. **Establecer relaciones** semánticas **entre** las **entidades** siguiendo un modelo conceptual previamente proporcionado que especifica cada tipo de entidad y relación posible. 
 Se nos **proporcionan documentos** de texto con contenido similares a la entrada del ejemplo siguiente:
 
-- **Ejemplo de entrada:**``“El asma es una enfermedad que afecta las vías respiratorias”``
+- **Ejemplo de entrada:** ``“El asma es una enfermedad que afecta las vías respiratorias”``
 - **Ejemplo de salida:** 
 ```
 |Texto| Concepto| inicio| fin| palabra|
@@ -280,7 +280,7 @@ La **primera columna** es un **identificador del elemento** por orden de aparici
 
 #### Descripción
 
-Es un **tipo de recuperación de la información** capaz de **recuperar respuestas** a **preguntas** planteadas en **lengua natural**. Se encarga de **buscar** una **información** en una cantidad más o menos grande de documentos, ya que esto debe extraer de dichos documentos un fragmento de texto que responda a una pregunta dada en lenguaje natural. 
+Es un **tipo de recuperación de la información** capaz de **recuperar respuestas** a **preguntas** planteadas en **lenguaje natural**. Se encarga de **buscar** una **información** en una cantidad más o menos grande de documentos, ya que esto debe extraer de dichos documentos un fragmento de texto que responda a una pregunta dada en lenguaje natural. 
 
 Estos sistemas están **muy ligados a los buscadores web**. Debe **considerar listas, definiciones**, y **preguntas** del tipo **cómo**, **cuándo**, **dónde**, **por qué**, etc.
 
@@ -299,7 +299,7 @@ Figura 13. Arquitectura genérica de un sistema de QA.
 
  Tomado de <https://ai.google.com/research/NaturalQuestions/visualization>
 
-- **Ejemplo de entrada:** Pregunta: When are hops added to the brewing process? => ES:¿ Cuándo se agregan lúpulos al proceso de elaboración?
+- **Ejemplo de entrada:** Pregunta: When are hops added to the brewing process? => ES: ¿Cuándo se agregan lúpulos al proceso de elaboración?
 - **Ejemplo de salida:**
   - **Respuesta corta:** ``"The boiling process"`` => ES: ``"El proceso de ebullición"``
   - **Respuesta larga:** ``"After mashing , the beer wort is boiled with hops ( and other flavourings if used ) in a large tank known as a " copper " or brew kettle – though historically the mash vessel was used and is still in some small breweries . The boiling process is where chemical reactions take place , including sterilization of the wort to remove unwanted bacteria , releasing of hop flavours , bitterness and aroma compounds through isomerization , stopping of enzymatic processes , precipitation of proteins , and concentration of the wort . Finally , the vapours produced during the boil volatilise off - flavours , including dimethyl sulfide precursors . The boil is conducted so that it is even and intense – a continuous " rolling boil " . The boil on average lasts between 45 and 90 minutes , depending on its intensity , the hop addition schedule , and volume of water the brewer expects to evaporate . At the end of the boil , solid particles in the hopped wort are separated out , usually in a vessel called a " whirlpool "``.
@@ -375,7 +375,7 @@ Aunque es una tarea que se viene **trabajando** desde hace **mucho tiempo** con 
 
 [“Coronavirus tweets NLP - Text Classification”:](https://www.kaggle.com/datatattle/covid-19-nlp-text-classification)
 
-Esta trarea propone realizar **clasificación** de texto **en los datos**. Se han obtenido de comentarios de Twitter relacionados con el COVID19 y se ha realizado el **etiquetado manual**.
+Esta tarea propone realizar **clasificación** de texto **en los datos**. Se han obtenido de comentarios de Twitter relacionados con el COVID19 y se ha realizado el **etiquetado manual**.
 
 - **Clases posibles:** Negative, Positive, Neutral, Extremely Positive, Extremely Negative
 - **Ejemplo de entrada:** ``The COVID-19 coronavirus pandemic is impacting consumer shopping behavior  purchase decisions and retail sales according to a First Insight study.``

@@ -4,7 +4,7 @@ T4. Centralización de datasets y modelos: Huggingface, OpenAI
 
 ```{admonition} Nota
 :class: note
-Lee con atención el tema 4 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondoentes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: ** Cierre 23:59 del 13/03/2024** (el día anterior a la clase presencial).
+Lee con atención el tema 4 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: ** Cierre 23:59 del 13/03/2024** (el día anterior a la clase presencial).
 
 Tiempo de dedicación: 2 horas (asíncrona) + 2 horas trabajo independiente
 ```
@@ -46,7 +46,7 @@ Esta instrucción debe descargar la versión 1 del conjunto de datos de respuest
 
 ### Listar datasets disponibles en el repositorio
 
-Para listar los conjuntos de datos disponibles es necesario ejecutar la siguiente función ``datasets.list_datasets ()`` que pertenece a la clase ``datasets``.
+Para listar los conjuntos de datos disponibles es necesario ejecutar la siguiente función ``datasets.list_datasets()`` que pertenece a la clase ``datasets``.
 
 ````
 >>> from datasets import list_datasets
@@ -89,12 +89,13 @@ No obstante, la librería ``datasets`` permite además **cargar conjuntos de dat
 ````
 
 Para más detalles sobre las distintas funciones y parámetros permitidos para manipular datasets ver la siguiente documentación:
-- <https://huggingface.co/docs/datasets/quicktour.html>
+- <https://huggingface.co/docs/datasets/v1.5.0/quicktour.html>
+- <https://huggingface.co/docs/datasets/quickstart>
 
 ### Tareas, subtareas e idiomas de datasets
 
 **Categorías:**
-En este repositorio podemos encontrar un amplio catalogo de tareas(categorías) por las cuales filtrar y y especificar el tipo de dateset que estamos buscando. Hemos de resaltar que estos datasets existen originalmente en diferentes formatos, nos obstante en una vez incluido en este repositorio, el formato es estandar. Por tal motivo, a través de las librías de manipulación (las mencionadas enteriormente) que ofrece Huggingface, podemos acceder a ellos y gestionarlos. Además, estos datasets se encuentran caracterizados por **idioma**, **subtarea** en la que se puede utilizar y la **licencia de uso**.
+En este repositorio podemos encontrar un amplio catalogo de tareas (categorías) por las cuales filtrar y especificar el tipo de dateset que estamos buscando. Hemos de resaltar que estos datasets existen originalmente en diferentes formatos, nos obstante en una vez incluido en este repositorio, el formato es estandar. Por tal motivo, a través de las librías de manipulación (las mencionadas enteriormente) que ofrece Huggingface, podemos acceder a ellos y gestionarlos. Además, estos datasets se encuentran caracterizados por **idioma**, **subtarea** en la que se puede utilizar y la **licencia de uso**.
 
 ```{image} /images/bloque3/t4/hf_dataset_categoria.jpg
 :alt: comic xkcd 2421
@@ -103,7 +104,7 @@ En este repositorio podemos encontrar un amplio catalogo de tareas(categorías) 
 :align: center
 ```
 
-Figura 1. Categorías generales(o tareas) que permiten el filtro de datasets
+Figura 1. Categorías generales (o tareas) que permiten el filtro de datasets
 
 **Más de 134 tareas y más de 194 idiomas:**
 
@@ -131,7 +132,7 @@ A groso modo listamos los modelos que nos podemos encontrar
 Tomado de https://huggingface.co/transformers/quicktour.html
 
 **Listado de tareas tal y como las podemos encontrar en el repositorio:**
-El listado de tareas, como categorías, en las que podemos filtar los distintos modelos preentrenados que ofrece el repositorio Huggingface, es igual de amplio que el de los datasets. Como podemos observar, a partir de 2022 tal y como se describe más adelante, en el siguiente imagen este repositorio no solo ofrece modelos prentrenados para el modelado del lenguaje, sino también para desarrollar tareas de distintas modalidades: multimodal, lenguaje, audio, visión(imagen), datos estructurados(tabulados), y otros.
+El listado de tareas, como categorías, en las que podemos filtar los distintos modelos preentrenados que ofrece el repositorio Huggingface, es igual de amplio que el de los datasets. Como podemos observar, a partir de 2022 tal y como se describe más adelante, en el siguiente imagen este repositorio no solo ofrece modelos prentrenados para el modelado del lenguaje, sino también para desarrollar tareas de distintas modalidades: multimodal, lenguaje, audio, visión (imagen), datos estructurados (tabulados), y otros.
 
 
 ```{image} /images/bloque3/t4/hf_modelos_tareas.jpg
@@ -174,7 +175,7 @@ Ejemplo de Análisis de Sentimientos con Huggingface Transformer:
 [{'label': 'POSITIVE', 'score': 0.9997795224189758}]
 ````
 
-Si os fijáis hemos cargado un modelo pre-entrenado a través del pipeline  ``sentiment-analysis`` para utilizarlo como clasificador. Este **modelo** se puede **reentrenar** a escenarios específicos si queremos realizando un ajuste sobre un nuevo corpus. Para **más detalles ver la clase práctica** [``bloque3_p3_SA-Transformers-Training-FineTuning``](https://jaspock.github.io/mtextos/bloque3_p3_SA-Transformers-Training-FineTuning.html)
+Si os fijáis hemos cargado un modelo pre-entrenado a través del pipeline  ``sentiment-analysis`` para utilizarlo como clasificador. Este **modelo** se puede **reentrenar** a escenarios específicos si queremos realizando un ajuste sobre un nuevo corpus. Para **más detalles ver la clase práctica** [``bloque3_p3_SA-Transformers-Training-FineTuning``](https://jaspock.github.io/mtextos2425/bloque3_p3_SA-Transformers-Training-FineTuning.html)
 
 
 Si queremos que el pipeline sea multilingue, podemos indicar el modelo exacto que contemple un diccionario de este tipo y el pipeline lo ensamblará internamente. Mirad el siguiente ejemplo:
@@ -242,7 +243,7 @@ tokenizer = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncase
 model = AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment") # cargando del modelo preentrenado
 ````
 
-### Configuraciones de modelos trasnformers
+### Configuraciones de modelos transformers
 Los **modelos pre-entrenados** que se brindan en el repositorio se **basan** en alguna de las **arquitecturas Transformers** descrita en la documentación del repositorio (<https://huggingface.co/docs>).
 Si tomamos como referencia la arquitectura de modelo Transformer [DistilBERT](https://huggingface.co/transformers/model_doc/distilbert.html#overview) podemos conocer cómo **gestionar** los distintos **parámetros**, [**configuraciones de red neuronal**](https://huggingface.co/transformers/model_doc/distilbert.html#distilbertconfig), [**tokenizador**](https://huggingface.co/transformers/model_doc/distilbert.html#distilberttokenizer) y **ejemplos documentados** para cada tipo de tarea, tal y como podemos encontrar en el siguiente enlace (<https://huggingface.co/course/chapter7/>).
 
@@ -286,7 +287,7 @@ GPT significa "Generative Pretrained Transformer". Es un modelo de lenguaje que 
 
 
 - GPT-1: Es la primera versión de GPT, [entrenado con 117 millones de parámetros](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf). Aunque es significativamente más limitada que las versiones posteriores, aún es capaz de generar texto aceptable en muchos contextos. 
-La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transformadores decodificadores colocados uno tras otro(ej. 12x ver la imagen). Los datos de texto se codifican mediante una [codificación de pares de bytes](https://arxiv.org/pdf/1508.07909.pdf) adaptada a caracteres. La [incrustación de posición es aprendida, en lugar de la típica sinusoidal estática](https://arxiv.org/pdf/1706.03762.pdf). La longitud máxima para tokens consecutivos es 512. La capa superior es simplemente una capa softmax adaptada a la tarea de aprendizaje específica.
+La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transformadores decodificadores colocados uno tras otro (ej. 12x ver la imagen). Los datos de texto se codifican mediante una [codificación de pares de bytes](https://arxiv.org/pdf/1508.07909.pdf) adaptada a caracteres. La [incrustación de posición es aprendida, en lugar de la típica sinusoidal estática](https://arxiv.org/pdf/1706.03762.pdf). La longitud máxima para tokens consecutivos es 512. La capa superior es simplemente una capa softmax adaptada a la tarea de aprendizaje específica.
 - GPT-2: Es la segunda versión de GPT, con solo [1.5 mil millones de parámetros](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf). Es capaz de generar texto coherente y a menudo convincente. GPT-2 tiene básicamente la misma arquitectura que GPT-1, pero el modelo más grande contiene 48 bloques(48x ver la imagen) de transformadores. La segunda capa de normalización se mueve a la primera posición en un bloque y el último bloque contiene una capa de normalización adicional. Los pesos se inicializan de forma ligeramente diferente y se aumenta el tamaño del vocabulario. El número de tokens consecutivos se incrementa a 1024.
 - [GPT-3](https://arxiv.org/abs/2005.14165): Es la tercera versión de GPT y es uno de los modelos de lenguaje más grandes y avanzados jamás entrenados. Tiene más de [175 mil millones de parámetros](https://arxiv.org/abs/2005.14165), lo que le permite generar texto muy convincente en una amplia variedad de contextos. GPT-3 tiene la misma arquitectura que GPT-2, pero el número de bloques aumentó a 96 en el modelo más grande y el tamaño del contexto (número de tokens consecutivos) aumentó a 2048. Las [capas de autoatención de varios cabezales se alternan entre los típicos densos los escasos y los dispersos](https://arxiv.org/pdf/1904.10509.pdf). 
 
@@ -406,7 +407,7 @@ Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y resp
 - Puede **integrarse con otros servicios en línea** para proporcionar una experiencia de usuario más completa.
 
 #### Desventajas
-- Costo: Copilot es un producto de OpenAI(empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.
+- Costo: Copilot es un producto de OpenAI (empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.
 
 - Accesibilidad limitada: **Solo está disponible como una API**, por lo que solo puede ser utilizado por desarrolladores y no está disponible directamente para el público en general.
 
@@ -420,7 +421,7 @@ Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y resp
 
 - **Dialogflow**: Una plataforma de Google que permite a los desarrolladores crear chatbots y aplicaciones de conversación.
 
-- **IBM Watson Assistant: Una plataforma de inteligencia artificial de IBM que permite a los desarrolladores crear chatbots y aplicaciones de conversación.
+- **IBM Watson Assistant**: Una plataforma de inteligencia artificial de IBM que permite a los desarrolladores crear chatbots y aplicaciones de conversación.
 
 - **Microsoft Bot Framework**: Un marco de trabajo de Microsoft que permite a los desarrolladores crear chatbots y aplicaciones de conversación para varias plataformas, incluidas las aplicaciones de mensajería, los sitios web y las aplicaciones de escritorio.
 
@@ -430,7 +431,7 @@ Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y resp
 
 ### ChatGPT
 
-Es un modelo de lenguaje entrenado utilizando una gran cantidad de texto en internet. Se trata de una tecnología de procesamiento del lenguaje natural que permite a los usuarios interactuar con el modelo mediante el uso de conversaciones naturales. !Es **orientado a servicios en la nube**! Es decir, se se accede a los servicios online a través de una API.
+Es un modelo de lenguaje entrenado utilizando una gran cantidad de texto en internet. Se trata de una tecnología de procesamiento del lenguaje natural que permite a los usuarios interactuar con el modelo mediante el uso de conversaciones naturales. !Es **orientado a servicios en la nube**! Es decir, se accede a los servicios online a través de una API.
 
 Algunas de las funcionalidades más destacadas incluyen:
 
@@ -448,36 +449,36 @@ Algunas de las funcionalidades más destacadas incluyen:
 
 En la web oficial de OpenAI podemos ver un amplio listado de ejemplos de aplicaciones de esta tecnología:
 
-- Q&A
-- Corrección gramtical 
-- Resumir un texto
+- Q&A.
+- Corrección gramatical.
+- Resumir un texto.
 - Traducir un texto complejo en un simple concepto.
-- Llamadas a APIs para usar técnicas de PLN 
-- Generar comandos de programación a partir de instrucciones en lenguaje natural
-- Traducción automática
-- Generar codificación de programación: para llamar APIs, sentencias SQL, estructuras de programación, etc., desde instrucciones en lenguaje natural
-- Crear tabulaciones a àrtir de texto
-- Separar contenido no estructurado
+- Llamadas a APIs para usar técnicas de PLN.
+- Generar comandos de programación a partir de instrucciones en lenguaje natural.
+- Traducción automática.
+- Generar codificación de programación: para llamar APIs, sentencias SQL, estructuras de programación, etc., desde instrucciones en lenguaje natural.
+- Crear tabulaciones a partir de texto.
+- Separar contenido no estructurado.
 - Tareas de clasificación. 
-  - Extracción de categorías implícitas en textos 
-- Generar descripciones y explicaciones a partir de códigos Python
-- Convertir el título de una película en un emoji
-- Hallar la complejidad computacional de una función
-- Traducir de un lenguaje de programación a otro
+  - Extracción de categorías implícitas en textos.
+- Generar descripciones y explicaciones a partir de códigos Python.
+- Convertir el título de una película en un emoji.
+- Hallar la complejidad computacional de una función.
+- Traducir de un lenguaje de programación a otro.
 - Detección de sentimientos para un fragmento de texto.
 - Explicar una pieza complicada de código.
 - Extraer palabras clave de un bloque de texto.
 - Convertir la descripción de un producto en un texto publicitario.
-- Generador de nombres de productos
-- Solucionar de errores de Python
+- Generador de nombres de productos.
+- Solucionar de errores de Python.
   - Encontrar y corregir errores en el código fuente.
-- Crear de hojas de cálculo
-- Responder preguntas de JavaScript
-- Responder preguntas sobre modelos de lenguaje
+- Crear de hojas de cálculo.
+- Responder preguntas de JavaScript.
+- Responder preguntas sobre modelos de lenguaje.
 - Crear una lista de elementos para un tema determinado.
-- Extracción de información
-- Crear  microhistorias
-- Convertir texto en de tercera persona
+- Extracción de información.
+- Crear  microhistorias.
+- Convertir texto en tercera persona.
 - Generar esquemas para un tema.
 - Conversación abierta con un asistente de IA.
 
@@ -545,13 +546,13 @@ Algunas alternativas son:
 
 - [**LaMDA de Google AI**](https://arxiv.org/pdf/2201.08239.pdf): un modelo de lenguaje entrenado para **aplicaciones de diálogo**. Está pre-entrenado en de ~3 billones de documentos y ~1 billones de diálogos y ajustado en datos generados por humanos para mejorar la calidad, la seguridad y la veracidad del texto generado. También está ajustado para aprender a llamar a un sistema externo de recuperación de información, como la Búsqueda de Google, una calculadora y un traductor, lo que lo convierte en un candidato mucho más fuerte para reemplazar la Búsqueda de Google que ChatGPT. Es un decodificador de  135 billones parámetros solo el transformer.
 
-- [**PaLM de Google AI**](https://arxiv.org/pdf/2204.02311.pdf) - El más grande de todos: ¡540 billlones de parámetros! Con capacidades innovadoras en aritmética y razonamiento de sentido común. Está entrenado en 780 mil millones de tokens provenientes de conversaciones en redes sociales multilingües, páginas web multilingües filtradas, libros, repositorios de GitHub, Wikipedia multilingüe y noticias.
+- [**PaLM de Google AI**](https://arxiv.org/pdf/2204.02311.pdf) - El más grande de todos: ¡540 billones de parámetros! Con capacidades innovadoras en aritmética y razonamiento de sentido común. Está entrenado en 780 mil millones de tokens provenientes de conversaciones en redes sociales multilingües, páginas web multilingües filtradas, libros, repositorios de GitHub, Wikipedia multilingüe y noticias.
 
 - [**HuggingChat**](https://huggingface.co/chat/) es una alternativa de código abierto a ChatGPT, desarrollada por Hugging Face. A diferencia de ChatGPT, HuggingChat está disponible para todos y se basa en los mejores modelos de chat de la comunidad. Su modelo actual es [mistralai/Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1)
 
-### Instrución de modelos 
+### Instrucción de modelos 
 
-La técnica de instrucción de modelos (Instruction-Tuning,IT) es crucial para mejorar las capacidades y la controlabilidad de los modelos de lenguaje grandes (LLMs).
+La técnica de instrucción de modelos (Instruction-Tuning, IT) es crucial para mejorar las capacidades y la controlabilidad de los modelos de lenguaje grandes (LLMs).
 
 - **Metodología general de IT**: El ajuste de instrucciones implica entrenar aún más los LLMs utilizando pares de datos de (instrucción, salida). Estos pares consisten en instrucciones humanas y las salidas generadas por el modelo. El objetivo es cerrar la brecha entre la predicción de la siguiente palabra por parte de los LLMs y el objetivo de los usuarios de que los LLMs sigan instrucciones humanas.
 - **Construcción de conjuntos de datos de IT**: Se crean los conjuntos de datos para el ajuste de instrucciones. Estos conjuntos contienen ejemplos de instrucciones junto con las salidas esperadas. Ver figura 8.
