@@ -4,7 +4,7 @@ T4. Centralización de datasets y modelos: Huggingface, OpenAI
 
 ```{admonition} Nota
 :class: note
-Lee con atención el tema 4 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondoentes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: ** Cierre 23:59 del 13/03/2024** (el día anterior a la clase presencial).
+Lee con atención el tema 4 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: ** Cierre 23:59 del 13/03/2024** (el día anterior a la clase presencial).
 
 Tiempo de dedicación: 2 horas (asíncrona) + 2 horas trabajo independiente
 ```
@@ -46,7 +46,7 @@ Esta instrucción debe descargar la versión 1 del conjunto de datos de respuest
 
 ### Listar datasets disponibles en el repositorio
 
-Para listar los conjuntos de datos disponibles es necesario ejecutar la siguiente función ``datasets.list_datasets ()`` que pertenece a la clase ``datasets``.
+Para listar los conjuntos de datos disponibles es necesario ejecutar la siguiente función ``datasets.list_datasets()`` que pertenece a la clase ``datasets``.
 
 ````
 >>> from datasets import list_datasets
@@ -89,12 +89,13 @@ No obstante, la librería ``datasets`` permite además **cargar conjuntos de dat
 ````
 
 Para más detalles sobre las distintas funciones y parámetros permitidos para manipular datasets ver la siguiente documentación:
-- <https://huggingface.co/docs/datasets/quicktour.html>
+- <https://huggingface.co/docs/datasets/v1.5.0/quicktour.html>
+- <https://huggingface.co/docs/datasets/quickstart>
 
 ### Tareas, subtareas e idiomas de datasets
 
 **Categorías:**
-En este repositorio podemos encontrar un amplio catalogo de tareas(categorías) por las cuales filtrar y y especificar el tipo de dateset que estamos buscando. Hemos de resaltar que estos datasets existen originalmente en diferentes formatos, nos obstante en una vez incluido en este repositorio, el formato es estandar. Por tal motivo, a través de las librías de manipulación (las mencionadas enteriormente) que ofrece Huggingface, podemos acceder a ellos y gestionarlos. Además, estos datasets se encuentran caracterizados por **idioma**, **subtarea** en la que se puede utilizar y la **licencia de uso**.
+En este repositorio podemos encontrar un amplio catalogo de tareas (categorías) por las cuales filtrar y especificar el tipo de dateset que estamos buscando. Hemos de resaltar que estos datasets existen originalmente en diferentes formatos, nos obstante en una vez incluido en este repositorio, el formato es estandar. Por tal motivo, a través de las librías de manipulación (las mencionadas enteriormente) que ofrece Huggingface, podemos acceder a ellos y gestionarlos. Además, estos datasets se encuentran caracterizados por **idioma**, **subtarea** en la que se puede utilizar y la **licencia de uso**.
 
 ```{image} /images/bloque3/t4/hf_dataset_categoria.jpg
 :alt: comic xkcd 2421
@@ -103,7 +104,7 @@ En este repositorio podemos encontrar un amplio catalogo de tareas(categorías) 
 :align: center
 ```
 
-Figura 1. Categorías generales(o tareas) que permiten el filtro de datasets
+Figura 1. Categorías generales (o tareas) que permiten el filtro de datasets
 
 **Más de 134 tareas y más de 194 idiomas:**
 
@@ -131,7 +132,7 @@ A groso modo listamos los modelos que nos podemos encontrar
 Tomado de https://huggingface.co/transformers/quicktour.html
 
 **Listado de tareas tal y como las podemos encontrar en el repositorio:**
-El listado de tareas, como categorías, en las que podemos filtar los distintos modelos preentrenados que ofrece el repositorio Huggingface, es igual de amplio que el de los datasets. Como podemos observar, a partir de 2022 tal y como se describe más adelante, en el siguiente imagen este repositorio no solo ofrece modelos prentrenados para el modelado del lenguaje, sino también para desarrollar tareas de distintas modalidades: multimodal, lenguaje, audio, visión(imagen), datos estructurados(tabulados), y otros.
+El listado de tareas, como categorías, en las que podemos filtar los distintos modelos preentrenados que ofrece el repositorio Huggingface, es igual de amplio que el de los datasets. Como podemos observar, a partir de 2022 tal y como se describe más adelante, en el siguiente imagen este repositorio no solo ofrece modelos prentrenados para el modelado del lenguaje, sino también para desarrollar tareas de distintas modalidades: multimodal, lenguaje, audio, visión (imagen), datos estructurados (tabulados), y otros.
 
 
 ```{image} /images/bloque3/t4/hf_modelos_tareas.jpg
@@ -174,7 +175,7 @@ Ejemplo de Análisis de Sentimientos con Huggingface Transformer:
 [{'label': 'POSITIVE', 'score': 0.9997795224189758}]
 ````
 
-Si os fijáis hemos cargado un modelo pre-entrenado a través del pipeline  ``sentiment-analysis`` para utilizarlo como clasificador. Este **modelo** se puede **reentrenar** a escenarios específicos si queremos realizando un ajuste sobre un nuevo corpus. Para **más detalles ver la clase práctica** [``bloque3_p3_SA-Transformers-Training-FineTuning``](https://jaspock.github.io/mtextos/bloque3_p3_SA-Transformers-Training-FineTuning.html)
+Si os fijáis hemos cargado un modelo pre-entrenado a través del pipeline  ``sentiment-analysis`` para utilizarlo como clasificador. Este **modelo** se puede **reentrenar** a escenarios específicos si queremos realizando un ajuste sobre un nuevo corpus. Para **más detalles ver la clase práctica** [``bloque3_p3_SA-Transformers-Training-FineTuning``](https://jaspock.github.io/mtextos2425/bloque3_p3_SA-Transformers-Training-FineTuning.html)
 
 
 Si queremos que el pipeline sea multilingue, podemos indicar el modelo exacto que contemple un diccionario de este tipo y el pipeline lo ensamblará internamente. Mirad el siguiente ejemplo:
@@ -242,7 +243,7 @@ tokenizer = AutoTokenizer.from_pretrained("nlptown/bert-base-multilingual-uncase
 model = AutoModelForSequenceClassification.from_pretrained("nlptown/bert-base-multilingual-uncased-sentiment") # cargando del modelo preentrenado
 ````
 
-### Configuraciones de modelos trasnformers
+### Configuraciones de modelos transformers
 Los **modelos pre-entrenados** que se brindan en el repositorio se **basan** en alguna de las **arquitecturas Transformers** descrita en la documentación del repositorio (<https://huggingface.co/docs>).
 Si tomamos como referencia la arquitectura de modelo Transformer [DistilBERT](https://huggingface.co/transformers/model_doc/distilbert.html#overview) podemos conocer cómo **gestionar** los distintos **parámetros**, [**configuraciones de red neuronal**](https://huggingface.co/transformers/model_doc/distilbert.html#distilbertconfig), [**tokenizador**](https://huggingface.co/transformers/model_doc/distilbert.html#distilberttokenizer) y **ejemplos documentados** para cada tipo de tarea, tal y como podemos encontrar en el siguiente enlace (<https://huggingface.co/course/chapter7/>).
 
@@ -286,7 +287,7 @@ GPT significa "Generative Pretrained Transformer". Es un modelo de lenguaje que 
 
 
 - GPT-1: Es la primera versión de GPT, [entrenado con 117 millones de parámetros](https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf). Aunque es significativamente más limitada que las versiones posteriores, aún es capaz de generar texto aceptable en muchos contextos. 
-La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transformadores decodificadores colocados uno tras otro(ej. 12x ver la imagen). Los datos de texto se codifican mediante una [codificación de pares de bytes](https://arxiv.org/pdf/1508.07909.pdf) adaptada a caracteres. La [incrustación de posición es aprendida, en lugar de la típica sinusoidal estática](https://arxiv.org/pdf/1706.03762.pdf). La longitud máxima para tokens consecutivos es 512. La capa superior es simplemente una capa softmax adaptada a la tarea de aprendizaje específica.
+La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transformadores decodificadores colocados uno tras otro (ej. 12x ver la imagen). Los datos de texto se codifican mediante una [codificación de pares de bytes](https://arxiv.org/pdf/1508.07909.pdf) adaptada a caracteres. La [incrustación de posición es aprendida, en lugar de la típica sinusoidal estática](https://arxiv.org/pdf/1706.03762.pdf). La longitud máxima para tokens consecutivos es 512. La capa superior es simplemente una capa softmax adaptada a la tarea de aprendizaje específica.
 - GPT-2: Es la segunda versión de GPT, con solo [1.5 mil millones de parámetros](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf). Es capaz de generar texto coherente y a menudo convincente. GPT-2 tiene básicamente la misma arquitectura que GPT-1, pero el modelo más grande contiene 48 bloques(48x ver la imagen) de transformadores. La segunda capa de normalización se mueve a la primera posición en un bloque y el último bloque contiene una capa de normalización adicional. Los pesos se inicializan de forma ligeramente diferente y se aumenta el tamaño del vocabulario. El número de tokens consecutivos se incrementa a 1024.
 - [GPT-3](https://arxiv.org/abs/2005.14165): Es la tercera versión de GPT y es uno de los modelos de lenguaje más grandes y avanzados jamás entrenados. Tiene más de [175 mil millones de parámetros](https://arxiv.org/abs/2005.14165), lo que le permite generar texto muy convincente en una amplia variedad de contextos. GPT-3 tiene la misma arquitectura que GPT-2, pero el número de bloques aumentó a 96 en el modelo más grande y el tamaño del contexto (número de tokens consecutivos) aumentó a 2048. Las [capas de autoatención de varios cabezales se alternan entre los típicos densos los escasos y los dispersos](https://arxiv.org/pdf/1904.10509.pdf). 
 
@@ -406,7 +407,7 @@ Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y resp
 - Puede **integrarse con otros servicios en línea** para proporcionar una experiencia de usuario más completa.
 
 #### Desventajas
-- Costo: Copilot es un producto de OpenAI(empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.
+- Costo: Copilot es un producto de OpenAI (empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.
 
 - Accesibilidad limitada: **Solo está disponible como una API**, por lo que solo puede ser utilizado por desarrolladores y no está disponible directamente para el público en general.
 
@@ -420,7 +421,7 @@ Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y resp
 
 - **Dialogflow**: Una plataforma de Google que permite a los desarrolladores crear chatbots y aplicaciones de conversación.
 
-- **IBM Watson Assistant: Una plataforma de inteligencia artificial de IBM que permite a los desarrolladores crear chatbots y aplicaciones de conversación.
+- **IBM Watson Assistant**: Una plataforma de inteligencia artificial de IBM que permite a los desarrolladores crear chatbots y aplicaciones de conversación.
 
 - **Microsoft Bot Framework**: Un marco de trabajo de Microsoft que permite a los desarrolladores crear chatbots y aplicaciones de conversación para varias plataformas, incluidas las aplicaciones de mensajería, los sitios web y las aplicaciones de escritorio.
 
@@ -430,7 +431,7 @@ Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y resp
 
 ### ChatGPT
 
-Es un modelo de lenguaje entrenado utilizando una gran cantidad de texto en internet. Se trata de una tecnología de procesamiento del lenguaje natural que permite a los usuarios interactuar con el modelo mediante el uso de conversaciones naturales. !Es **orientado a servicios en la nube**! Es decir, se se accede a los servicios online a través de una API.
+Es un modelo de lenguaje entrenado utilizando una gran cantidad de texto en internet. Se trata de una tecnología de procesamiento del lenguaje natural que permite a los usuarios interactuar con el modelo mediante el uso de conversaciones naturales. !Es **orientado a servicios en la nube**! Es decir, se accede a los servicios online a través de una API.
 
 Algunas de las funcionalidades más destacadas incluyen:
 
@@ -448,36 +449,36 @@ Algunas de las funcionalidades más destacadas incluyen:
 
 En la web oficial de OpenAI podemos ver un amplio listado de ejemplos de aplicaciones de esta tecnología:
 
-- Q&A
-- Corrección gramtical 
-- Resumir un texto
+- Q&A.
+- Corrección gramatical.
+- Resumir un texto.
 - Traducir un texto complejo en un simple concepto.
-- Llamadas a APIs para usar técnicas de PLN 
-- Generar comandos de programación a partir de instrucciones en lenguaje natural
-- Traducción automática
-- Generar codificación de programación: para llamar APIs, sentencias SQL, estructuras de programación, etc., desde instrucciones en lenguaje natural
-- Crear tabulaciones a àrtir de texto
-- Separar contenido no estructurado
+- Llamadas a APIs para usar técnicas de PLN.
+- Generar comandos de programación a partir de instrucciones en lenguaje natural.
+- Traducción automática.
+- Generar codificación de programación: para llamar APIs, sentencias SQL, estructuras de programación, etc., desde instrucciones en lenguaje natural.
+- Crear tabulaciones a partir de texto.
+- Separar contenido no estructurado.
 - Tareas de clasificación. 
-  - Extracción de categorías implícitas en textos 
-- Generar descripciones y explicaciones a partir de códigos Python
-- Convertir el título de una película en un emoji
-- Hallar la complejidad computacional de una función
-- Traducir de un lenguaje de programación a otro
+  - Extracción de categorías implícitas en textos.
+- Generar descripciones y explicaciones a partir de códigos Python.
+- Convertir el título de una película en un emoji.
+- Hallar la complejidad computacional de una función.
+- Traducir de un lenguaje de programación a otro.
 - Detección de sentimientos para un fragmento de texto.
 - Explicar una pieza complicada de código.
 - Extraer palabras clave de un bloque de texto.
 - Convertir la descripción de un producto en un texto publicitario.
-- Generador de nombres de productos
-- Solucionar de errores de Python
+- Generador de nombres de productos.
+- Solucionar de errores de Python.
   - Encontrar y corregir errores en el código fuente.
-- Crear de hojas de cálculo
-- Responder preguntas de JavaScript
-- Responder preguntas sobre modelos de lenguaje
+- Crear de hojas de cálculo.
+- Responder preguntas de JavaScript.
+- Responder preguntas sobre modelos de lenguaje.
 - Crear una lista de elementos para un tema determinado.
-- Extracción de información
-- Crear  microhistorias
-- Convertir texto en de tercera persona
+- Extracción de información.
+- Crear  microhistorias.
+- Convertir texto en tercera persona.
 - Generar esquemas para un tema.
 - Conversación abierta con un asistente de IA.
 
@@ -545,27 +546,117 @@ Algunas alternativas son:
 
 - [**LaMDA de Google AI**](https://arxiv.org/pdf/2201.08239.pdf): un modelo de lenguaje entrenado para **aplicaciones de diálogo**. Está pre-entrenado en de ~3 billones de documentos y ~1 billones de diálogos y ajustado en datos generados por humanos para mejorar la calidad, la seguridad y la veracidad del texto generado. También está ajustado para aprender a llamar a un sistema externo de recuperación de información, como la Búsqueda de Google, una calculadora y un traductor, lo que lo convierte en un candidato mucho más fuerte para reemplazar la Búsqueda de Google que ChatGPT. Es un decodificador de  135 billones parámetros solo el transformer.
 
-- [**PaLM de Google AI**](https://arxiv.org/pdf/2204.02311.pdf) - El más grande de todos: ¡540 billlones de parámetros! Con capacidades innovadoras en aritmética y razonamiento de sentido común. Está entrenado en 780 mil millones de tokens provenientes de conversaciones en redes sociales multilingües, páginas web multilingües filtradas, libros, repositorios de GitHub, Wikipedia multilingüe y noticias.
+- [**PaLM de Google AI**](https://arxiv.org/pdf/2204.02311.pdf) - El más grande de todos: ¡540 billones de parámetros! Con capacidades innovadoras en aritmética y razonamiento de sentido común. Está entrenado en 780 mil millones de tokens provenientes de conversaciones en redes sociales multilingües, páginas web multilingües filtradas, libros, repositorios de GitHub, Wikipedia multilingüe y noticias.
 
 - [**HuggingChat**](https://huggingface.co/chat/) es una alternativa de código abierto a ChatGPT, desarrollada por Hugging Face. A diferencia de ChatGPT, HuggingChat está disponible para todos y se basa en los mejores modelos de chat de la comunidad. Su modelo actual es [mistralai/Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1)
 
-### Instrución de modelos 
+### Métodos para Optimizar Modelos Preentrenados
 
-La técnica de instrucción de modelos (Instruction-Tuning,IT) es crucial para mejorar las capacidades y la controlabilidad de los modelos de lenguaje grandes (LLMs).
+La ingeniería de prompts (_prompt engineering_), el ajuste de prompts (_prompt tuning_) y el ajuste fino (_fine-tuning_) son tres métodos distintos aplicados a modelos de lenguaje preentrenados (LLMs) para mejorar su rendimiento en dominios nuevos o tareas específicas. Estos métodos no son mutuamente excluyentes y cada uno está orientado a un caso de uso particular.
+
+Cada una de estas técnicas ofrece un enfoque diferente para aprovechar las capacidades de los modelos preentrenados. La elección entre ellas depende de las necesidades específicas de la aplicación, como la disponibilidad de recursos computacionales, el nivel de personalización requerido para el modelo y el grado de interacción deseado con los parámetros de aprendizaje del modelo.
+
+Método | Demanda de Recursos | Requiere Entrenamiento | Ideal Para
+--- | --- | --- | ---
+_Prompt engineering_ | Ninguna | No | Adaptaciones rápidas sin costo computacional.
+_Prompt tuning_ | Baja | Sí | Mantener la integridad del modelo en múltiples tareas.
+_Fine-tuning_ | Alta | Sí | Tareas que requieren una personalización profunda del modelo.
+
+
+#### Ingeniería de prompts (_Prompt Engineering_)
+
+La ingeniería de prompts no implica ningún tipo de entrenamiento o reentrenamiento. Se basa completamente en que el usuario diseñe prompts específicos para el modelo. Requiere un entendimiento detallado de las capacidades de procesamiento del modelo y aprovecha el conocimiento intrínseco ya integrado en el modelo. La ingeniería de prompts no requiere recursos computacionales, ya que se basa únicamente en la formulación estratégica de entradas para obtener los resultados deseados.
+
+Entre las técnicas más populares de ingeniería de prompts tenemos las siguientes.
+
+- **Zero-shot**: En este tipo de *promts* no se especifica ningún ejemplo, sino que directamente se le pide que realice algo. Por ejemplo, si estamos en la tarea de análisis de sentimientos, un prompt de *zero-shot* podría ser
+  ```
+  "No me ha gustado la película Dune parte 2"?. Sentimiento:
+  ```
+
+- **Few-shot**: En este caso, las plantillas sí que incluyen algún ejemplo. Volviendo al ejemplo anterior, una plantilla *few-shot* podría ser:
+  ```
+  "No me ha gustado la película Dune parte 2"?. Sentimiento: negativo.
+  "Me ha gustado la película Kung Fu Panda 4". Sentimiento:
+  ```
+
+- **Chain-of-Thoughts**: Es una técnica que guía a los LLMs para que expliquen, paso a paso, cómo resuelven un problema antes de proporcionar la respuesta final. Este enfoque mejora sus capacidades de razonamiento al incentivar al modelo a descomponer problemas complejos en una secuencia lógica de pasos, imitando un proceso de pensamiento humano. Como resultado, los LLM pueden abordar de manera más efectiva tareas que requieren razonamiento lógico y soluciones en múltiples etapas, como preguntas de matemáticas o de sentido común. Por ejemplo, un enfoque básico pero efectivo consiste en simplemente usar una plantilla como:
+  ```
+  P: {pregunta}
+  R: Pensemos paso a paso.
+  ```
+  Por supuesto, este enfoque no es mutuamente excluyente con los anteriores, así que podría mejorarse a partir de combinarlo con *few-shot*.
+  ```
+  P: Sumando los siguientes números obtienes un resultado de 3 cifras: 4, 2, 6, 23, 40.
+  R: Pensamos paso a paso. Falso, la suma de 4 + 2 + 6 + 23 + 40 = 75, de dos cifras.
+  P: Sumando los siguientes números obtienes un resultado de 3 cifras: 20, 30, 40, 55.
+  R: Pensemos paso a paso. Verdadero, la suma de 20 + 30 + 40 + 55 = 145, de 3 cifras.
+  P: {pregunta}
+  R: Pensemos paso a paso.
+  ```
+
+Estas técnicas de ingeniería de prompts también se pueden emplear para construir prompts en vista a ser usadas en _prompt tuning_ (ver siguiente sección). Estos casos se suele hablar de _zero-shot learning_, _few-shot learning_ y _chain of thought learning_.
+
+>  En [este cuaderno de trabajo]() se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.
+
+#### Ajuste de prompts (_Prompt Tuning_)
+
+El ajuste de prompts modifica un conjunto de parámetros adicionales, conocidos como "prompts suaves" o "soft prompts," que se integran en el procesamiento de entrada del modelo. Este método ajusta cómo el modelo interpreta las entradas sin modificar por completo sus pesos, ofreciendo un equilibrio entre mejora del rendimiento y eficiencia de recursos. Es particularmente valioso cuando los recursos computacionales son limitados o cuando se requiere flexibilidad para múltiples tareas, ya que los pesos originales del modelo permanecen sin cambios tras aplicar esta técnica.
+
+![Prompt Tuning](images/bloque3/t4/prompt-tuning.png)
+Figura 8. Prompt Tuning ([fuente](https://arxiv.org/abs/2104.08691)).
+
+Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este [enlace](https://huggingface.co/docs/peft/en/package_reference/prompt_tuning).
+
+> En [este cuaderno de trabajo]() se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo [FLAN-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5) creado por Google.
+
+#### Ajuste fino (_Fine-tuning_)
+
+El ajuste fino es el más intensivo en recursos, ya que implica un reentrenamiento completo del modelo con un conjunto de datos específico para un propósito particular. Esto ajusta los pesos del modelo preentrenado, optimizándolo para captar las sutilezas del conjunto de datos, pero requiere recursos computacionales sustanciales y aumenta el riesgo de sobreajuste. Muchos modelos de lenguaje como ChatGPT pasan por un ajuste fino después de su entrenamiento inicial genérico en la tarea de predicción de la siguiente palabra. El ajuste fino enseña a estos modelos cómo funcionar como asistentes digitales, haciéndolos significativamente más útiles que un modelo entrenado de manera general.
+
+##### Continual pre-training
+
+El _continual pretraining_ es una forma de ajuste fino, pero con distinciones en su contexto y aplicación. A diferencia del ajuste fino tradicional, que adapta un modelo preentrenado a un conjunto de datos específico para una tarea concreta, el _continual pretraining_ implica continuar el entrenamiento de un modelo en nuevos datos después de su fase inicial de preentrenamiento, sin realizar un reentrenamiento completo desde cero.
+
+El objetivo del _continual pretraining_ no es necesariamente optimizar el modelo para una tarea específica, sino actualizar su comprensión basándose en nueva información, preservando al mismo tiempo el conocimiento adquirido en el preentrenamiento original. Esto puede incluir datos generales o específicos de un dominio y puede abarcar múltiples áreas temáticas.
+
+Por ejemplo, mientras que un ajuste fino podría usar un corpus médico para especializar un modelo en tareas médicas, el _continual pretraining_ puede emplearse para extender la capacidad del modelo a manejar un lenguaje nuevo o datos más recientes o cambientes en un dominio sin enfocarse exclusivamente en una tarea concreta.
+
+![Continual pre-training](images/bloque3/t4/continual.png)
+Figura 8. Continual pre-training ([fuente](https://medium.com/@gilinachum/llm-domain-adaptation-using-continued-pre-training-part-1-3-e3d10fcfdae1)).
+
+>  En [este cuaderno de trabajo]() se muestra como realizar un continual pre-training sobre un gran modelo de lenguaje (LLM), concretamente el modelo GPT-2.
+
+##### Fine-tuning LoRA
+
+El ajuste fino utilizando LoRA (Low-Rank Adaptation) es una técnica eficiente que permite adaptar modelos grandes a tareas específicas con un costo computacional mucho menor que el ajuste fino tradicional. LoRA introduce modificaciones en las capas del modelo mediante matrices de baja dimensión, ajustando solo una pequeña parte de los parámetros del modelo preentrenado. Esto reduce significativamente la cantidad de recursos necesarios para el ajuste fino y minimiza el riesgo de sobreajuste.
+
+En lugar de ajustar todos los pesos del modelo, LoRA inserta capas auxiliares que se entrenan para captar las características relevantes del nuevo conjunto de datos o tarea. Estas capas adicionales no afectan los parámetros originales del modelo, permitiendo que este conserve su funcionalidad general y aumentando la flexibilidad para adaptarse a múltiples tareas con un solo modelo base.
+
+Por ejemplo, LoRA es particularmente útil en escenarios donde se necesita adaptar un modelo a diferentes dominios o idiomas sin tener que duplicar el costo de almacenamiento o entrenamiento para cada adaptación. Su enfoque modular y eficiente ha hecho que sea una elección popular en la personalización de grandes modelos de lenguaje.
+
+Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este [enlace](https://huggingface.co/docs/peft/main/en/package_reference/lora).
+
+![Low-Rank Adaptation](images/bloque3/t4/lora.jpg)
+Figura 9. Low-Rank Adaptation ([fuente](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)).
+
+### Instrucción de modelos 
+
+La técnica de instrucción de modelos (Instruction-Tuning, IT) es crucial para mejorar las capacidades y la controlabilidad de los modelos de lenguaje grandes (LLMs).
 
 - **Metodología general de IT**: El ajuste de instrucciones implica entrenar aún más los LLMs utilizando pares de datos de (instrucción, salida). Estos pares consisten en instrucciones humanas y las salidas generadas por el modelo. El objetivo es cerrar la brecha entre la predicción de la siguiente palabra por parte de los LLMs y el objetivo de los usuarios de que los LLMs sigan instrucciones humanas.
-- **Construcción de conjuntos de datos de IT**: Se crean los conjuntos de datos para el ajuste de instrucciones. Estos conjuntos contienen ejemplos de instrucciones junto con las salidas esperadas. Ver figura 8.
+- **Construcción de conjuntos de datos de IT**: Se crean los conjuntos de datos para el ajuste de instrucciones. Estos conjuntos contienen ejemplos de instrucciones junto con las salidas esperadas.
 - **Entrenamiento de modelos de IT**: Son técnicas de entrenamiento específicas utilizadas para ajustar los LLMs según las instrucciones proporcionadas.
 - **Aplicaciones en diferentes modalidades y dominios**: El ajuste de instrucciones se aplica a diversas áreas, como texto, imágenes y otros tipos de datos.
 - **Factores que influyen en los resultados de IT**: El tamaño del conjunto de datos de instrucciones y la generación de salidas de instrucciones son algunos de los factores que afectan los resultados del ajuste de instrucciones.
 
 ![Alt text](images/bloque3/t4/GPT_instrucciones.png)
-Figura 9. Arquitectura de instrucciones GPT.
+Figura 10. Arquitectura de instrucciones GPT.
 
 En el siguiente artículo [<<*Instruction Tuning for Large Language Models: A Survey*>>](https://arxiv.org/pdf/2308.10792.pdf) se revisan las posibles dificultades del IT y las críticas en su contra, además de señalar las deficiencias actuales de las estrategias existentes y sugerir posibles áreas de investigación futura. 
 
 ![Alt text](images/bloque3/t4/GPT_IT_ejemplo.png)
-Figura 10. Ejemplo de instrucciones GPT.
+Figura 11. Ejemplo de instrucciones GPT.
 
 #### FLAN
 
@@ -576,24 +667,12 @@ Para ese instruction-tuning, FLAN define una serie de plantillas, estando estas 
 En la imagen siguiente se muestran los datasets que se utilizan, teniendo FLAN para todos ellos definidas las plantillas para así generar los conjuntos de instrucciones. Verás que todos los datasets están agrupados en las diferentes tareas que se pretenden realizar.
 
 ![alt text](images/bloque3/t4/GPT_IT_datasets.png)
-Figura 11. Datasets de instrucciones.
+Figura 12. Datasets de instrucciones.
 
-Estas plantillas se definen para generar instrucciones tanto de *zero-shot* como de *few-shot*. ¿Qué significa esto?
-
-- *Zero-shot*: En este tipo de *promts* no se especifica ningún ejemplo, sino que directamente se le pide que realice algo. Por ejemplo, si estamos en la tarea de análisis de sentimientos, un prompt de *zero-shot* podría ser
-  ```
-  "No me ha gustado la película Dune parte 2"?. Sentimiento:
-  ```
-- *Few-shot*: Sobre las plantillas de *zero-shot*, FLAN construye plantillas *few-shot*. En este caso, estas plantillas sí que incluyen algún ejemplo. Volviendo al ejemplo anterior, una plantilla *few-shot* podría ser:
-  ```
-  "No me ha gustado la película Dune parte 2"?. Sentimiento: negativo.
-  "Me ha gustado la película Kung Fu Panda 4". Sentimiento:
-  ```
-
-Google tras proponer FLAN, realizó un reentrenamiento de T5, figura 12, con FLAN, estando publicado este modelo en diferentes tamaños en una [colección de Hugging Face](https://huggingface.co/collections/google/flan-t5-release-65005c39e3201fff885e22fb). En el siguiente artículo [<<*Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer*>>](https://paperswithcode.com/method/t5), se exploran las técnicas de aprendizaje por transferencia para NLP y se introducen un marco unificado que convierte todos los problemas de lenguaje basados en texto en un formato texto-a-texto.
+Google tras proponer FLAN, realizó un reentrenamiento de T5, Figura 13, con FLAN, estando publicado este modelo en diferentes tamaños en una [colección de Hugging Face](https://huggingface.co/collections/google/flan-t5-release-65005c39e3201fff885e22fb). En el siguiente artículo [<<*Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer*>>](https://paperswithcode.com/method/t5), se exploran las técnicas de aprendizaje por transferencia para NLP y se introducen un marco unificado que convierte todos los problemas de lenguaje basados en texto en un formato texto-a-texto.
 
 ![alt text](images/bloque3/t4/Transformer5.png)
-Figura 12. Text-to-Text Transfer Transformer(T5)
+Figura 13. Text-to-Text Transfer Transformer(T5)
 
 #### Cuaderno de ejemplo de instruction-tuning
 
