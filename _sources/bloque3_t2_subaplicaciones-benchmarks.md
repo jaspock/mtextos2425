@@ -4,7 +4,7 @@ T2. Aplicaciones específicas y Benchmacks
 
 ```{admonition} Nota
 :class: note
-Lee con atención el tema 2 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondoentes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: **plazo límite: 23:59 del 28/02/2024**  (el día anterior a la clase presencial).
+Lee con atención el tema 2 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. **El plazo para realizar las lecturas y el cuestionario es: **plazo límite: 23:59 del 28/02/2024**  (el día anterior a la clase presencial).
 
 Tiempo de dedicación: 1 hora 20 minutos (asíncrona) + 1 hora trabajo independiente
 ```
@@ -21,7 +21,7 @@ Dentro de las aplicaciones generales del PLN existen una **gran diversidad de ap
 
 ### Análisis de sentimientos
 
-El **análisis de sentimientos(SA)** (o minería de opiniones/emociones) se refiere al uso del procesamiento del lenguaje natural para **identificar, extraer, cuantificar y estudiar** sistemáticamente **estados afectivos e información subjetiva**. Se suele aplicar contenido proveniente de **redes sociales** y en línea, y **contenidos** de cualquier otra índole que ofrezcan un **criterio formulado**. Sus **aplicaciones de dominio** desde el **marketing** hasta el **servicio al cliente** y la **medicina clínica**.
+El **análisis de sentimientos (SA)** (o minería de opiniones/emociones) se refiere al uso del procesamiento del lenguaje natural para **identificar, extraer, cuantificar y estudiar** sistemáticamente **estados afectivos e información subjetiva**. Se suele aplicar contenido proveniente de **redes sociales** y en línea, y **contenidos** de cualquier otra índole que ofrezcan un **criterio formulado**. Sus **aplicaciones de dominio** desde el **marketing** hasta el **servicio al cliente** y la **medicina clínica**.
 
 Entre los mayores **promotores** del estudio del análisis de sentimientos para idiomas iberoamericanos podemos encontrar el **TASS** (Taller de Análisis Semántico de la [SEPLN]).
 
@@ -49,7 +49,7 @@ Existen múltiples **estrategias** para **cuantificar** la **opinión social**, 
 
 Con la **combinación** de estos **criterios** podemos formular una **valoración de la reputación** la cual nos permite establecer criterios de **comparación** y **ordinalidad**.
 
-A continuación, se muestra un ejemplo tomado de `[1]` basa en la **herramienta** [**Social Analytics**](https://socialanalytics.gplsi.es/):
+A continuación, se muestra un ejemplo tomado de `[1]` basado en la **herramienta** [**Social Analytics**](https://socialanalytics.gplsi.es/):
 
 ```{image} /images/bloque3/t2/gplsisa.jpg
 :alt: comic xkcd 2421
@@ -86,7 +86,7 @@ Figura 3. Trols y Haters. Tomado de <https://www.dw.com/en/german-anti-hate-spee
 
 #### CiberBullying
 
-Hay evidencias que apuntan a que el **Cyberbullyng** es un **fenómeno** que cada vez más está **presente** entre los **actuales problemas** de nuestros **jóvenes**. El bullyng **siempre ha existido**, pero con la aparición de las **redes sociales** y medios de **comunicación instantáneos** su **efecto** se ha hace **global** y con **mayor impacto**  ``[2]``. 
+Hay evidencias que apuntan a que el **Cyberbullying** es un **fenómeno** que cada vez más está **presente** entre los **actuales problemas** de nuestros **jóvenes**. El bullying **siempre ha existido**, pero con la aparición de las **redes sociales** y medios de **comunicación instantáneos** su **efecto** se ha hace **global** y con **mayor impacto**  ``[2]``. 
 
 El cyberbullying **consiste** en **enviar mensajes instantáneos** o en un chat para **herir a una persona**, **publicar fotos o videos vergonzosos** en las redes sociales y **crear rumores** en línea.
 
@@ -99,7 +99,7 @@ El cyberbullying **consiste** en **enviar mensajes instantáneos** o en un chat 
 :align: center
 ```
 
-Figura 4. Cyberbullyng. Tomado de [3]
+Figura 4. Cyberbullying. Tomado de [3]
 
 Estudio de **fenómenos sociológicos** y como el PLN puede ayudar: 
 
@@ -109,7 +109,7 @@ Estudio de **fenómenos sociológicos** y como el PLN puede ayudar:
 
 #### NER (Name Entity Recognition) y sus aplicaciones
 
-Named Entity Recognition, (**NER**) es la tarea o aplicación de NLP que **ayuda** a **entender** el **qué**, **quién** y **dónde** de una serie de **documentos** [4].
+Named Entity Recognition (**NER**) es la tarea o aplicación de NLP que **ayuda** a **entender** el **qué**, **quién** y **dónde** de una serie de **documentos** [4].
 
 Nació como sustituto de la extracción de información relevante de los textos, se pensó:
 
@@ -256,7 +256,7 @@ Ejemplo tomado de [1]:
 
 #### Natural language inference (Inferencia del Language Natural)
 
-La inferencia del lenguaje natural es la tarea de **determinar si** una **"hipótesis" es verdadera** (implicación), **falsa** (contradicción) o **indeterminada** (neutral) dada una **"premisa"**[NLP Prog TI].
+La inferencia del lenguaje natural es la tarea de **determinar si** una **"hipótesis" es verdadera** (implicación), **falsa** (contradicción) o **indeterminada** (neutral) dada una **"premisa"** [NLP Prog TI].
 
 ##### Contradicción
 
@@ -320,7 +320,7 @@ A continuación, dos **métodos** de modelado de temas:
 
 #### Event extraction(Extracción de eventos)
 
-Es el proceso de **recopilar conocimiento** sobre **incidentes periódicos** que se encuentran en los **textos**, **identificando** automáticamente información sobre lo **qué** sucedió y **cuándo** sucedió.
+Es el proceso de **recopilar conocimiento** sobre **incidentes periódicos** que se encuentran en los **textos**, **identificando** automáticamente información sobre **qué** sucedió y **cuándo** sucedió.
 
 Un elemento **vital** es **identificar** el **tema central** para conseguir su **seguimiento**. Tomado de [EventExtraction]
 
@@ -676,10 +676,9 @@ La librería Transformers **proporciona**:
 - **API para descargar y usar** rápidamente esos **modelos previamente entrenados**
 - está **respaldado/integrado** por librerías como [**PyTorch**](https://pytorch.org/) y [**TensorFlow**](https://www.tensorflow.org/)
 
-#### [Extreme](https://sites.research.google/xtreme) [tabla de rankings, conjunto de datos, códigos fuente. papers, modelos]
+#### [Extreme](https://sites.research.google/xtreme) [tabla de rankings, conjunto de datos, códigos fuente, papers, modelos]
 
-**TRansfer Evaluation of Multilingual Encoders** ([Extreme]) es un benckmark para la **evaluación** de la capacidad de **generalización** entre **idiomas de modelos multilingües** previamente entrenados. Cubre **40 idiomas** tipológicamente diversos (que abarcan 12 familias de idiomas) e incluye **nueve tareas** que colectivamente requieren razonamiento sobre diferentes niveles de sintaxis y semántica.
-[Extreme](https://github.com/google-research/xtreme)
+**TRansfer Evaluation of Multilingual Encoders** ([Extreme](https://github.com/google-research/xtreme)) es un benckmark para la **evaluación** de la capacidad de **generalización** entre **idiomas de modelos multilingües** previamente entrenados. Cubre **40 idiomas** tipológicamente diversos (que abarcan 12 familias de idiomas) e incluye **nueve tareas** que colectivamente requieren razonamiento sobre diferentes niveles de sintaxis y semántica.
 
 
 ## Bibliografía
