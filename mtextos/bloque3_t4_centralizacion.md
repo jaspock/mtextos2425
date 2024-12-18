@@ -1,5 +1,5 @@
 
-T4. Centralización de datasets y modelos: Huggingface, OpenAI
+T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados
 ====================================
 
 ```{admonition} Nota
