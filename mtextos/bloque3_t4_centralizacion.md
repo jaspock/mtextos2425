@@ -608,6 +608,14 @@ Figura 8. Prompt Tuning ([fuente](https://arxiv.org/abs/2104.08691)).
 
 Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este [enlace](https://huggingface.co/docs/peft/en/package_reference/prompt_tuning).
 
+##### Diferencia entre ajuste de prompts y ajuste fino
+
+La diferencia principal entre el ajuste de prompts y el ajuste fino (que se explicará en detalle en la siguiente sección) radica tanto en el alcance de cada técnica como en su propósito.
+
+El ajuste fino permite una personalización profunda del modelo, modificando directamente todos los pesos de su estructura. Es ideal para aplicaciones específicas donde se necesita maximizar el rendimiento para una tarea concreta. Por otro lado, el ajuste de prompts adopta un enfoque más ágil al centrarse únicamente en aprender una representación más inteligente de la entrada, sin tocar los pesos del modelo. Esto lo convierte en una opción más liviana y flexible.
+
+Si bien es cierto que el ajuste fino puede optimizarse con técnicas modernas como LoRA (que se abordará más adelante), conceptualmente estas estrategias representan métodos distintos. El ajuste de prompts no busca alterar el modelo en su totalidad, sino mejorar la forma en que interpreta las entradas.
+
 > En [este cuaderno de trabajo]() se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo [FLAN-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5) creado por Google.
 
 #### Ajuste fino (_Fine-tuning_)
