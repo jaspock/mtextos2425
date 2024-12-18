@@ -666,6 +666,19 @@ En el siguiente artículo [<<*Instruction Tuning for Large Language Models: A Su
 ![Alt text](images/bloque3/t4/GPT_IT_ejemplo.png)
 Figura 11. Ejemplo de instrucciones GPT.
 
+#### Diferencia entre instrucción de modelos y ajuste de prompts
+
+El ajuste de prompts y la instrucción de modelos son enfoques utilizados para optimizar modelos de lenguaje, pero con objetivos y métodos distintos. Mientras que el ajuste de prompts busca mejorar el desempeño del modelo en tareas específicas al optimizar únicamente los vectores del prompt sin alterar los pesos del modelo base, la instrucción de modelos implica modificar los pesos del modelo mediante el entrenamiento con un gran conjunto de datos de instrucciones variadas, lo que amplía su capacidad de generalización a diversas tareas. Como se detalla en la tabla a continuación, el ajuste de prompts es menos complejo computacionalmente y requiere pocos ejemplos enfocados, pero su generalización es limitada. Por otro lado, la instrucción de modelos, aunque más costosa, habilita un mejor entendimiento y ejecución de una amplia gama de instrucciones.
+
+Aspecto | Prompt Tuning | Instruction Tuning
+--- | --- | ---
+Objetivo | Mejorar tareas específicas. | Mejorar la capacidad general de seguir instrucciones.
+Modificación del modelo | No se alteran los pesos del modelo base. | Se ajustan los pesos del modelo.
+Dataset requerido | Pocos ejemplos, enfocados en una tarea concreta. | Gran conjunto de datos diversos de instrucciones.
+Generalización | Limitada a la tarea para la cual se ajustó el prompt. | Amplia, con capacidad para responder a más tareas.
+Complejidad computacional | Menor (ajuste de vectores del prompt). | Mayor (entrenamiento de pesos del modelo).
+
+
 #### FLAN
 
 FLAN (Fine-tuned LAnguage Net) es una "arquitectura" para realizar un instruction-tuning a un modelo de lenguaje pre-entrenado. El objetivo es que usando un pequeño número de actualizaciones sobre un modelo pre-entrenado, el modelo resultante sea capaz de realizar tareas específicas que antes no era capaz de realizar.
