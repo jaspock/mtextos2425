@@ -11,13 +11,13 @@ Los materiales de clase complementan la lectura de algunos capítulos de un libr
 
 ## Prácticas a entregar para este bloque
 
-Durante las sesiones de este bloque, estudiaremos diferentes implementaciones en PyTorch de modelos neuronales para procesar textos. Para cada cuaderno de código se planteará uno o más ejercicios que tendrás que resolver y entregar en forma de un informe final. **Importante:** solo has de realizar los ejercicios que se indican en esta página de la asignatura y no los que pudieran aparecer al final del cuaderno. La longitud máxima de la respuesta de cada ejercicio es de 800 palabras, excluyendo los fragmentos de código. En cualquier caso, mantén estos fragmentos de código al mínimo y no copies todo el código de los cuadernos, sino solo aquellas líneas más relevantes para complementar tu respuesta. Entrega un único PDF final a través de una tutoría de UACloud. El **plazo de entrega acaba el 27 de mayo de 2024** a las 23.59 horas. Las prácticas se pueden hacer en parejas. Recuerda que hay un examen final de la asignatura, por lo que es muy recomendable que ambos miembros del equipo se impliquen de igual manera.
+Durante las sesiones de este bloque, estudiaremos diferentes implementaciones en PyTorch de modelos neuronales para procesar textos. Para cada cuaderno de código se planteará uno o más ejercicios que tendrás que resolver y entregar en forma de un informe final. **Importante:** solo has de realizar los ejercicios que se indican en esta página de la asignatura y no los que pudieran aparecer al final del cuaderno. La longitud máxima de la respuesta de cada ejercicio es de 800 palabras, excluyendo los fragmentos de código. En cualquier caso, mantén estos fragmentos de código al mínimo y no copies todo el código de los cuadernos, sino solo aquellas líneas más relevantes para complementar tu respuesta. Si incluyes fragmentos de código en tu informe, asegúrate de que los incluyes como texto (con los estilos adecuados) y no como imagen; y, mucho menos, como imagen con fondo oscuro, que dificulta la lectura y derrocha tinta en caso de impresión. Entrega un único PDF final a través de una tutoría de UACloud. El **plazo de entrega acaba el 23 de marzo de 2025** a las 23.59 horas. Las prácticas, excepto casos puntuales, se han de hacer en parejas. Recuerda que hay un examen final de la asignatura, por lo que es muy recomendable que ambos miembros del equipo se impliquen de igual manera.
 
-A la hora de corregir los informes de prácticas, no se penalizará el uso de asistentes generativos de texto. Más bien al contrario: el uso de ciertas herramientas de inteligencia artificial puede aumentar tus capacidades profesionales. Sin embargo, el abuso de su uso hasta el punto de despersonalizar tus entregas, desproveerlas de tu estilo personal, de tus propios razonamientos o de contenido relevante sí afectará negativamente a tu nota. Todo esto suele ser bastante fácil de detectar, pero para casos dudosos el profesor podrá realizar una pequeña prueba con el estudiante en la que no se permita el uso de asistentes generativos de texto para comprobar la consistencia entre lo entregado y lo que el estudiante es capaz de producir por sí mismo.
+A la hora de corregir los informes de prácticas, no se penalizará el uso de asistentes generativos de texto. El uso de ciertas herramientas de inteligencia artificial puede aumentar tus capacidades profesionales. Sin embargo, el abuso de su uso hasta el punto de despersonalizar tus entregas, desproveerlas de tu estilo personal, de tus propios razonamientos o de contenido relevante sí afectará negativamente a tu nota. Todo esto suele ser bastante fácil de detectar, pero para casos dudosos el profesor podrá realizar una pequeña prueba con el estudiante en la que no se permita el uso de asistentes generativos de texto para comprobar la consistencia entre lo entregado y lo que el estudiante es capaz de producir por sí mismo.
 
-## Primera sesión (25 de abril de 2024)
+## Primera sesión (06/02/2025)
 
-**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 25/04/2024</span>**
+**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 06/02/2025</span>**
 
 Las actividades a realizar antes de esta clase son:
 
@@ -35,18 +35,20 @@ En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenido
 
 2. **Regresor logístico multinomial**: estudia las probabilidades emitidas por el modelo ya entrenado para cada clase tanto con las frases del cuaderno como con algunas frases nuevas que tú propongas. Juega con frases que estén a medio camino entre diferentes temáticas.
 
-## Segunda sesión (2 de mayo de 2024)
+## Segunda sesión (13/02/2025)
 
-**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 02/05/2024</span>**
+**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 13/02/2025</span>**
 
 Las actividades a realizar antes de esta clase son:
 
 - Lectura y estudio de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/embeddings) sobre la obtención de embeddings incontextuales. Como verás, la página te indica qué contenidos has de leer del libro. Tras una primera lectura, lee las anotaciones del profesor, cuyo objetivo es ayudarte a entender los conceptos clave del capítulo. Después, realiza una segunda lectura del capítulo. En total, esta parte debería llevarte unas 3 horas 🕒️ de trabajo.
 - Lectura y estudio de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/ffw) sobre las redes neuronales hacia delante. En total, esta parte debería llevarte unas 2 horas 🕒️ de trabajo.
-- Primeros pasos en el estudio del modelo transformer. Volveremos a dedicar más horas a esta arquitectura para la próxima sesión de forma que la abordaremos en dos fases. Por ahora, lee con detenimiento la introducción a mecanismos de atención de ["Visualizing A Neural Machine Translation Model"](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/), así como la introducción visual a los transformers de ["The Illustrated Transformer"](http://jalammar.github.io/illustrated-transformer/) y la más elaborada de ["The Illustrated GPT-2"](https://jalammar.github.io/illustrated-gpt2/). A continuación, lee el apartado 9.7 (solo este apartado) del capítulo ["Deep learning architectures for sequence processing"](https://web.archive.org/web/20221216193204/https://web.stanford.edu/~jurafsky/slp3/9.pdf); el objetivo es que entiendas conceptualmente el mecanismo de atención de los transformers, pero no es necesario que en este momento comprendas todos los detalles técnicos (especialmente las ecuaciones del modelo), ya que volverás a dedicarle tiempo a este capítulo más adelante. En total, esta parte debería llevarte ahora unas 3 horas 🕒️ de trabajo.
+- Primeros pasos en el estudio del modelo transformer. Volveremos a dedicar más horas a esta arquitectura para la próxima sesión de forma que la abordaremos en dos fases. Por ahora, lee con detenimiento la introducción a mecanismos de atención de ["Visualizing A Neural Machine Translation Model"](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/), así como la introducción visual a los transformers de ["The Illustrated Transformer"](http://jalammar.github.io/illustrated-transformer/) y la más elaborada de ["The Illustrated GPT-2"](https://jalammar.github.io/illustrated-gpt2/). El objetivo es que entiendas conceptualmente el mecanismo de atención de los transformers, pero no es necesario que en este momento comprendas todos los detalles técnicos (especialmente las ecuaciones del modelo), ya que volverás a dedicarle tiempo a este capítulo más adelante. En total, esta parte debería llevarte ahora unas 3 horas 🕒️ de trabajo.
 - Realización del [test de evaluación](https://forms.gle/Eb3ZwwGxbQp88t4FA) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 
-**<span style="font-size: 1.15em">Contenidos para la sesión presencial del 02/05/2024</span>**
+<!-- A continuación, lee el apartado 9.7 (solo este apartado) del capítulo ["Deep learning architectures for sequence processing"](https://web.archive.org/web/20221216193204/https://web.stanford.edu/~jurafsky/slp3/9.pdf); -->
+
+**<span style="font-size: 1.15em">Contenidos para la sesión presencial del 13/02/2025</span>**
 
 En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenidos de la semana anterior y veremos sendas implementaciones en PyTorch del algoritmo [skip-grams](https://www.dlsi.ua.es/~japerez/materials/transformers/implementacion/#codigo-para-skip-grams) y de un modelo de lengua basado en [redes feedforward](https://www.dlsi.ua.es/~japerez/materials/transformers/implementacion/#codigo-para-un-modelo-de-lengua-con-redes-feedforward).
 
@@ -55,23 +57,42 @@ En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenido
 1. **Skip-grams**: modifica el código para que se pueda seleccionar el tamaño de la ventana L y realiza un pequeño estudio sobre cómo esto afecta a los embeddings obtenidos.
 2. **Skip-grams**: sustituye la parte del código que usa la notación de Einstein por una multiplicación convencional de matrices seguida de una operación que se quede con los valores que nos interesan. Compara los tiempos de ejecución de ambas implementaciones.
 
-## Tercera sesión (9 de mayo de 2024)
 
-**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 09/05/2023</span>**
+🚧 ⚠️ Atención: Los contenidos a partir de este punto no son definitivos y podrían sufrir variaciones.
+
+## Tercera sesión (20/02/2025)
+
+**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 20/02/2025</span>**
 
 Las actividades a realizar antes de esta clase son:
 
 - Afianzar el estudio de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/attention) sobre el modelo transformer y el capítulo correspondiente del libro. En realidad, ya estudiaste para la sesión anterior todos estos conceptos, pero se te pidió que no te detuvieras en exceso en los detalles técnicos del libro. Ahora, es el momento de que vuelvas a leerlo con más calma y consultes también las anotaciones del profesor que hay en la página web. En total, esta parte debería llevarte unas 3 horas 🕒️ de trabajo.
-- Ampliar el estudio del transformer con la arquitectura codificador-descodificador completa, así como con la basada solo en codificador siguiendo para ello las secciones 6.1 a 6.5 de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/attention2/). En total, esta parte debería llevarte unas 3 horas 🕒️ de trabajo.
 - Realiza el [test de evaluación](https://forms.gle/qJMmKi6KGhtKDJtYA) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 
-**<span style="font-size: 1.15em">Contenidos para la sesión del 10/05/2023</span>**
+**<span style="font-size: 1.15em">Contenidos para la sesión del 20/02/2025</span>**
+
+En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenidos de la semana anterior y veremos cómo se [implementa el modelo transformer en PyTorch](https://www.dlsi.ua.es/~japerez/materials/transformers/implementacion/#codigo-para-el-transformer).
+
+**Ejercicios**: no hay ejercicios para esta sesión.
+
+
+## Cuarta sesión (27/02/2025)
+
+**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 27/02/2025</span>**
+
+Las actividades a realizar antes de esta clase son:
+
+- Ampliar el estudio del transformer con la arquitectura codificador-descodificador completa, así como con la basada solo en codificador siguiendo para ello las secciones de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/attention2/). En total, esta parte debería llevarte unas 3 horas 🕒️ de trabajo.
+- Realiza el [test de evaluación]() de estos contenidos. Son pocas preguntas y te llevará unos minutos.
+
+**<span style="font-size: 1.15em">Contenidos para la sesión del 20/02/2025</span>**
 
 En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenidos de la semana anterior y veremos cómo se [implementa el modelo transformer en PyTorch](https://www.dlsi.ua.es/~japerez/materials/transformers/implementacion/#codigo-para-el-transformer).
 
 **Ejercicios**: para este bloque, haz los siguientes ejercicios. Repasa las normas que se indican más arriba sobre cómo entregar los ejercicios.
 
-1. **Modelos de lengua basados en transformers**: léete este tutorial [sencillo](https://pub.towardsai.net/multi-query-attention-explained-844dfc4935bf) y este otro más [avanzado](https://blog.fireworks.ai/multi-query-attention-is-all-you-need-db072e758055) sobre el concepto de multi-query attention y, a continuación, modifica el código del modelo de lengua basado en transformers para que use multi-query attention sin implementar todavía una caché KV. Realiza un pequeño estudio sobre cómo afecta esto a la calidad del modelo; para esto puedes medir qué probabilidad da el modelo a algunas frases similares a las del conjunto de entrenamiento. Adicionalmente, estudia cómo afecta a la calidad del modelo el uso de una caché KV que tendrás que implementar. Aunque sería deseable poder medir el impacto de ambas cosas en los tiempos de ejecución, no es necesario que lo hagas, ya que probablemente no puedas medirlo con precisión suficiente salvo que incrementes el tamaño de los datos de entrenamiento y el número de parámetros del modelo. Explica en tu respuesta las ideas básicas tanto de multi-query attention como de la caché KV. *Nota:* este ejercicio es más complejo que los anteriores por lo que requerirá un mayor esfuerzo por tu parte; la nota final de tu informe se basará un 35% en los ejercicios de la sesión 1, un 35% en los de la sesión 2 y un 30% en los de esta sesión, por lo que se puede considerar que es un ejercicio *para nota*. Puedes usar, además, el doble de espacio para responder a este ejercicio.
+1. **Modelos de lengua basados en transformers**: léete este tutorial [sencillo](https://pub.towardsai.net/multi-query-attention-explained-844dfc4935bf) y este otro más [avanzado](https://fireworks.ai/blog/multi-query-attention-is-all-you-need) sobre el concepto de multi-query attention y, a continuación, modifica el código del modelo de lengua basado en transformers para que use multi-query attention sin implementar todavía una caché KV. Realiza un pequeño estudio sobre cómo afecta esto a la calidad del modelo; para esto puedes medir qué probabilidad da el modelo a algunas frases similares a las del conjunto de entrenamiento. Adicionalmente, estudia cómo afecta a la calidad del modelo el uso de una caché KV que tendrás que implementar. Aunque sería deseable poder medir el impacto de ambas cosas en los tiempos de ejecución, no es necesario que lo hagas, ya que probablemente no puedas medirlo con precisión suficiente salvo que incrementes el tamaño de los datos de entrenamiento y el número de parámetros del modelo. Explica en tu respuesta las ideas básicas tanto de multi-query attention como de la caché KV. *Nota:* este ejercicio es más complejo que los anteriores por lo que requerirá un mayor esfuerzo por tu parte; la nota final de tu informe se basará un 35% en los ejercicios de la sesión 1, un 35% en los de la sesión 2 y un 30% en los de esta sesión, por lo que se puede considerar que es un ejercicio *para nota*. Puedes usar, además, el doble de espacio para responder a este ejercicio.
+
 
 <!--
 

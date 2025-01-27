@@ -737,7 +737,7 @@ En total considera 65 hyperparametros: 15 boleanos, 14 categoricos, 17 discretos
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/t5_autosklearn_espacioBusq.jpg"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/t5_autosklearn_espacioBusq.jpg" style="width: 600px;" /></a>
 <p>Figura 4. Configuraciión estructurada del espacio de búsqueda. Tomado de [1].</p>
 <p>El siguiente ejemplo muestra la simplicidad de invocar procediminetos con Autosklearn</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">autosklearn.classification</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">autosklearn.classification</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="bp">cls</span> <span class="o">=</span> <span class="n">autosklearn</span><span class="o">.</span><span class="n">classification</span><span class="o">.</span><span class="n">AutoSklearnClassifier</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="bp">cls</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">predictions</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>

@@ -20,7 +20,7 @@ Novedades
 :widths: 10 90
 :class: tablita
 
-* - 15 Ene 
+* - 27 Ene 
   - Se ha publicado la primera versión de los materiales de la asignatura. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
 
 `````
@@ -39,6 +39,8 @@ Novedades
 (label_actividades_previas)=
 Actividades previas
 -------------------
+
+- Antes de la clase del 06/02/2025: lee los contenidos y visualiza los vídeos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test10] (plazo límite: 23:59 del 05/02/2025). Accede al test con tu cuenta de `gcloud.ua.es`.
 
 <!--
 - Antes de la clase del 09/05/2023: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test12]  (plazo límite: 23:59 del 08/05/2023); termina también las actividades prácticas que tengas pendientes.
@@ -85,17 +87,18 @@ Actividades previas
 Guía docente y normas del curso
 -------------------------------
 
-Estos son los materiales de clase de la asignatura Minería de Textos, coordinada por el profesor [Juan Antonio Pérez Ortiz][japerez_url] ([@japer3z][japerez_twitter]) de la Universitat d'Alacant e impartida también por los profesores [Miquel Esplà Gomis][miquel url] y [Yoan Gutiérrez Vázquez][yoan url]. 
+Estos son los materiales de clase de la asignatura Minería de Textos, coordinada por el profesor [Juan Antonio Pérez Ortiz][japerez_url] ([X][japerez_twitter], [LinkedIn][japerez_linkedin]) de la Universitat d'Alacant e impartida junto con este por los profesores [Miquel Esplà Gomis][miquel url] y [Yoan Gutiérrez Vázquez][yoan url]. 
 
 Para obtener información sobre la evaluación de la asignatura puedes consultar la [guía docente][guía]. Algunos aspectos adicionales que no están recogidos en la guía son los siguientes:
 
 [japerez_url]: https://cvnet.cpd.ua.es/curriculum-breve/es/perez-ortiz-juan-antonio/15404
+[japerez_linkedin]: linkedin.com/in/japer3z
 [miquel url]: https://cvnet.cpd.ua.es/curriculum-breve/es/espla-gomis-miquel/16262
 [yoan url]: https://cvnet.cpd.ua.es/curriculum-breve/es/gutierrez-vazquez-yoan/49618
 [japerez_twitter]: https://twitter.com/japer3z
 [guía]: https://cvnet.cpd.ua.es/Guia-Docente/GuiaDocente/Index?wlengua=es&wcodasi=43459&scaca=2024-25
 
-- Las prácticas se realizan individualmente o en parejas, según se indique en el enunciado de cada una de ellas. Cada uno de los tres bloques de la asignatura tendrá uno o más trabajos prácticos. Los trabajos del primer bloque contarán un 15% en la nota final de las prácticas, los del segundo un 50% y un 35% los del tercero.
+- Las prácticas se realizan individualmente o en parejas, según se indique en el enunciado de cada una de ellas. Cada uno de los tres bloques de la asignatura tendrá uno o más trabajos prácticos. Los trabajos del bloque de técnicas contarán un 40% en la nota final de las prácticas, los del bloque de lingüística computacional un 20% y un 40% los del bloque de aplicaciones
 - La asistencia a prácticas es obligatoria. Se pasará lista en cada sesión presencial. Se puede tener un máximo de 3 faltas sin justificar. Si se acumulan más faltas no justificadas, no se podrá superar la parte de prácticas en la primera convocatoria, pero sí en la segunda (si se realizan las entregas correspondientes antes del día del examen) o en las otras convocatorias extraordinarias.
 
 El [código fuente][fuente] de estas páginas, escrito en MyST para Jupyter Book, está disponible en Github.
@@ -119,7 +122,11 @@ La asignatura se centra en presentar los fundamentos, características y aplicac
 [tareas]: https://super.gluebenchmark.com/tasks/
 [superglue]: https://www.microsoft.com/en-us/research/blog/microsoft-deberta-surpasses-human-performance-on-the-superglue-benchmark/
 
-La asignatura tiene tres bloques: el primero ("{ref}`label_introduccion`") introduce los fundamentos de la lingüística computacional; en el segundo ("{ref}`label_aplicaciones`") se discuten algunas de las aplicaciones más importantes del procesamiento del lenguaje natural; por último, el tercer bloque ("{ref}`label_tecnicas`") estudia con cierto nivel de detalle las arquitecturas neuronales más empleadas en el área. 
+La asignatura tiene tres bloques: 
+
+1. ("{ref}`label_tecnicas`") estudia con cierto nivel de detalle las arquitecturas neuronales más empleadas en el área.
+2. ("{ref}`label_introduccion`") introduce los fundamentos de la lingüística computacional.
+3. ("{ref}`label_aplicaciones`") se discuten algunas de las aplicaciones más importantes del procesamiento del lenguaje natural.
 
 ### Para saber más 
 
