@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>10. T4. Centralización de datasets y modelos: Huggingface, OpenAI &#8212; Minería de Textos</title>
+    <title>T4. Centralización de datasets y modelos: Huggingface, OpenAI &#8212; Minería de Textos</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11. T5. Auto Machine Learning(AutoML)" href="bloque3_t5_automl.html" />
-    <link rel="prev" title="9. T3. Métricas de Evaluación" href="bloque3_t3.1_metricas.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -128,116 +126,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Bloque LINGCOMP
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque1.html">
-   2. Introducción. Minería de textos y procesamiento del lenguaje natural
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque1_Practica1.html">
-   3. Práctica 1a: PLN con SpaCy
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque1_Practica2.html">
-   4. Práctica 1b :
-   <em>
-    Topic modeling
-   </em>
-   .
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Bloque APLICACIONES
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3.html">
-   5. Aplicaciones de la minería de textos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_t1_aplicaciones.html">
-   6. T1. Aplicaciones generales
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_t2_subaplicaciones-benchmarks.html">
-   7. T2. Aplicaciones específicas y Benchmacks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_t2.1_analisis_sentimientos.html">
-   8. T2.1. Aplicaciones específicas. Análisis de Sentimientos
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_t3.1_metricas.html">
-   9. T3. Métricas de Evaluación
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   10. T4. Centralización de datasets y modelos: Huggingface, OpenAI
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_t5_automl.html">
-   11. T5. Auto Machine Learning(AutoML)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_t5.1_autogoal.html">
-   12. T5.1. AutoGOAL
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_p1_SA-Pipeline-Reviews.html">
-   13. P1.1. Pipeline simple
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_p2_SA-Transformers-Basic.html">
-   14. P1.2. APIs Transformers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_p3_SA-Transformers-Training-FineTuning.html">
-   15. P2. Reajustar modelos Transformers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_p4_SA-Transformers-Training-Custom.html">
-   16. P3. Composición de vectores de características
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_p5-SA-Ensemble.html">
-   17. P4. Ensemble de pipelines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="bloque3_ev.html">
-   18. Ev. Evaluación de prácticas del Bloque 2
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
   Utilidades
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="doc_utils/creditosColab/web.html">
-   19. Uso de Google Colab con una VM personalizada
+   2. Uso de Google Colab con una VM personalizada
   </a>
  </li>
 </ul>
@@ -374,142 +269,142 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduccion">
-   10.1. Introducción
+   Introducción
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#repositorio-de-datasets">
-   10.2. Repositorio de Datasets
+   Repositorio de Datasets
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#listar-datasets-disponibles-en-el-repositorio">
-     10.2.1. Listar datasets disponibles en el repositorio
+     Listar datasets disponibles en el repositorio
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#como-cargar-datasets">
-     10.2.2. ¿Cómo cargar datasets?
+     ¿Cómo cargar datasets?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tareas-subtareas-e-idiomas-de-datasets">
-     10.2.3. Tareas, subtareas e idiomas de datasets
+     Tareas, subtareas e idiomas de datasets
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#repositorio-de-modelos-pre-entrenados">
-   10.3. Repositorio de Modelos pre-entrenados
+   Repositorio de Modelos pre-entrenados
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#listado-de-pipelines">
-     10.3.1. Listado de Pipelines
+     Listado de Pipelines
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma">
-     10.3.2. ¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?
+     ¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuraciones-de-modelos-transformers">
-     10.3.3. Configuraciones de modelos transformers
+     Configuraciones de modelos transformers
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tecnologias-de-generacion">
-   10.4. Tecnologías de generación
+   Tecnologías de generación
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gpt">
-     10.4.1. GPT
+     GPT
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#entrenamiento-del-gpt">
-       10.4.1.1. Entrenamiento del GPT
+       Entrenamiento del GPT
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ventajas">
-       10.4.1.2. Ventajas
+       Ventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#desventajas">
-       10.4.1.3. Desventajas
+       Desventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#decodificacion-de-gpt">
-       10.4.1.4. Decodificación de GPT
+       Decodificación de GPT
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#copilot">
-     10.4.2. Copilot
+     Copilot
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       10.4.2.1. Ventajas
+       Ventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       10.4.2.2. Desventajas
+       Desventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#alternativas-a-copilot">
-       10.4.2.3. Alternativas a Copilot
+       Alternativas a Copilot
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chatgpt">
-     10.4.3. ChatGPT
+     ChatGPT
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ejemplo-de-uso-de-la-api-chatgpt">
-       10.4.3.1. Ejemplo de uso de la API ChatGPT:
+       Ejemplo de uso de la API ChatGPT:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
-       10.4.3.2. Ventajas
+       Ventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id4">
-       10.4.3.3. Desventajas
+       Desventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#alternativas-a-chatgpt">
-       10.4.3.4. Alternativas a ChatGPT
+       Alternativas a ChatGPT
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#metodos-para-optimizar-modelos-preentrenados">
-     10.4.4. Métodos para Optimizar Modelos Preentrenados
+     Métodos para Optimizar Modelos Preentrenados
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ingenieria-de-prompts-prompt-engineering">
-       10.4.4.1. Ingeniería de prompts (
+       Ingeniería de prompts (
        <em>
         Prompt Engineering
        </em>
@@ -518,7 +413,7 @@ title="Print to PDF"
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ajuste-de-prompts-prompt-tuning">
-       10.4.4.2. Ajuste de prompts (
+       Ajuste de prompts (
        <em>
         Prompt Tuning
        </em>
@@ -527,7 +422,7 @@ title="Print to PDF"
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ajuste-fino-fine-tuning">
-       10.4.4.3. Ajuste fino (
+       Ajuste fino (
        <em>
         Fine-tuning
        </em>
@@ -536,12 +431,12 @@ title="Print to PDF"
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#continual-pre-training">
-         10.4.4.3.1. Continual pre-training
+         Continual pre-training
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#fine-tuning-lora">
-         10.4.4.3.2. Fine-tuning LoRA
+         Fine-tuning LoRA
         </a>
        </li>
       </ul>
@@ -550,17 +445,17 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#instruccion-de-modelos">
-     10.4.5. Instrucción de modelos
+     Instrucción de modelos
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flan">
-       10.4.5.1. FLAN
+       FLAN
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cuaderno-de-ejemplo-de-instruction-tuning">
-       10.4.5.2. Cuaderno de ejemplo de instruction-tuning
+       Cuaderno de ejemplo de instruction-tuning
       </a>
      </li>
     </ul>
@@ -569,7 +464,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliografia">
-   10.5. Bibliografía
+   Bibliografía
   </a>
  </li>
 </ul>
@@ -593,142 +488,142 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#introduccion">
-   10.1. Introducción
+   Introducción
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#repositorio-de-datasets">
-   10.2. Repositorio de Datasets
+   Repositorio de Datasets
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#listar-datasets-disponibles-en-el-repositorio">
-     10.2.1. Listar datasets disponibles en el repositorio
+     Listar datasets disponibles en el repositorio
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#como-cargar-datasets">
-     10.2.2. ¿Cómo cargar datasets?
+     ¿Cómo cargar datasets?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tareas-subtareas-e-idiomas-de-datasets">
-     10.2.3. Tareas, subtareas e idiomas de datasets
+     Tareas, subtareas e idiomas de datasets
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#repositorio-de-modelos-pre-entrenados">
-   10.3. Repositorio de Modelos pre-entrenados
+   Repositorio de Modelos pre-entrenados
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#listado-de-pipelines">
-     10.3.1. Listado de Pipelines
+     Listado de Pipelines
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma">
-     10.3.2. ¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?
+     ¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#configuraciones-de-modelos-transformers">
-     10.3.3. Configuraciones de modelos transformers
+     Configuraciones de modelos transformers
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tecnologias-de-generacion">
-   10.4. Tecnologías de generación
+   Tecnologías de generación
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#gpt">
-     10.4.1. GPT
+     GPT
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#entrenamiento-del-gpt">
-       10.4.1.1. Entrenamiento del GPT
+       Entrenamiento del GPT
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ventajas">
-       10.4.1.2. Ventajas
+       Ventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#desventajas">
-       10.4.1.3. Desventajas
+       Desventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#decodificacion-de-gpt">
-       10.4.1.4. Decodificación de GPT
+       Decodificación de GPT
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#copilot">
-     10.4.2. Copilot
+     Copilot
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id1">
-       10.4.2.1. Ventajas
+       Ventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id2">
-       10.4.2.2. Desventajas
+       Desventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#alternativas-a-copilot">
-       10.4.2.3. Alternativas a Copilot
+       Alternativas a Copilot
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#chatgpt">
-     10.4.3. ChatGPT
+     ChatGPT
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ejemplo-de-uso-de-la-api-chatgpt">
-       10.4.3.1. Ejemplo de uso de la API ChatGPT:
+       Ejemplo de uso de la API ChatGPT:
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id3">
-       10.4.3.2. Ventajas
+       Ventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id4">
-       10.4.3.3. Desventajas
+       Desventajas
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#alternativas-a-chatgpt">
-       10.4.3.4. Alternativas a ChatGPT
+       Alternativas a ChatGPT
       </a>
      </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#metodos-para-optimizar-modelos-preentrenados">
-     10.4.4. Métodos para Optimizar Modelos Preentrenados
+     Métodos para Optimizar Modelos Preentrenados
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ingenieria-de-prompts-prompt-engineering">
-       10.4.4.1. Ingeniería de prompts (
+       Ingeniería de prompts (
        <em>
         Prompt Engineering
        </em>
@@ -737,7 +632,7 @@ title="Print to PDF"
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ajuste-de-prompts-prompt-tuning">
-       10.4.4.2. Ajuste de prompts (
+       Ajuste de prompts (
        <em>
         Prompt Tuning
        </em>
@@ -746,7 +641,7 @@ title="Print to PDF"
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ajuste-fino-fine-tuning">
-       10.4.4.3. Ajuste fino (
+       Ajuste fino (
        <em>
         Fine-tuning
        </em>
@@ -755,12 +650,12 @@ title="Print to PDF"
       <ul class="nav section-nav flex-column">
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#continual-pre-training">
-         10.4.4.3.1. Continual pre-training
+         Continual pre-training
         </a>
        </li>
        <li class="toc-h5 nav-item toc-entry">
         <a class="reference internal nav-link" href="#fine-tuning-lora">
-         10.4.4.3.2. Fine-tuning LoRA
+         Fine-tuning LoRA
         </a>
        </li>
       </ul>
@@ -769,17 +664,17 @@ title="Print to PDF"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#instruccion-de-modelos">
-     10.4.5. Instrucción de modelos
+     Instrucción de modelos
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flan">
-       10.4.5.1. FLAN
+       FLAN
       </a>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#cuaderno-de-ejemplo-de-instruction-tuning">
-       10.4.5.2. Cuaderno de ejemplo de instruction-tuning
+       Cuaderno de ejemplo de instruction-tuning
       </a>
      </li>
     </ul>
@@ -788,7 +683,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bibliografia">
-   10.5. Bibliografía
+   Bibliografía
   </a>
  </li>
 </ul>
@@ -802,7 +697,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="t4-centralizacion-de-datasets-y-modelos-huggingface-openai">
-<h1><span class="section-number">10. </span>T4. Centralización de datasets y modelos: Huggingface, OpenAI<a class="headerlink" href="#t4-centralizacion-de-datasets-y-modelos-huggingface-openai" title="Permalink to this headline">#</a></h1>
+<h1>T4. Centralización de datasets y modelos: Huggingface, OpenAI<a class="headerlink" href="#t4-centralizacion-de-datasets-y-modelos-huggingface-openai" title="Permalink to this headline">#</a></h1>
 <div class="note admonition">
 <p class="admonition-title">Nota</p>
 <p>Lee con atención el tema 4 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. <strong>El plazo para realizar las lecturas y el cuestionario es: ** Cierre 23:59 del 13/03/2024</strong> (el día anterior a la clase presencial).</p>
@@ -816,12 +711,12 @@ title="Print to PDF"
 <li><p><a class="reference external" href="#tecnologias-de-generacion">Tecnologías de Generación (GPT, Copilot, ChatGPT)</a></p></li>
 </ul>
 <section id="introduccion">
-<h2><span class="section-number">10.1. </span>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="http://Huggingface.co">Huggingface.co</a> una compañía centrada en el PLN la cual ha desarrollado las <a class="reference external" href="https://huggingface.co/transformers/"><strong>librerías Transformers</strong></a>, <strong>centralizado datasets</strong> y ha <strong>creado modelos de aprendizaje pre-entrenados</strong> disponibles a través de sus librerías de programación.
 Las librerías de Huggingface actualmente dan soporte a empresas muy importantes del mercado tecnológico. Ver <a class="reference external" href="https://huggingface.co/">https://huggingface.co/</a>.</p>
 </section>
 <section id="repositorio-de-datasets">
-<h2><span class="section-number">10.2. </span>Repositorio de Datasets<a class="headerlink" href="#repositorio-de-datasets" title="Permalink to this headline">#</a></h2>
+<h2>Repositorio de Datasets<a class="headerlink" href="#repositorio-de-datasets" title="Permalink to this headline">#</a></h2>
 <p>Proporciona conjuntos de datos para muchas tareas de PLN como clasificación de texto, respuesta a preguntas, modelado de lenguaje, etc.<br />
 Instalación de librería de manipulación de datasets
 Para la <strong>instalación</strong> de la librería de manipulación de datasets se debe ejecutar la siguiente instrucción pip:</p>
@@ -838,7 +733,7 @@ Para la <strong>instalación</strong> de la librería de manipulación de datase
 </pre></div>
 </div>
 <section id="listar-datasets-disponibles-en-el-repositorio">
-<h3><span class="section-number">10.2.1. </span>Listar datasets disponibles en el repositorio<a class="headerlink" href="#listar-datasets-disponibles-en-el-repositorio" title="Permalink to this headline">#</a></h3>
+<h3>Listar datasets disponibles en el repositorio<a class="headerlink" href="#listar-datasets-disponibles-en-el-repositorio" title="Permalink to this headline">#</a></h3>
 <p>Para listar los conjuntos de datos disponibles es necesario ejecutar la siguiente función <code class="docutils literal notranslate"><span class="pre">datasets.list_datasets()</span></code> que pertenece a la clase <code class="docutils literal notranslate"><span class="pre">datasets</span></code>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">list_datasets</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">datasets_list</span> <span class="o">=</span> <span class="n">list_datasets</span><span class="p">()</span>
@@ -859,7 +754,7 @@ Para la <strong>instalación</strong> de la librería de manipulación de datase
 </ol>
 </section>
 <section id="como-cargar-datasets">
-<h3><span class="section-number">10.2.2. </span>¿Cómo cargar datasets?<a class="headerlink" href="#como-cargar-datasets" title="Permalink to this headline">#</a></h3>
+<h3>¿Cómo cargar datasets?<a class="headerlink" href="#como-cargar-datasets" title="Permalink to this headline">#</a></h3>
 <p>Haciendo uso de la función <code class="docutils literal notranslate"><span class="pre">load_dataset</span></code> se nos permite recuperar cualquier dataset registrado en el repositorio. Por ejemplo, el dataset <strong>MRPC</strong> que ha sido proporcionado en el índice de referencia GLUE (<a class="reference external" href="https://gluebenchmark.com/leaderboard">https://gluebenchmark.com/leaderboard</a>).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dataset</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;glue&#39;</span><span class="p">,</span> <span class="s1">&#39;mrpc&#39;</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">)</span>
@@ -882,7 +777,7 @@ Para la <strong>instalación</strong> de la librería de manipulación de datase
 </ul>
 </section>
 <section id="tareas-subtareas-e-idiomas-de-datasets">
-<h3><span class="section-number">10.2.3. </span>Tareas, subtareas e idiomas de datasets<a class="headerlink" href="#tareas-subtareas-e-idiomas-de-datasets" title="Permalink to this headline">#</a></h3>
+<h3>Tareas, subtareas e idiomas de datasets<a class="headerlink" href="#tareas-subtareas-e-idiomas-de-datasets" title="Permalink to this headline">#</a></h3>
 <p><strong>Categorías:</strong>
 En este repositorio podemos encontrar un amplio catalogo de tareas (categorías) por las cuales filtrar y especificar el tipo de dateset que estamos buscando. Hemos de resaltar que estos datasets existen originalmente en diferentes formatos, nos obstante en una vez incluido en este repositorio, el formato es estandar. Por tal motivo, a través de las librías de manipulación (las mencionadas enteriormente) que ofrece Huggingface, podemos acceder a ellos y gestionarlos. Además, estos datasets se encuentran caracterizados por <strong>idioma</strong>, <strong>subtarea</strong> en la que se puede utilizar y la <strong>licencia de uso</strong>.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/hf_dataset_categoria.jpg"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/hf_dataset_categoria.jpg" style="width: 300px;" /></a>
@@ -893,7 +788,7 @@ En este repositorio podemos encontrar un amplio catalogo de tareas (categorías)
 </section>
 </section>
 <section id="repositorio-de-modelos-pre-entrenados">
-<h2><span class="section-number">10.3. </span>Repositorio de Modelos pre-entrenados<a class="headerlink" href="#repositorio-de-modelos-pre-entrenados" title="Permalink to this headline">#</a></h2>
+<h2>Repositorio de Modelos pre-entrenados<a class="headerlink" href="#repositorio-de-modelos-pre-entrenados" title="Permalink to this headline">#</a></h2>
 <p>La biblioteca de Transformers permite el <strong>uso de modelos previamente entrenados</strong> para tareas de Comprensión del lenguaje natural (NLU), i.e. como analizar el sentimiento de un texto, y Generación del lenguaje natural (NLG), i.e. como completar un mensaje con texto nuevo o traducir a otro idioma.
 A groso modo listamos los modelos que nos podemos encontrar</p>
 <ul class="simple">
@@ -971,11 +866,11 @@ A mediados de 2022 esta plataforma federativa da un paso agigantado expandiendo 
 </pre></div>
 </div>
 <section id="listado-de-pipelines">
-<h3><span class="section-number">10.3.1. </span>Listado de Pipelines<a class="headerlink" href="#listado-de-pipelines" title="Permalink to this headline">#</a></h3>
+<h3>Listado de Pipelines<a class="headerlink" href="#listado-de-pipelines" title="Permalink to this headline">#</a></h3>
 <p>En Huggingface podemos encontrar una serie de Pipelines ya preparados para enfrentar tareas concretas a los cuales les podemos suministrar distintos modelos y tokenizadores transformes. Ver ejemplos: <a class="reference external" href="https://huggingface.co/transformers/main_classes/pipelines.html">https://huggingface.co/transformers/main_classes/pipelines.html</a></p>
 </section>
 <section id="como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma">
-<h3><span class="section-number">10.3.2. </span>¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?<a class="headerlink" href="#como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma" title="Permalink to this headline">#</a></h3>
+<h3>¿Cómo buscar y reutilizar modelos pre-entrenados en la plataforma?<a class="headerlink" href="#como-buscar-y-reutilizar-modelos-pre-entrenados-en-la-plataforma" title="Permalink to this headline">#</a></h3>
 <p>A continuación, se listan los pasos a seguir:</p>
 <ol class="simple">
 <li><p>Dirigirse al repositorio <a class="reference external" href="https://huggingface.co/">https://huggingface.co/</a></p></li>
@@ -993,7 +888,7 @@ En la propia documentación se aporta el <strong>código de ejemplo</strong> par
 </div>
 </section>
 <section id="configuraciones-de-modelos-transformers">
-<h3><span class="section-number">10.3.3. </span>Configuraciones de modelos transformers<a class="headerlink" href="#configuraciones-de-modelos-transformers" title="Permalink to this headline">#</a></h3>
+<h3>Configuraciones de modelos transformers<a class="headerlink" href="#configuraciones-de-modelos-transformers" title="Permalink to this headline">#</a></h3>
 <p>Los <strong>modelos pre-entrenados</strong> que se brindan en el repositorio se <strong>basan</strong> en alguna de las <strong>arquitecturas Transformers</strong> descrita en la documentación del repositorio (<a class="reference external" href="https://huggingface.co/docs">https://huggingface.co/docs</a>).
 Si tomamos como referencia la arquitectura de modelo Transformer <a class="reference external" href="https://huggingface.co/transformers/model_doc/distilbert.html#overview">DistilBERT</a> podemos conocer cómo <strong>gestionar</strong> los distintos <strong>parámetros</strong>, <a class="reference external" href="https://huggingface.co/transformers/model_doc/distilbert.html#distilbertconfig"><strong>configuraciones de red neuronal</strong></a>, <a class="reference external" href="https://huggingface.co/transformers/model_doc/distilbert.html#distilberttokenizer"><strong>tokenizador</strong></a> y <strong>ejemplos documentados</strong> para cada tipo de tarea, tal y como podemos encontrar en el siguiente enlace (<a class="reference external" href="https://huggingface.co/course/chapter7/">https://huggingface.co/course/chapter7/</a>).</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="c1"># !pip install transformers</span>
@@ -1029,9 +924,9 @@ Si tomamos como referencia la arquitectura de modelo Transformer <a class="refer
 </section>
 </section>
 <section id="tecnologias-de-generacion">
-<h2><span class="section-number">10.4. </span>Tecnologías de generación<a class="headerlink" href="#tecnologias-de-generacion" title="Permalink to this headline">#</a></h2>
+<h2>Tecnologías de generación<a class="headerlink" href="#tecnologias-de-generacion" title="Permalink to this headline">#</a></h2>
 <section id="gpt">
-<h3><span class="section-number">10.4.1. </span>GPT<a class="headerlink" href="#gpt" title="Permalink to this headline">#</a></h3>
+<h3>GPT<a class="headerlink" href="#gpt" title="Permalink to this headline">#</a></h3>
 <p>GPT significa “Generative Pretrained Transformer”. Es un modelo de lenguaje que utiliza técnicas de deep learning para generar texto de manera autónoma. GPT ha sido entrenado en una amplia cantidad de contenido textual. !Es <strong>orientado a liberías</strong>! Es decir, se puede incorporar el componente en tu propia aplicación.</p>
 <ul class="simple">
 <li><p>GPT-1: Es la primera versión de GPT, <a class="reference external" href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">entrenado con 117 millones de parámetros</a>. Aunque es significativamente más limitada que las versiones posteriores, aún es capaz de generar texto aceptable en muchos contextos.
@@ -1044,7 +939,7 @@ La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transfo
 <p>Figura 5. Arquitecturas GPT. Fuente <a class="reference external" href="https://newsletter.theaiedge.io/p/the-chatgpt-models-family">https://newsletter.theaiedge.io/p/the-chatgpt-models-family</a></p>
 <p>Además de estas versiones, también existen variantes más pequeñas de GPT para diferentes usos, como GPT-3 Lite y GPT-2 Medium. Cada una de estas variantes tiene un tamaño y capacidad diferente, lo que las hace más adecuadas para diferentes aplicaciones y escenarios.</p>
 <section id="entrenamiento-del-gpt">
-<h4><span class="section-number">10.4.1.1. </span>Entrenamiento del GPT<a class="headerlink" href="#entrenamiento-del-gpt" title="Permalink to this headline">#</a></h4>
+<h4>Entrenamiento del GPT<a class="headerlink" href="#entrenamiento-del-gpt" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>GPT-1 está preentrenado en el conjunto de datos de BooksCorpus, que contiene ~7000 libros que suman ~5 GB de datos: <a class="reference external" href="https://huggingface.co/datasets/bookcorpus">https://huggingface.co/datasets/bookcorpus</a>.</p></li>
 <li><p>GPT-2 se entrena previamente con el conjunto de datos de WebText, que es un conjunto más diverso de datos de Internet que contiene ~8 millones de documentos para aproximadamente ~40 GB de datos: <a class="reference external" href="https://huggingface.co/datasets/openwebtext">https://huggingface.co/datasets/openwebtext</a></p></li>
@@ -1066,7 +961,7 @@ La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transfo
 <p>GPT-3 API se encuentra disponible en el siguiente enlace: <a class="reference external" href="https://platform.openai.com/docs/introduction/overview">https://platform.openai.com/docs/introduction/overview</a></p>
 </section>
 <section id="ventajas">
-<h4><span class="section-number">10.4.1.2. </span>Ventajas<a class="headerlink" href="#ventajas" title="Permalink to this headline">#</a></h4>
+<h4>Ventajas<a class="headerlink" href="#ventajas" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Alto rendimiento en tareas de lenguaje natural: GPT está entrenado en una gran cantidad de texto en internet, lo que le permite desarrollar una comprensión profunda del lenguaje natural y su uso en diferentes contextos. Esto hace que mejore la capacidad de rendimiento y calidad en tareas como la traducción automática, la generación de texto y la respuesta a preguntas.</p></li>
 <li><p>Facilidad de uso: GPT es un modelo pre-entrenado, lo que significa que no es necesario entrenarlo desde cero para cada tarea específica. Esto significa que es más fácil de usar para los desarrolladores y requiere menos recursos de hardware y tiempo de entrenamiento.</p></li>
@@ -1075,7 +970,7 @@ La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transfo
 </ul>
 </section>
 <section id="desventajas">
-<h4><span class="section-number">10.4.1.3. </span>Desventajas<a class="headerlink" href="#desventajas" title="Permalink to this headline">#</a></h4>
+<h4>Desventajas<a class="headerlink" href="#desventajas" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Bias y desigualdades: Al estar entrenado en una gran cantidad de texto en internet, GPT puede incorporar los sesgos y desigualdades presentes en la fuente de datos.</p></li>
 <li><p>Inseguridad: GPT es un modelo de aprendizaje automático, lo que significa que su rendimiento puede ser afectado por la calidad y la representatividad de la fuente de datos utilizada para su entrenamiento. Además, el modelo puede ser <strong>vulnerable a ataques y manipulaciones</strong>, como la generación de texto falsificado o la respuesta a preguntas inapropiadas.</p></li>
@@ -1084,7 +979,7 @@ La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transfo
 </ul>
 </section>
 <section id="decodificacion-de-gpt">
-<h4><span class="section-number">10.4.1.4. </span>Decodificación de GPT<a class="headerlink" href="#decodificacion-de-gpt" title="Permalink to this headline">#</a></h4>
+<h4>Decodificación de GPT<a class="headerlink" href="#decodificacion-de-gpt" title="Permalink to this headline">#</a></h4>
 <p>La decodificación de GPT es el proceso de generar texto a partir de un modelo de lenguaje pre-entrenado.
 Existen dos estrategias:</p>
 <ul class="simple">
@@ -1107,7 +1002,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </section>
 </section>
 <section id="copilot">
-<h3><span class="section-number">10.4.2. </span>Copilot<a class="headerlink" href="#copilot" title="Permalink to this headline">#</a></h3>
+<h3>Copilot<a class="headerlink" href="#copilot" title="Permalink to this headline">#</a></h3>
 <p>Es asistente de inteligencia artificial diseñado, por OpenAI, para ayudar enel completamiento de código mediante el uso de la conversación natural. Copilot utiliza modelos de lenguaje avanzados para comprender tus necesidades y brindarte la información y la ayuda que necesitas. Puedes interactuar con Copilot en una variedad de plataformas y dispositivos, incluyendo mensajería, aplicaciones de chat, aplicaciones de escritorio y más. !Es <strong>orientado a servicios en la nube</strong>! Es decir, se se accede a los servicios online a través de una API.</p>
 <p>Copilot está diseñado para ayudarte a realizar una amplia gama de tareas y responder preguntas de forma eficiente y precisa. Algunos ejemplos de las tareas que puedes realizar con Copilot incluyen:</p>
 <ul class="simple">
@@ -1122,7 +1017,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </ul>
 <p>Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y responder preguntas de una manera conveniente y rápida. Ejemplo de ello, lo podemos encontrar en la integración de pluggins en <a class="reference external" href="https://docs.github.com/en/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-visual-studio-code">Visual Studio Code</a> para la completación de códigos.</p>
 <section id="id1">
-<h4><span class="section-number">10.4.2.1. </span>Ventajas<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
+<h4>Ventajas<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Copilot utiliza una <strong>interfaz de conversación natural</strong> (Visual y API) para interactuar con los usuarios, lo que hace que sea fácil y agradable de usar.</p></li>
 <li><p>Está entrenado en una amplia gama de información y puede <strong>ayudar a los usuarios a encontrar y proporcionar información sobre una amplia variedad de temas</strong>.</p></li>
@@ -1132,7 +1027,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </ul>
 </section>
 <section id="id2">
-<h4><span class="section-number">10.4.2.2. </span>Desventajas<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
+<h4>Desventajas<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>Costo: Copilot es un producto de OpenAI (empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.</p></li>
 <li><p>Accesibilidad limitada: <strong>Solo está disponible como una API</strong>, por lo que solo puede ser utilizado por desarrolladores y no está disponible directamente para el público en general.</p></li>
@@ -1142,7 +1037,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </ul>
 </section>
 <section id="alternativas-a-copilot">
-<h4><span class="section-number">10.4.2.3. </span>Alternativas a Copilot<a class="headerlink" href="#alternativas-a-copilot" title="Permalink to this headline">#</a></h4>
+<h4>Alternativas a Copilot<a class="headerlink" href="#alternativas-a-copilot" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><strong>Dialogflow</strong>: Una plataforma de Google que permite a los desarrolladores crear chatbots y aplicaciones de conversación.</p></li>
 <li><p><strong>IBM Watson Assistant</strong>: Una plataforma de inteligencia artificial de IBM que permite a los desarrolladores crear chatbots y aplicaciones de conversación.</p></li>
@@ -1153,7 +1048,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </section>
 </section>
 <section id="chatgpt">
-<h3><span class="section-number">10.4.3. </span>ChatGPT<a class="headerlink" href="#chatgpt" title="Permalink to this headline">#</a></h3>
+<h3>ChatGPT<a class="headerlink" href="#chatgpt" title="Permalink to this headline">#</a></h3>
 <p>Es un modelo de lenguaje entrenado utilizando una gran cantidad de texto en internet. Se trata de una tecnología de procesamiento del lenguaje natural que permite a los usuarios interactuar con el modelo mediante el uso de conversaciones naturales. !Es <strong>orientado a servicios en la nube</strong>! Es decir, se accede a los servicios online a través de una API.</p>
 <p>Algunas de las funcionalidades más destacadas incluyen:</p>
 <ul class="simple">
@@ -1209,7 +1104,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/GPT-1-2-3_datasources.png"><img alt="comic xkcd 2421" class="bg-primary mb-1 align-center" src="_images/GPT-1-2-3_datasources.png" style="width: 600px;" /></a>
 <p>Figura 7. Evolución de GPT hasta llegar a ChatGPT. Fuente <a class="reference external" href="https://newsletter.theaiedge.io/p/the-chatgpt-models-family">https://newsletter.theaiedge.io/p/the-chatgpt-models-family</a></p>
 <section id="ejemplo-de-uso-de-la-api-chatgpt">
-<h4><span class="section-number">10.4.3.1. </span>Ejemplo de uso de la API ChatGPT:<a class="headerlink" href="#ejemplo-de-uso-de-la-api-chatgpt" title="Permalink to this headline">#</a></h4>
+<h4>Ejemplo de uso de la API ChatGPT:<a class="headerlink" href="#ejemplo-de-uso-de-la-api-chatgpt" title="Permalink to this headline">#</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">openai</span>
 
 <span class="c1"># Inicializar la API de OpenAI</span>
@@ -1232,7 +1127,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 <p>Nótese que para poder utilizar esta librería se ha de emplear un servicio en la nube del cual se ha de requerir una clave de acceso. Las instruciones para conseguirlas las podéis encontrar en el siguiente enlace: <a class="reference external" href="https://platform.openai.com/account/api-keys">https://platform.openai.com/account/api-keys</a></p>
 </section>
 <section id="id3">
-<h4><span class="section-number">10.4.3.2. </span>Ventajas<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
+<h4>Ventajas<a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><strong>Gran capacidad de comprensión del lenguaje natural</strong>: ChatGPT ha sido entrenado en una amplia variedad de textos y ha desarrollado una comprensión profunda del lenguaje humano, lo que le permite responder de manera fluida y natural a las preguntas y comentarios de los usuarios.</p></li>
 <li><p><strong>Personalización</strong>: Puede ser personalizado para diferentes aplicaciones y usos, lo que lo hace ideal para una amplia variedad de industrias.</p></li>
@@ -1242,7 +1137,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </ul>
 </section>
 <section id="id4">
-<h4><span class="section-number">10.4.3.3. </span>Desventajas<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
+<h4>Desventajas<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><strong>Limitaciones en la comprensión del contexto</strong>: Aunque ChatGPT ha sido entrenado en una amplia variedad de textos, todavía puede tener dificultades para comprender el contexto completo de una conversación, especialmente en situaciones más complejas.</p></li>
 <li><p><strong>Responsabilidad por la precisión de la información</strong>: Puede proporcionar información que no sea precisa o que sea engañosa. Es responsabilidad del usuario verificar la información proporcionada por ChatGPT antes de tomar decisiones o acciones importantes.</p></li>
@@ -1251,7 +1146,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </ul>
 </section>
 <section id="alternativas-a-chatgpt">
-<h4><span class="section-number">10.4.3.4. </span>Alternativas a ChatGPT<a class="headerlink" href="#alternativas-a-chatgpt" title="Permalink to this headline">#</a></h4>
+<h4>Alternativas a ChatGPT<a class="headerlink" href="#alternativas-a-chatgpt" title="Permalink to this headline">#</a></h4>
 <p>Algunas alternativas son:</p>
 <ul class="simple">
 <li><p><span class="xref myst"><strong>PEER de Meta AI</strong></span>: un lenguaje entrenado para <strong>imitar el proceso de escritura</strong>. Está entrenado en los <a class="reference external" href="https://dumps.wikimedia.org/enwiki/">datos del historial de edición de Wikipedia</a>. Se especializa en predecir ediciones y explicar las razones de esas ediciones. Es capaz de citar y citar documentos de referencia para respaldar las afirmaciones que genera. Es un transformador de 11 billones de parámetros con la arquitectura típica de codificador-decodificador, y está superando a GPT-3 en la tarea en la que se especializa.</p></li>
@@ -1262,7 +1157,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </section>
 </section>
 <section id="metodos-para-optimizar-modelos-preentrenados">
-<h3><span class="section-number">10.4.4. </span>Métodos para Optimizar Modelos Preentrenados<a class="headerlink" href="#metodos-para-optimizar-modelos-preentrenados" title="Permalink to this headline">#</a></h3>
+<h3>Métodos para Optimizar Modelos Preentrenados<a class="headerlink" href="#metodos-para-optimizar-modelos-preentrenados" title="Permalink to this headline">#</a></h3>
 <p>La ingeniería de prompts (<em>prompt engineering</em>), el ajuste de prompts (<em>prompt tuning</em>) y el ajuste fino (<em>fine-tuning</em>) son tres métodos distintos aplicados a modelos de lenguaje preentrenados (LLMs) para mejorar su rendimiento en dominios nuevos o tareas específicas. Estos métodos no son mutuamente excluyentes y cada uno está orientado a un caso de uso particular.</p>
 <p>Cada una de estas técnicas ofrece un enfoque diferente para aprovechar las capacidades de los modelos preentrenados. La elección entre ellas depende de las necesidades específicas de la aplicación, como la disponibilidad de recursos computacionales, el nivel de personalización requerido para el modelo y el grado de interacción deseado con los parámetros de aprendizaje del modelo.</p>
 <table class="colwidths-auto table">
@@ -1292,7 +1187,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </tbody>
 </table>
 <section id="ingenieria-de-prompts-prompt-engineering">
-<h4><span class="section-number">10.4.4.1. </span>Ingeniería de prompts (<em>Prompt Engineering</em>)<a class="headerlink" href="#ingenieria-de-prompts-prompt-engineering" title="Permalink to this headline">#</a></h4>
+<h4>Ingeniería de prompts (<em>Prompt Engineering</em>)<a class="headerlink" href="#ingenieria-de-prompts-prompt-engineering" title="Permalink to this headline">#</a></h4>
 <p>La ingeniería de prompts no implica ningún tipo de entrenamiento o reentrenamiento. Se basa completamente en que el usuario diseñe prompts específicos para el modelo. Requiere un entendimiento detallado de las capacidades de procesamiento del modelo y aprovecha el conocimiento intrínseco ya integrado en el modelo. La ingeniería de prompts no requiere recursos computacionales, ya que se basa únicamente en la formulación estratégica de entradas para obtener los resultados deseados.</p>
 <p>Entre las técnicas más populares de ingeniería de prompts tenemos las siguientes.</p>
 <ul>
@@ -1329,7 +1224,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </div></blockquote>
 </section>
 <section id="ajuste-de-prompts-prompt-tuning">
-<h4><span class="section-number">10.4.4.2. </span>Ajuste de prompts (<em>Prompt Tuning</em>)<a class="headerlink" href="#ajuste-de-prompts-prompt-tuning" title="Permalink to this headline">#</a></h4>
+<h4>Ajuste de prompts (<em>Prompt Tuning</em>)<a class="headerlink" href="#ajuste-de-prompts-prompt-tuning" title="Permalink to this headline">#</a></h4>
 <p>El ajuste de prompts modifica un conjunto de parámetros adicionales, conocidos como “prompts suaves” o “soft prompts,” que se integran en el procesamiento de entrada del modelo. Este método ajusta cómo el modelo interpreta las entradas sin modificar por completo sus pesos, ofreciendo un equilibrio entre mejora del rendimiento y eficiencia de recursos. Es particularmente valioso cuando los recursos computacionales son limitados o cuando se requiere flexibilidad para múltiples tareas, ya que los pesos originales del modelo permanecen sin cambios tras aplicar esta técnica.</p>
 <p><img alt="Prompt Tuning" src="_images/prompt-tuning.png" />
 Figura 8. Prompt Tuning (<a class="reference external" href="https://arxiv.org/abs/2104.08691">fuente</a>).</p>
@@ -1339,10 +1234,10 @@ Figura 8. Prompt Tuning (<a class="reference external" href="https://arxiv.org/a
 </div></blockquote>
 </section>
 <section id="ajuste-fino-fine-tuning">
-<h4><span class="section-number">10.4.4.3. </span>Ajuste fino (<em>Fine-tuning</em>)<a class="headerlink" href="#ajuste-fino-fine-tuning" title="Permalink to this headline">#</a></h4>
+<h4>Ajuste fino (<em>Fine-tuning</em>)<a class="headerlink" href="#ajuste-fino-fine-tuning" title="Permalink to this headline">#</a></h4>
 <p>El ajuste fino es el más intensivo en recursos, ya que implica un reentrenamiento completo del modelo con un conjunto de datos específico para un propósito particular. Esto ajusta los pesos del modelo preentrenado, optimizándolo para captar las sutilezas del conjunto de datos, pero requiere recursos computacionales sustanciales y aumenta el riesgo de sobreajuste. Muchos modelos de lenguaje como ChatGPT pasan por un ajuste fino después de su entrenamiento inicial genérico en la tarea de predicción de la siguiente palabra. El ajuste fino enseña a estos modelos cómo funcionar como asistentes digitales, haciéndolos significativamente más útiles que un modelo entrenado de manera general.</p>
 <section id="continual-pre-training">
-<h5><span class="section-number">10.4.4.3.1. </span>Continual pre-training<a class="headerlink" href="#continual-pre-training" title="Permalink to this headline">#</a></h5>
+<h5>Continual pre-training<a class="headerlink" href="#continual-pre-training" title="Permalink to this headline">#</a></h5>
 <p>El <em>continual pretraining</em> es una forma de ajuste fino, pero con distinciones en su contexto y aplicación. A diferencia del ajuste fino tradicional, que adapta un modelo preentrenado a un conjunto de datos específico para una tarea concreta, el <em>continual pretraining</em> implica continuar el entrenamiento de un modelo en nuevos datos después de su fase inicial de preentrenamiento, sin realizar un reentrenamiento completo desde cero.</p>
 <p>El objetivo del <em>continual pretraining</em> no es necesariamente optimizar el modelo para una tarea específica, sino actualizar su comprensión basándose en nueva información, preservando al mismo tiempo el conocimiento adquirido en el preentrenamiento original. Esto puede incluir datos generales o específicos de un dominio y puede abarcar múltiples áreas temáticas.</p>
 <p>Por ejemplo, mientras que un ajuste fino podría usar un corpus médico para especializar un modelo en tareas médicas, el <em>continual pretraining</em> puede emplearse para extender la capacidad del modelo a manejar un lenguaje nuevo o datos más recientes o cambientes en un dominio sin enfocarse exclusivamente en una tarea concreta.</p>
@@ -1353,7 +1248,7 @@ Figura 8. Continual pre-training (<a class="reference external" href="https://me
 </div></blockquote>
 </section>
 <section id="fine-tuning-lora">
-<h5><span class="section-number">10.4.4.3.2. </span>Fine-tuning LoRA<a class="headerlink" href="#fine-tuning-lora" title="Permalink to this headline">#</a></h5>
+<h5>Fine-tuning LoRA<a class="headerlink" href="#fine-tuning-lora" title="Permalink to this headline">#</a></h5>
 <p>El ajuste fino utilizando LoRA (Low-Rank Adaptation) es una técnica eficiente que permite adaptar modelos grandes a tareas específicas con un costo computacional mucho menor que el ajuste fino tradicional. LoRA introduce modificaciones en las capas del modelo mediante matrices de baja dimensión, ajustando solo una pequeña parte de los parámetros del modelo preentrenado. Esto reduce significativamente la cantidad de recursos necesarios para el ajuste fino y minimiza el riesgo de sobreajuste.</p>
 <p>En lugar de ajustar todos los pesos del modelo, LoRA inserta capas auxiliares que se entrenan para captar las características relevantes del nuevo conjunto de datos o tarea. Estas capas adicionales no afectan los parámetros originales del modelo, permitiendo que este conserve su funcionalidad general y aumentando la flexibilidad para adaptarse a múltiples tareas con un solo modelo base.</p>
 <p>Por ejemplo, LoRA es particularmente útil en escenarios donde se necesita adaptar un modelo a diferentes dominios o idiomas sin tener que duplicar el costo de almacenamiento o entrenamiento para cada adaptación. Su enfoque modular y eficiente ha hecho que sea una elección popular en la personalización de grandes modelos de lenguaje.</p>
@@ -1364,7 +1259,7 @@ Figura 9. Low-Rank Adaptation (<a class="reference external" href="https://magaz
 </section>
 </section>
 <section id="instruccion-de-modelos">
-<h3><span class="section-number">10.4.5. </span>Instrucción de modelos<a class="headerlink" href="#instruccion-de-modelos" title="Permalink to this headline">#</a></h3>
+<h3>Instrucción de modelos<a class="headerlink" href="#instruccion-de-modelos" title="Permalink to this headline">#</a></h3>
 <p>La técnica de instrucción de modelos (Instruction-Tuning, IT) es crucial para mejorar las capacidades y la controlabilidad de los modelos de lenguaje grandes (LLMs).</p>
 <ul class="simple">
 <li><p><strong>Metodología general de IT</strong>: El ajuste de instrucciones implica entrenar aún más los LLMs utilizando pares de datos de (instrucción, salida). Estos pares consisten en instrucciones humanas y las salidas generadas por el modelo. El objetivo es cerrar la brecha entre la predicción de la siguiente palabra por parte de los LLMs y el objetivo de los usuarios de que los LLMs sigan instrucciones humanas.</p></li>
@@ -1379,7 +1274,7 @@ Figura 10. Arquitectura de instrucciones GPT.</p>
 <p><img alt="Alt text" src="_images/GPT_IT_ejemplo.png" />
 Figura 11. Ejemplo de instrucciones GPT.</p>
 <section id="flan">
-<h4><span class="section-number">10.4.5.1. </span>FLAN<a class="headerlink" href="#flan" title="Permalink to this headline">#</a></h4>
+<h4>FLAN<a class="headerlink" href="#flan" title="Permalink to this headline">#</a></h4>
 <p>FLAN (Fine-tuned LAnguage Net) es una “arquitectura” para realizar un instruction-tuning a un modelo de lenguaje pre-entrenado. El objetivo es que usando un pequeño número de actualizaciones sobre un modelo pre-entrenado, el modelo resultante sea capaz de realizar tareas específicas que antes no era capaz de realizar.</p>
 <p>Para ese instruction-tuning, FLAN define una serie de plantillas, estando estas organizadas en las diferentes tareas para los que se quiere realizar el instruction-tuning (text classification, named entity recognition, etc.). Estas plantillas son utilizadas para generar ejemplos de entrenamiento a partir de los cuales se realiza el instruction-tuning.</p>
 <p>En la imagen siguiente se muestran los datasets que se utilizan, teniendo FLAN para todos ellos definidas las plantillas para así generar los conjuntos de instrucciones. Verás que todos los datasets están agrupados en las diferentes tareas que se pretenden realizar.</p>
@@ -1390,7 +1285,7 @@ Figura 12. Datasets de instrucciones.</p>
 Figura 13. Text-to-Text Transfer Transformer(T5)</p>
 </section>
 <section id="cuaderno-de-ejemplo-de-instruction-tuning">
-<h4><span class="section-number">10.4.5.2. </span>Cuaderno de ejemplo de instruction-tuning<a class="headerlink" href="#cuaderno-de-ejemplo-de-instruction-tuning" title="Permalink to this headline">#</a></h4>
+<h4>Cuaderno de ejemplo de instruction-tuning<a class="headerlink" href="#cuaderno-de-ejemplo-de-instruction-tuning" title="Permalink to this headline">#</a></h4>
 <p>Hemos visto que un modelo se puede reentrenar con instrucciones. En <a class="reference external" href="https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/practicaFlan.ipynb">este <strong>cuaderno de trabajo</strong></a> podrás ver un ejemplo usando un pequeño dataset con anotaciones de enfermedades.</p>
 <p>Puedes ver que se realiza una plantilla y se realiza un instruction-tuning al modelo <a class="reference external" href="https://huggingface.co/docs/transformers/model_doc/t5">T5</a> en su versión pequeña.</p>
 <p>Revisa el cuaderno y date cuenta de las librerías que usamos. Especialmente en lo importado de la librería <em>transformers</em>.</p>
@@ -1399,7 +1294,7 @@ Figura 13. Text-to-Text Transfer Transformer(T5)</p>
 </section>
 </section>
 <section id="bibliografia">
-<h2><span class="section-number">10.5. </span>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this headline">#</a></h2>
+<h2>Bibliografía<a class="headerlink" href="#bibliografia" title="Permalink to this headline">#</a></h2>
 <p>[1] <a class="reference external" href="https://huggingface.co/">https://huggingface.co/</a></p>
 <p>[2] <a class="reference external" href="https://openai.com/blog/chatgpt/">https://openai.com/blog/chatgpt/</a></p>
 <p>[3] Zhang, Y., Sun, S., Galley, M., Chen, Y. C., Brockett, C., Gao, X., … &amp; Dolan, B. (2019). Dialogpt: Large-scale generative pre-training for conversational response generation. arXiv preprint arXiv:1911.00536.</p>
@@ -1434,20 +1329,6 @@ Figura 13. Text-to-Text Transfer Transformer(T5)</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="bloque3_t3.1_metricas.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">9. </span>T3. Métricas de Evaluación</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="bloque3_t5_automl.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11. </span>T5. Auto Machine Learning(AutoML)</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
