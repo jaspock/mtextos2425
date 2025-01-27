@@ -5,7 +5,10 @@ format: jb-book
 defaults:
   numbered: true
 parts:
-- caption: Bloque 1
+- caption: Bloque TÉCNICAS
+  chapters:
+  - file: bloque2
+- caption: Bloque LINGCOMP
   chapters:
   - file: bloque1
   - file: bloque1_Practica1
@@ -15,7 +18,7 @@ parts:
 #  - file: bloque1_Practica1
 #  - file: bloque1_3AnalisisSemantico
 #  - file: bloque1_4AnalisisSemanticoVectorial
-- caption: Bloque 2
+- caption: Bloque APLICACIONES
   chapters:
   - file: bloque3
   - file: bloque3_t1_aplicaciones
@@ -32,9 +35,6 @@ parts:
   - file: bloque3_p5-SA-Ensemble
 #   - file: bloque3_p6_SA-AutoGOAL
   - file: bloque3_ev
-- caption: Bloque 3
-  chapters:
-  - file: bloque2
 #  - file: bloque2_historia
 #  - file: bloque2_embeddings
 #  - file: bloque2_recurrent
