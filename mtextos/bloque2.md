@@ -25,7 +25,7 @@ Las actividades a realizar antes de esta clase son:
 - Visionado y estudio de los tutoriales en vídeo de esta [playlist oficial de PyTorch](https://www.youtube.com/playlist?list=PL_lsbAsL_o2CTlGHgMxNrKhzP97BaG9ZN).  Estudia al menos los 4 primeros vídeos (“Introduction to PyTorch”, “Introduction to PyTorch Tensors”, “The Fundamentals of Autograd” y “Building Models with PyTorch”). En total, esta parte debería llevarte unas 2 horas 🕒️ de trabajo.
 - Tras acabar con las dos partes anteriores, realiza este [test de evaluación](https://forms.gle/E1xzZHw6hzMWJaNr7) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 
-**<span style="font-size: 1.15em">Contenidos para la sesión presencial del 25/04/2024</span>**
+**<span style="font-size: 1.15em">Contenidos para la sesión presencial del 06/02/2025</span>**
 
 En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenidos de la semana anterior y veremos cómo se implementa un regresor logístico en PyTorch siguiendo la implementación de un regresor logístico binario y de uno multinomial que se comentan en [este apartado](https://www.dlsi.ua.es/~japerez/materials/transformers/implementacion/#codigo-para-un-regresor-logistico-y-uno-multinomial).
 
@@ -58,8 +58,6 @@ En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenido
 2. **Skip-grams**: sustituye la parte del código que usa la notación de Einstein por una multiplicación convencional de matrices seguida de una operación que se quede con los valores que nos interesan. Compara los tiempos de ejecución de ambas implementaciones.
 
 
-🚧 ⚠️ Atención: Los contenidos a partir de este punto no son definitivos y podrían sufrir variaciones.
-
 ## Tercera sesión (20/02/2025)
 
 **<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 20/02/2025</span>**
@@ -75,6 +73,9 @@ En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenido
 
 **Ejercicios**: no hay ejercicios para esta sesión.
 
+<!--
+🚧 ⚠️ Atención: Los contenidos a partir de este punto no son definitivos y podrían sufrir variaciones.
+-->
 
 ## Cuarta sesión (27/02/2025)
 
@@ -83,7 +84,7 @@ En la clase presencial (3 horas 🕒️ de duración), repasaremos los contenido
 Las actividades a realizar antes de esta clase son:
 
 - Ampliar el estudio del transformer con la arquitectura codificador-descodificador completa, así como con la basada solo en codificador siguiendo para ello las secciones de [esta página](https://www.dlsi.ua.es/~japerez/materials/transformers/attention2/). En total, esta parte debería llevarte unas 3 horas 🕒️ de trabajo.
-- Realiza el [test de evaluación]() de estos contenidos. Son pocas preguntas y te llevará unos minutos.
+- Realiza el [test de evaluación](https://forms.gle/yHuUBZrqxDrnARkM8) de estos contenidos. Son pocas preguntas y te llevará unos minutos.
 
 **<span style="font-size: 1.15em">Contenidos para la sesión del 20/02/2025</span>**
 
