@@ -40,10 +40,8 @@ Novedades
 Actividades previas
 -------------------
 
-<!--
-- Antes de la clase del 27/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test13] (plazo límite: 23:59 del 26/02/2025).
--->
 
+- Antes de la clase del 27/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test13] (plazo límite: 23:59 del 26/02/2025).
 - Antes de la clase del 20/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test12] (plazo límite: 23:59 del 19/02/2025).
 - Antes de la clase del 13/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test11] (plazo límite: 23:59 del 12/02/2025); aprovecha para ir acabando también las actividades prácticas de la clase anterior.
 - Antes de la clase del 06/02/2025: lee los contenidos y visualiza los vídeos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test10] (plazo límite: 23:59 del 05/02/2025). Accede al test con tu cuenta de `gcloud.ua.es`.
