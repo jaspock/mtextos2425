@@ -8,6 +8,9 @@ parts:
 - caption: Bloque TÉCNICAS
   chapters:
   - file: bloque2
+- caption: Bloque PLN
+  chapters:
+  - file: bloque2
 #- caption: Bloque LINGCOMP
 #  chapters:
 #  - file: bloque1
