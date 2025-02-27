@@ -41,6 +41,7 @@ Actividades previas
 -------------------
 
 
+- Antes de la clase del 06/03/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase en la [pàgina de introducción][introduccion] a la minería de textos y el procesamiento del lenguaje natural; a continuación, realiza este [test][test21] (plazo límite: 23:59 del 05/03/2025). Accede al test con tu cuenta de `gcloud.ua.es`.
 - Antes de la clase del 27/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test13] (plazo límite: 23:59 del 26/02/2025).
 - Antes de la clase del 20/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test12] (plazo límite: 23:59 del 19/02/2025).
 - Antes de la clase del 13/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test11] (plazo límite: 23:59 del 12/02/2025); aprovecha para ir acabando también las actividades prácticas de la clase anterior.
@@ -70,6 +71,9 @@ Actividades previas
 - Antes de la clase del 15/02/2024: leed los [apartados 5 y 6 del PDF con el contenido teórico del bloque 1](https://jaspock.github.io/mtextos2324/bloque1.html); a continuación, contestad este [segundo cuestionario][test02] (plazo límite: 23:59 horas del 14/02/2024).
 - (Completado) Antes de la clase del 08/02/2024: lee los [apartados 1, 2, 3 y 4 del PDF con el contenido teórico del bloque 1](https://jaspock.github.io/mtextos2324/bloque1.html); a continuación, contesta este [test][test01] (plazo límite: 23:59 horas del 07/02/2024).
 -->
+
+[test21]: https://docs.google.com/forms/d/e/1FAIpQLSddNgxnLXLhWJWz7WKyQ7ME7Erfixc4k86FJtjHxpaMwa9emw/viewform
+[introduccion]: https://jaspock.github.io/mtextos2425/bloque1.html
 
 [test13]: https://forms.gle/yHuUBZrqxDrnARkM8
 [test12]: https://forms.gle/qJMmKi6KGhtKDJtYA
