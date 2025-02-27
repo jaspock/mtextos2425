@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Introducción. Minería de textos y procesamiento del lenguaje natural &#8212; Minería de Textos</title>
+    <title>2. Introducción. Minería de textos y procesamiento del lenguaje natural &#8212; Minería de Textos</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,6 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Uso de Google Colab con una VM personalizada" href="doc_utils/creditosColab/web.html" />
+    <link rel="prev" title="1. Técnicas para la minería de textos" href="bloque2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -126,13 +128,25 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
+  Bloque PLN
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Introducción. Minería de textos y procesamiento del lenguaje natural
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
   Utilidades
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="doc_utils/creditosColab/web.html">
-   2. Uso de Google Colab con una VM personalizada
+   3. Uso de Google Colab con una VM personalizada
   </a>
  </li>
 </ul>
@@ -269,12 +283,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#practicas-a-entregar-para-este-bloque">
-   Prácticas a entregar para este bloque
+   2.1. Prácticas a entregar para este bloque
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#primera-sesion-06-03-2025">
-   Primera sesión (06/03/2025)
+   2.2. Primera sesión (06/03/2025)
   </a>
  </li>
 </ul>
@@ -298,12 +312,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#practicas-a-entregar-para-este-bloque">
-   Prácticas a entregar para este bloque
+   2.1. Prácticas a entregar para este bloque
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#primera-sesion-06-03-2025">
-   Primera sesión (06/03/2025)
+   2.2. Primera sesión (06/03/2025)
   </a>
  </li>
 </ul>
@@ -317,7 +331,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="introduccion-mineria-de-textos-y-procesamiento-del-lenguaje-natural">
-<span id="label-introduccion"></span><h1>Introducción. Minería de textos y procesamiento del lenguaje natural<a class="headerlink" href="#introduccion-mineria-de-textos-y-procesamiento-del-lenguaje-natural" title="Permalink to this headline">#</a></h1>
+<span id="label-introduccion"></span><h1><span class="section-number">2. </span>Introducción. Minería de textos y procesamiento del lenguaje natural<a class="headerlink" href="#introduccion-mineria-de-textos-y-procesamiento-del-lenguaje-natural" title="Permalink to this headline">#</a></h1>
 <p>En este bloque se abordan aspectos relacionados con la obtención de textos, así como de su preprocesamiento y tratamiento con técnicas básicas de procesamiento del lenguaje natural. El profesor de este bloque es Miquel Esplà Gomis.</p>
 <p>La <em>minería de textos</em> es el conjunto de técnicas y herramientas desarrolladas para extraer información de grandes colecciones textuales, tanto información implícita como explícita.</p>
 <p>Esa información está codificada en textos, es decir, en un idioma o lengua. La minería de textos necesita, por tanto, interpretar (en mayor o menor medida) los textos y a partir de esa interpretación extraer la información. La disciplina computacional que idea y desarrolla sistemas para la interpretación lingüística de los textos es el procesamiento del lenguaje natural (PLN o NLP por sus siglas en inglés: <em>Natural Language Processing</em>), disciplina híbrida entre la lingüística y la computación.</p>
@@ -326,13 +340,13 @@ title="Print to PDF"
 2- los conceptos fundamentales del procesamiento del lenguaje natural.
 También se comentarán herramientas y recursos útiles para la minería de textos.</p>
 <section id="practicas-a-entregar-para-este-bloque">
-<h2>Prácticas a entregar para este bloque<a class="headerlink" href="#practicas-a-entregar-para-este-bloque" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.1. </span>Prácticas a entregar para este bloque<a class="headerlink" href="#practicas-a-entregar-para-este-bloque" title="Permalink to this headline">#</a></h2>
 <p>Durante las dos sesiones de este bloque, vamos a realizar una serie de prácticas que permitirán experimentar con algunos de los elementos incluidos en los contenidos teóricos de la asignatura. En la primera sesión de este bloque, las prácticas se centrarán en explorar diferentes estrategias para la obtención de documentos de textos a partir de Internet, extracción de texto relevante de éstos, y preprocesamiento del texto extraido. En la segunda sesión nos centraremos en explorar algunas de las estrategias estudiadas en el contenido teórico, concretamente centradas en la obtención de representaciones vectoriales del texto, y de cómo se pueden usar para explotar la información descargada y almacenada.</p>
 <p><strong>Esta sección se encuentra en construcción</strong>, y la versión definitiva estará disponible durante la primera sesión de este bloque, el día 6 de marzo de 2025. En cualquier caso, <strong>plazo de entrega para el informe de prácticas de este bloque acaba el 27 de marzo de 2025</strong> a las 23.59 horas. Las prácticas, excepto casos puntuales, se han de hacer en parejas. Recuerda que hay un examen final de la asignatura, por lo que es muy recomendable que ambos miembros del equipo se impliquen de igual manera. La entrtega se realizará Entrega un único PDF final a través de una tutoría de UACloud</p>
 <p>A la hora de corregir los informes de prácticas, no se penalizará el uso de asistentes generativos de texto. El uso de ciertas herramientas de inteligencia artificial puede aumentar tus capacidades profesionales. Sin embargo, el abuso de su uso hasta el punto de despersonalizar tus entregas, desproveerlas de tu estilo personal, de tus propios razonamientos o de contenido relevante sí afectará negativamente a tu nota. Todo esto suele ser bastante fácil de detectar, pero para casos dudosos el profesor podrá realizar una pequeña prueba con el estudiante en la que no se permita el uso de asistentes generativos de texto para comprobar la consistencia entre lo entregado y lo que el estudiante es capaz de producir por sí mismo.</p>
 </section>
 <section id="primera-sesion-06-03-2025">
-<h2>Primera sesión (06/03/2025)<a class="headerlink" href="#primera-sesion-06-03-2025" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.2. </span>Primera sesión (06/03/2025)<a class="headerlink" href="#primera-sesion-06-03-2025" title="Permalink to this headline">#</a></h2>
 <p><strong><span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 06/03/2025</span></strong></p>
 <p>Las actividades a realizar antes de clase son:</p>
 <ul class="simple">
@@ -374,6 +388,20 @@ También se comentarán herramientas y recursos útiles para la minería de text
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="bloque2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Técnicas para la minería de textos</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="doc_utils/creditosColab/web.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Uso de Google Colab con una VM personalizada</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             </footer>
         </div>
