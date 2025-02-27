@@ -10,7 +10,7 @@ parts:
   - file: bloque2
 - caption: Bloque PLN
   chapters:
-  - file: bloque2
+  - file: bloque1
 #- caption: Bloque LINGCOMP
 #  chapters:
 #  - file: bloque1
