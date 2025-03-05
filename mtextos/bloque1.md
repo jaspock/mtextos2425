@@ -38,3 +38,28 @@ En total, todo el trabajo previo a la clase te llevará alrededor de 4 horas �
 
 **Nota adicional**: Si la adquisición de textos de Internet te interesa y en el futuro quieres ampliar tus conocimientos, el libro [Web Scraping with Python](https://www.oreilly.com/library/view/web-scraping-with/9781098145347/) de Ryan Mitchell (actualmente en su tercera edición) me parece una guia exhaustiva y con un planteamiento muy práctico sobre las principales estrategias y retos para profundizar en esta tarea.
 
+**<span style="font-size: 1.15em">Contenidos para la sesión presencial del 06/03/2025</span>**
+- Realización del [tutorial de RealPython](https://realpython.com/beautiful-soup-web-scraper-python/#scrape-the-fake-python-job-site) sobre descarga de documentos estáticos de la web y extracción de texto.
+- Ampliación del tutorial anterior abordando la tarea de descarga con un un navegador tipo "headless", como [Puppeteer](https://pptr.dev/guides/getting-started), [Selenium](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/) o [requests-HTML](https://requests-html.kennethreitz.org/).
+- Comparación de al menos dos herramientas para extraer texto de documentos PDF. Podéis probar herramientas como [PyMuPDF](https://pymupdf.readthedocs.io/en/latest/tutorial.html), [PyPDF](https://pypdf.readthedocs.io/en/stable/user/extract-text.html), [PDFMiner](https://pdfminersix.readthedocs.io/en/latest/), o [PDFtoText](https://pypi.org/project/pdftotext/). Probad las herramientas sobre los PDFs de los artículos: [Using Machine Translation to Provide Target-Language Edit Hints in Computer Aided Translation Based on Translation Memories](https://www.dlsi.ua.es/~fsanchez/pub/pdf/espla-gomis15a.pdf) y [MaCoCu: Massive collection and curation of monolingual and bilingual data: focus on under-resourced languages](https://aclanthology.org/2022.eamt-1.41.pdf). Comentad las diferencias y problemas que detectáis.
+- Comparación de herramientas para la extracción del texto principal de páginas web. Podéis probar diferentes herramientas como [Trafilatura](https://trafilatura.readthedocs.io/en/latest/quickstart.html) , [readability](https://pypi.org/project/readability/), o  [BoilerPy3](https://pypi.org/project/boilerpy3/). Haced pruebas con diferentes páginas web, una sugerencia pueden ser páginas que contengan notícias de medios digitales, que suelen tener mucho contenido descartable.
+- **Ejercicio final de la sesión**: Váis a recolectar datos de las publicaciones de la revista de la [*Sociedad Española para el Procesamiento del Lenguaje Natural*](http://journal.sepln.org). Para esto, accederíeis al [archivo de publicaciones de la revista](http://journal.sepln.org/sepln/ojs/ojs/index.php/pln/issue/archive) y accederéis a los séis números publicados entre 2016 y 2018. Debéis implementar una herramienta que haga uso de una librería de scrapping para recolectar, para cáda artículo en estos números de la resvista, la siguiente información: el título, el abstract, el año de publicación y la URL correspondiente al artículo. La información recolectada se guardará en 
+
+```json
+[{"title": "Rule Extraction for Tree-to-Tree Transducers by Cost Minimization", "abstract": "Finite-state transducers give efficient representations of many Natural Language phenomena. They allow to account for complex lexicon restrictions encountered, without involving the use of a large set of complex rules difficult to analyze. We here show that these representations can be made very compact, indicate how to perform the corresponding minimization, and point out interesting linguistic side-effects of this operation.", "url": "http://aclweb.org/anthology/D16-1002", "year": "2016"},...]
+```
+
+## Segunda sesión (13/03/2025)
+
+**<span style="font-size: 1.15em">Contenidos a preparar antes de la sesión del 13/03/2025</span>**
+
+Las actividades a realizar antes de clase son:
+
+- Ver el vídeo de la clase magistral de Yulia Tsvetkov sobre [análisis morfológico y flexión morfológica](https://www.youtube.com/watch?v=y9sVFrmGu0w). La duración de la clase es de 45 minutos 🕒️.
+- Ver vídeo de la clase magistral de Graham Neubig sobre [análisis de dependencias sintácticas](https://www.youtube.com/watch?v=y9sVFrmGu0w). Aunque el vídeo es más largo, sólo necesito que veáis la primera parte de la sesión, que acaba alrededor del minuto 38 🕒️.
+- Haz el tutorial sobre la herramienta de [procesamiento morfo-sintáctico Stanza](https://applied-language-technology.mooc.fi/html/notebooks/part_iii/01_multilingual_nlp.html) publicado por el grupo *Applied Language Technology* de la Universidad de Helsinki. El tutorial te llevará entre 1,25 y 1,5 horas 🕒️.
+- Lectura del capítulo 6 del libro [*Speech and Language Processing*](https://web.stanford.edu/~jurafsky/slp3/6.pdf) de Daniel Jurafsky y James H. Martin (2024). Sólo necesitas leer hasta la sección 6.5, ya que los contenidos de secciones posteriores ya han sido cubiertas. Esta lectura te llevará alrededor de 1 hora 🕒️.
+
+En total, todo el trabajo previo a la clase te llevará alrededor de 4 horas 🕒️.
+
+
