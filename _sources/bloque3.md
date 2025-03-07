@@ -30,7 +30,7 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
 -->
 - [P2. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos][p4]
 - [P3. Modelos Generativos][p7]
-- [P4. Consolidación de temario y trabajo en clase][]
+- [P4. Consolidación de temario y trabajo en clase]()
 <!--  - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
  - [P5. Utilización de técnicas de AutoML, libreria AutoGOAL.  Caso de uso Clasificación de Documentos][p6] -->
 
