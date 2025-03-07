@@ -3,7 +3,7 @@
 Aplicaciones de la minería de textos
 ====================================
 
-Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamiento del lenguaje natural. El profesor encargado de este bloque es [Yoan Gutiérrez][yoan url]. Colaboradores: [José I. Abbreu Salas][abreu url], [Javier Fernández Martínez][javi url], [Eduardo Grande Ruiz](https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690) y [Ernesto Luis Estevanell]().
+Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamiento del lenguaje natural. El profesor encargado de este bloque es [Yoan Gutiérrez][yoan url]. Colaboradores: [José I. Abbreu Salas][abreu url], [Javier Fernández Martínez][javi url], [Eduardo Grande Ruiz](https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690) [Juan Pablo Consuegra](https://cvnet.cpd.ua.es/curriculum-breve/es/consuegra-ayala-juan-pablo/550467).
 
 
 
@@ -34,12 +34,12 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
 ## Evaluación
 
 ### Teoría
- - [T1.C1. Cuestionario de evaluación](https://forms.gle/irLjzcb4S6sy4Frh8). Apertura el 16/02/2043- Cierre 23:59 del 21/02/2024.
- - [T2.C1. Cuestionario de evaluación](https://forms.gle/BNCNyzpiGxntCYL8A). Apertura el 22/02/2024- Cierre 23:59 del 28/02/2024.
- - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/dD4eSErz5LUWLMA86). Apertura el 22/02/2024- Cierre 23:59 del 28/02/2024.
- - [T3.C1. Cuestionario de evaluación](https://forms.gle/tEkSKBLQuBrrkEJj9). Apertura el 01/03/2024- Cierre 23:59 del 06/03/2023.
- - [T4.C1. Cuestionario de evaluación](https://forms.gle/miKS9bMyJTrKrxhD9). Apertura el 11/03/2024- Cierre 14:59 del 13/03/2023.
- - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
+ - [T1.C1. Cuestionario de evaluación](https://forms.gle/A9VANxkdBd99Ly5j9). Apertura el 20/03/2025- Cierre 23:59 del 26/03/2025.
+ - [T2.C1. Cuestionario de evaluación](https://forms.gle/FtYfQjSa1n8tEpK6A). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
+ - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/hFoNUccvKW9RKP7z8). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
+ - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 03/04/2025- Cierre 23:59 del 09/04/2025.
+ - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025.
+% - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
 
 % - [Cuestionario de setisfacción](https://forms.gle/sAobHzNaFSCu47ss8)
  
