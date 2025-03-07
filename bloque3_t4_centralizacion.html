@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>T4. Centralización de datasets y modelos: Huggingface, OpenAI &#8212; Minería de Textos</title>
+    <title>T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados &#8212; Minería de Textos</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -431,6 +431,13 @@ title="Print to PDF"
        </em>
        )
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#diferencia-entre-ajuste-de-prompts-y-ajuste-fino">
+         Diferencia entre ajuste de prompts y ajuste fino
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ajuste-fino-fine-tuning">
@@ -461,6 +468,11 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diferencia-entre-instruccion-de-modelos-y-ajuste-de-prompts">
+       Diferencia entre instrucción de modelos y ajuste de prompts
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flan">
        FLAN
       </a>
@@ -488,7 +500,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>T4. Centralización de datasets y modelos: Huggingface, OpenAI</h1>
+                <h1>T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -650,6 +662,13 @@ title="Print to PDF"
        </em>
        )
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#diferencia-entre-ajuste-de-prompts-y-ajuste-fino">
+         Diferencia entre ajuste de prompts y ajuste fino
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#ajuste-fino-fine-tuning">
@@ -680,6 +699,11 @@ title="Print to PDF"
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#diferencia-entre-instruccion-de-modelos-y-ajuste-de-prompts">
+       Diferencia entre instrucción de modelos y ajuste de prompts
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#flan">
        FLAN
       </a>
@@ -708,8 +732,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="t4-centralizacion-de-datasets-y-modelos-huggingface-openai">
-<h1>T4. Centralización de datasets y modelos: Huggingface, OpenAI<a class="headerlink" href="#t4-centralizacion-de-datasets-y-modelos-huggingface-openai" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="t4-repositorios-y-tecnologias-de-modelos-generativos-preentrenados">
+<h1>T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados<a class="headerlink" href="#t4-repositorios-y-tecnologias-de-modelos-generativos-preentrenados" title="Permalink to this headline">#</a></h1>
 <div class="note admonition">
 <p class="admonition-title">Nota</p>
 <p>Lee con atención el tema 4 del bloque 2. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 2.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. <strong>El plazo para realizar las lecturas y el cuestionario es: ** Cierre 23:59 del 13/03/2024</strong> (el día anterior a la clase presencial).</p>
@@ -1232,7 +1256,7 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 </ul>
 <p>Estas técnicas de ingeniería de prompts también se pueden emplear para construir prompts en vista a ser usadas en <em>prompt tuning</em> (ver siguiente sección). Estos casos se suele hablar de <em>zero-shot learning</em>, <em>few-shot learning</em> y <em>chain of thought learning</em>.</p>
 <blockquote>
-<div><p>En <span class="xref myst">este cuaderno de trabajo</span> se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.</p>
+<div><p>En <a class="reference external" href="https://github.com/gplsi/Cuadernos/blob/main/shotTechn.ipynb">este cuaderno de trabajo</a> se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.</p>
 </div></blockquote>
 </section>
 <section id="ajuste-de-prompts-prompt-tuning">
@@ -1242,8 +1266,17 @@ Figura 6. Estrategias de decodificación modelos GPT.</p>
 Figura 8. Prompt Tuning (<a class="reference external" href="https://arxiv.org/abs/2104.08691">fuente</a>).</p>
 <p>Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este <a class="reference external" href="https://huggingface.co/docs/peft/en/package_reference/prompt_tuning">enlace</a>.</p>
 <blockquote>
-<div><p>En <span class="xref myst">este cuaderno de trabajo</span> se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo <a class="reference external" href="https://huggingface.co/docs/transformers/model_doc/flan-t5">FLAN-T5</a> creado por Google.</p>
+<div><p>En <a class="reference external" href="https://github.com/gplsi/Cuadernos/blob/main/promptTuning.ipynb">este cuaderno de trabajo</a> se muestra como realizar un prompt tuning sobre un gran modelo de lenguaje (LLM), concretamente, al modelo FLAN-T5 creado por Google..</p>
 </div></blockquote>
+<section id="diferencia-entre-ajuste-de-prompts-y-ajuste-fino">
+<h5>Diferencia entre ajuste de prompts y ajuste fino<a class="headerlink" href="#diferencia-entre-ajuste-de-prompts-y-ajuste-fino" title="Permalink to this headline">#</a></h5>
+<p>La diferencia principal entre el ajuste de prompts y el ajuste fino (que se explicará en detalle en la siguiente sección) radica tanto en el alcance de cada técnica como en su propósito.</p>
+<p>El ajuste fino permite una personalización profunda del modelo, modificando directamente todos los pesos de su estructura. Es ideal para aplicaciones específicas donde se necesita maximizar el rendimiento para una tarea concreta. Por otro lado, el ajuste de prompts adopta un enfoque más ágil al centrarse únicamente en aprender una representación más inteligente de la entrada, sin tocar los pesos del modelo. Esto lo convierte en una opción más liviana y flexible.</p>
+<p>Si bien es cierto que el ajuste fino puede optimizarse con técnicas modernas como LoRA (que se abordará más adelante), conceptualmente estas estrategias representan métodos distintos. El ajuste de prompts no busca alterar el modelo en su totalidad, sino mejorar la forma en que interpreta las entradas.</p>
+<blockquote>
+<div><p>En <a class="reference external" href="https://github.com/gplsi/Cuadernos/blob/main/instructionTuning.ipynb">este cuaderno de trabajo</a> se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo <a class="reference external" href="https://huggingface.co/docs/transformers/model_doc/flan-t5">FLAN-T5</a> creado por Google.</p>
+</div></blockquote>
+</section>
 </section>
 <section id="ajuste-fino-fine-tuning">
 <h4>Ajuste fino (<em>Fine-tuning</em>)<a class="headerlink" href="#ajuste-fino-fine-tuning" title="Permalink to this headline">#</a></h4>
@@ -1256,7 +1289,7 @@ Figura 8. Prompt Tuning (<a class="reference external" href="https://arxiv.org/a
 <p><img alt="Continual pre-training" src="_images/continual.png" />
 Figura 8. Continual pre-training (<a class="reference external" href="https://medium.com/&#64;gilinachum/llm-domain-adaptation-using-continued-pre-training-part-1-3-e3d10fcfdae1">fuente</a>).</p>
 <blockquote>
-<div><p>En <span class="xref myst">este cuaderno de trabajo</span> se muestra como realizar un continual pre-training sobre un gran modelo de lenguaje (LLM), concretamente el modelo GPT-2.</p>
+<div><p>En <a class="reference external" href="https://github.com/gplsi/Cuadernos/blob/main/continual.ipynb">este cuaderno de trabajo</a> se muestra como realizar un continual pre-training sobre un gran modelo de lenguaje (LLM), concretamente el modelo GPT-2.</p>
 </div></blockquote>
 </section>
 <section id="fine-tuning-lora">
@@ -1285,6 +1318,40 @@ Figura 10. Arquitectura de instrucciones GPT.</p>
 <p>En el siguiente artículo <a class="reference external" href="https://arxiv.org/pdf/2308.10792.pdf">&lt;&lt;<em>Instruction Tuning for Large Language Models: A Survey</em>&gt;&gt;</a> se revisan las posibles dificultades del IT y las críticas en su contra, además de señalar las deficiencias actuales de las estrategias existentes y sugerir posibles áreas de investigación futura.</p>
 <p><img alt="Alt text" src="_images/GPT_IT_ejemplo.png" />
 Figura 11. Ejemplo de instrucciones GPT.</p>
+<section id="diferencia-entre-instruccion-de-modelos-y-ajuste-de-prompts">
+<h4>Diferencia entre instrucción de modelos y ajuste de prompts<a class="headerlink" href="#diferencia-entre-instruccion-de-modelos-y-ajuste-de-prompts" title="Permalink to this headline">#</a></h4>
+<p>El ajuste de prompts y la instrucción de modelos son enfoques utilizados para optimizar modelos de lenguaje, pero con objetivos y métodos distintos. Mientras que el ajuste de prompts busca mejorar el desempeño del modelo en tareas específicas al optimizar únicamente los vectores del prompt sin alterar los pesos del modelo base, la instrucción de modelos implica modificar los pesos del modelo mediante el entrenamiento con un gran conjunto de datos de instrucciones variadas, lo que amplía su capacidad de generalización a diversas tareas. Como se detalla en la tabla a continuación, el ajuste de prompts es menos complejo computacionalmente y requiere pocos ejemplos enfocados, pero su generalización es limitada. Por otro lado, la instrucción de modelos, aunque más costosa, habilita un mejor entendimiento y ejecución de una amplia gama de instrucciones.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Aspecto</p></th>
+<th class="head"><p>Prompt Tuning</p></th>
+<th class="head"><p>Instruction Tuning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Objetivo</p></td>
+<td><p>Mejorar tareas específicas.</p></td>
+<td><p>Mejorar la capacidad general de seguir instrucciones.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Modificación del modelo</p></td>
+<td><p>No se alteran los pesos del modelo base.</p></td>
+<td><p>Se ajustan los pesos del modelo.</p></td>
+</tr>
+<tr class="row-even"><td><p>Dataset requerido</p></td>
+<td><p>Pocos ejemplos, enfocados en una tarea concreta.</p></td>
+<td><p>Gran conjunto de datos diversos de instrucciones.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Generalización</p></td>
+<td><p>Limitada a la tarea para la cual se ajustó el prompt.</p></td>
+<td><p>Amplia, con capacidad para responder a más tareas.</p></td>
+</tr>
+<tr class="row-even"><td><p>Complejidad computacional</p></td>
+<td><p>Menor (ajuste de vectores del prompt).</p></td>
+<td><p>Mayor (entrenamiento de pesos del modelo).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="flan">
 <h4>FLAN<a class="headerlink" href="#flan" title="Permalink to this headline">#</a></h4>
 <p>FLAN (Fine-tuned LAnguage Net) es una “arquitectura” para realizar un instruction-tuning a un modelo de lenguaje pre-entrenado. El objetivo es que usando un pequeño número de actualizaciones sobre un modelo pre-entrenado, el modelo resultante sea capaz de realizar tareas específicas que antes no era capaz de realizar.</p>

@@ -466,6 +466,18 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#huggingface-conjunto-de-datos-codigo-fuente-modelos">
        Huggingface 🤗 [conjunto de datos, código fuente, modelos]
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#open-llm-leaderboard-tabla-de-rankings">
+         Open LLM Leaderboard [tabla de rankings]
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#language-model-evaluation-harness-tool-for-standardized-evaluation-of-language-models">
+         Language Model Evaluation Harness [Tool for standardized evaluation of language models]
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#extreme-tabla-de-rankings-conjunto-de-datos-codigos-fuente-papers-modelos">
@@ -687,6 +699,18 @@ title="Print to PDF"
       <a class="reference internal nav-link" href="#huggingface-conjunto-de-datos-codigo-fuente-modelos">
        Huggingface 🤗 [conjunto de datos, código fuente, modelos]
       </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#open-llm-leaderboard-tabla-de-rankings">
+         Open LLM Leaderboard [tabla de rankings]
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#language-model-evaluation-harness-tool-for-standardized-evaluation-of-language-models">
+         Language Model Evaluation Harness [Tool for standardized evaluation of language models]
+        </a>
+       </li>
+      </ul>
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#extreme-tabla-de-rankings-conjunto-de-datos-codigos-fuente-papers-modelos">
@@ -1239,6 +1263,27 @@ Las tareas recogidas en el marco de GLUE actualmente ofrecen <strong>rendimiento
 <li><p><strong>API para descargar y usar</strong> rápidamente esos <strong>modelos previamente entrenados</strong></p></li>
 <li><p>está <strong>respaldado/integrado</strong> por librerías como <a class="reference external" href="https://pytorch.org/"><strong>PyTorch</strong></a> y <a class="reference external" href="https://www.tensorflow.org/"><strong>TensorFlow</strong></a></p></li>
 </ul>
+<section id="open-llm-leaderboard-tabla-de-rankings">
+<h5><a class="reference external" href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard">Open LLM Leaderboard</a> [tabla de rankings]<a class="headerlink" href="#open-llm-leaderboard-tabla-de-rankings" title="Permalink to this headline">#</a></h5>
+<p>El <strong>Open LLM Leaderboard</strong> es una plataforma colaborativa desarrollada por Huggingface que permite comparar el rendimiento de modelos de lenguaje abiertos de última generación en una amplia gama de tareas estándar. Esta herramienta proporciona un espacio transparente y accesible para que investigadores, desarrolladores y organizaciones evalúen sus modelos utilizando métricas consistentes y datos reproducibles. Al integrar modelos alojados localmente y APIs comerciales, el Leaderboard fomenta la innovación al tiempo que garantiza la comparabilidad entre soluciones. Además, su enfoque en la transparencia y la reproducibilidad lo ha convertido en un recurso fundamental para la comunidad de inteligencia artificial, promoviendo avances en la evaluación y el desarrollo de modelos de lenguaje.</p>
+<p><img alt="Open LLM Leaderboard" src="_images/open-llm-leaderboard.png" />
+Figura 16. Open LLM Leaderboard.</p>
+</section>
+<section id="language-model-evaluation-harness-tool-for-standardized-evaluation-of-language-models">
+<h5><a class="reference external" href="https://github.com/EleutherAI/lm-evaluation-harness">Language Model Evaluation Harness</a> [Tool for standardized evaluation of language models]<a class="headerlink" href="#language-model-evaluation-harness-tool-for-standardized-evaluation-of-language-models" title="Permalink to this headline">#</a></h5>
+<p>El <strong>LM Evaluation Harness</strong> es la tecnología base que impulsa el popular <a class="reference external" href="https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard">Open LLM Leaderboard</a> de Huggingface. Ha sido utilizado en <a class="reference external" href="https://scholar.google.com/scholar?oi=bibs&amp;hl=en&amp;authuser=2&amp;cites=15052937328817631261,4097184744846514103,1520777361382155671,17476825572045927382,18443729326628441434,14801318227356878622,7890865700763267262,12854182577605049984,15641002901115500560,5104500764547628290">cientos de publicaciones académicas</a> y adoptado internamente por docenas de organizaciones, incluyendo NVIDIA, Cohere, BigScience, BigCode, Nous Research y Mosaic ML. Su amplia aceptación tanto en la academia como en la industria refleja su utilidad y confiabilidad como herramienta para evaluar modelos de lenguaje generativo.</p>
+<p>Características principales:</p>
+<ul class="simple">
+<li><p><strong>Más de 60 benchmarks académicos estándar para LLMs</strong>, que incluyen cientos de subtareas y variantes ya implementadas.</p></li>
+<li><p><strong>Compatibilidad con modelos</strong> cargados mediante <a class="reference external" href="https://github.com/huggingface/transformers/">transformers</a> (incluyendo cuantización con <a class="reference external" href="https://github.com/ModelCloud/GPTQModel">GPTQModel</a> y <a class="reference external" href="https://github.com/PanQiWei/AutoGPTQ">AutoGPTQ</a>), <a class="reference external" href="https://github.com/EleutherAI/gpt-neox">GPT-NeoX</a> y <a class="reference external" href="https://github.com/microsoft/Megatron-DeepSpeed/">Megatron-DeepSpeed</a>, utilizando una interfaz flexible independiente del tokenizador.</p></li>
+<li><p><strong>Soporte para inferencia rápida y eficiente en memoria</strong> con <a class="reference external" href="https://github.com/vllm-project/vllm">vLLM</a>.</p></li>
+<li><p><strong>Integración con APIs comerciales</strong> como <a class="reference external" href="https://openai.com">OpenAI</a> y <a class="reference external" href="https://textsynth.com/">TextSynth</a>.</p></li>
+<li><p><strong>Evaluación de adaptadores</strong> (por ejemplo, LoRA) mediante la biblioteca <a class="reference external" href="https://github.com/huggingface/peft">PEFT de HuggingFace</a>.</p></li>
+<li><p><strong>Compatibilidad con modelos locales y benchmarks personalizados.</strong></p></li>
+<li><p><strong>Evaluación reproducible:</strong> Se utilizan prompts públicos, lo que garantiza comparabilidad entre trabajos de investigación.</p></li>
+<li><p><strong>Facilidad para personalizar prompts y métricas de evaluación.</strong></p></li>
+</ul>
+</section>
 </section>
 <section id="extreme-tabla-de-rankings-conjunto-de-datos-codigos-fuente-papers-modelos">
 <h4><a class="reference external" href="https://sites.research.google/xtreme">Extreme</a> [tabla de rankings, conjunto de datos, códigos fuente, papers, modelos]<a class="headerlink" href="#extreme-tabla-de-rankings-conjunto-de-datos-codigos-fuente-papers-modelos" title="Permalink to this headline">#</a></h4>
