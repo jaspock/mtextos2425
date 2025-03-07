@@ -597,7 +597,7 @@ Entre las técnicas más populares de ingeniería de prompts tenemos las siguien
 
 Estas técnicas de ingeniería de prompts también se pueden emplear para construir prompts en vista a ser usadas en _prompt tuning_ (ver siguiente sección). Estos casos se suele hablar de _zero-shot learning_, _few-shot learning_ y _chain of thought learning_.
 
->  En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/shotTechn.ipynb) se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.
+>  En [este cuaderno de trabajo](https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/shotTechn.ipynb) se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.
 
 #### Ajuste de prompts (_Prompt Tuning_)
 
@@ -608,7 +608,7 @@ Figura 8. Prompt Tuning ([fuente](https://arxiv.org/abs/2104.08691)).
 
 Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este [enlace](https://huggingface.co/docs/peft/en/package_reference/prompt_tuning).
 
->  En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/promptTuning.ipynb) se muestra como realizar un prompt tuning sobre un gran modelo de lenguaje (LLM), concretamente, al modelo FLAN-T5 creado por Google..
+>  En [este cuaderno de trabajo](https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/promptTuning.ipynb) se muestra como realizar un prompt tuning sobre un gran modelo de lenguaje (LLM), concretamente, al modelo FLAN-T5 creado por Google..
 
 ##### Diferencia entre ajuste de prompts y ajuste fino
 
@@ -618,7 +618,7 @@ El ajuste fino permite una personalización profunda del modelo, modificando dir
 
 Si bien es cierto que el ajuste fino puede optimizarse con técnicas modernas como LoRA (que se abordará más adelante), conceptualmente estas estrategias representan métodos distintos. El ajuste de prompts no busca alterar el modelo en su totalidad, sino mejorar la forma en que interpreta las entradas.
 
-> En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/instructionTuning.ipynb) se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo [FLAN-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5) creado por Google.
+> En [este cuaderno de trabajo](https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/instructionTuning.ipynb) se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo [FLAN-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5) creado por Google.
 
 #### Ajuste fino (_Fine-tuning_)
 
@@ -635,7 +635,7 @@ Por ejemplo, mientras que un ajuste fino podría usar un corpus médico para esp
 ![Continual pre-training](images/bloque3/t4/continual.png)
 Figura 8. Continual pre-training ([fuente](https://medium.com/@gilinachum/llm-domain-adaptation-using-continued-pre-training-part-1-3-e3d10fcfdae1)).
 
->  En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/continual.ipynb) se muestra como realizar un continual pre-training sobre un gran modelo de lenguaje (LLM), concretamente el modelo GPT-2.
+>  En [este cuaderno de trabajo](https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/continual.ipynb) se muestra como realizar un continual pre-training sobre un gran modelo de lenguaje (LLM), concretamente el modelo GPT-2.
 
 ##### Fine-tuning LoRA
 
