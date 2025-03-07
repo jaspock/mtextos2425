@@ -16,20 +16,23 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
 - [T2.1. Caso de estudio Análisis de Sentimientos][t2.1]
 - [T3. Métricas de Evaluación][t3]
 - [T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados][t4]
-
+<!--
 % - [T5. AutoML. Descripción general y estado de la cuestión][t5]
 % - [T5.1. AutoGOAL: Marco de trabajo para la generación de pipelines óptimos][t5.1]
+-->
 
 ### Prácticas
 
 - [P1. Creación de baseline con Sklearn. Caso de uso Clasificación de Documentos][p1]
 - [P1.2. Utilización de modelos transformers ya existentes como API. Caso de uso Clasificación de Documentos][p2]
+<!-- 
 %- [P2. Transformer fine-tunnig. Caso de uso Clasificación de Documentos][p3]
+-->
 - [P2. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos][p4]
 - [P3. Modelos Generativos][p7]
 - [P4. Consolidación de temario y trabajo en clase][]
-% - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
-% - [P5. Utilización de técnicas de AutoML, libreria AutoGOAL.  Caso de uso Clasificación de Documentos][p6]
+<!--  - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
+ - [P5. Utilización de técnicas de AutoML, libreria AutoGOAL.  Caso de uso Clasificación de Documentos][p6] -->
 
 
 ## Evaluación
@@ -40,18 +43,18 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
  - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/hFoNUccvKW9RKP7z8). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
  - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 03/04/2025- Cierre 23:59 del 09/04/2025.
  - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025.
-% - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
+<!-- [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
 
-% - [Cuestionario de setisfacción](https://forms.gle/sAobHzNaFSCu47ss8)
+- [Cuestionario de setisfacción](https://forms.gle/sAobHzNaFSCu47ss8) -->
  
 
 ### Prácticas
  - P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun). Apertura el 27/03/2025 - Cierre 23:59 del 10/04/2025.
-- P.Ev2. [Evaluación 2 (selectiva)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva). Apertura el 10/04/2025 - Cierre 23:59 del <strike>22/05/2025</strike>  05/05/2024.
+- P.Ev2. [Evaluación 2 (selectiva)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva). Apertura el 10/04/2025 - Cierre 23:59 del 22/05/2025.
 
 
 ### Utilidades
-- Gestión de créditos y máquinas virtuales con Google Colab: [Instrucciones](https://jaspock.github.io/mtextos2425/doc_utils/creditosColab/web.html)
+<!-- Gestión de créditos y máquinas virtuales con Google Colab: [Instrucciones](https://jaspock.github.io/mtextos2425/doc_utils/creditosColab/web.html) -->
 - Gestión de entornos Google Colab conectados a máquinas virtuales locales de Docker. [Instrucciones](https://jaspock.github.io/mtextos2425/doc_utils/colabEntornoLocal/web.html)
 
 
