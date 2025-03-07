@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Aplicaciones de la minería de textos &#8212; Minería de Textos</title>
+    <title>P3. Ensemble de pipelines &#8212; Minería de Textos</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -220,7 +220,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/bloque3.md"
+        <a href="_sources/bloque3_p6-SA-Generativos.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -280,40 +280,52 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temario">
-   Temario
+  <a class="reference internal nav-link" href="#clase-practica">
+   <strong>
+    Clase práctica.
+   </strong>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teoria">
-     Teoría
+    <a class="reference internal nav-link" href="#ensemble-de-pipelines-caso-de-estudio-de-analisis-de-sentimientos">
+     Ensemble de pipelines: Caso de estudio de Análisis de Sentimientos
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#practicas">
-     Prácticas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluacion">
-   Evaluación
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Teoría
+    <a class="reference internal nav-link" href="#descripcion">
+     Descripción
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Prácticas
+    <a class="reference internal nav-link" href="#ejemplos-demostrativos">
+     Ejemplos demostrativos
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#utilidades">
-     Utilidades
+    <a class="reference internal nav-link" href="#ejercicios">
+     Ejercicios
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicio-1">
+       Ejercicio 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicio-2">
+       Ejercicio 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicios-adicionales">
+       Ejercicios adicionales
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criterios-a-tener-en-cuenta-para-la-practica">
+     Criterios a tener en cuenta para la práctica:
     </a>
    </li>
   </ul>
@@ -327,7 +339,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Aplicaciones de la minería de textos</h1>
+                <h1>P3. Ensemble de pipelines</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -338,40 +350,52 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#temario">
-   Temario
+  <a class="reference internal nav-link" href="#clase-practica">
+   <strong>
+    Clase práctica.
+   </strong>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#teoria">
-     Teoría
+    <a class="reference internal nav-link" href="#ensemble-de-pipelines-caso-de-estudio-de-analisis-de-sentimientos">
+     Ensemble de pipelines: Caso de estudio de Análisis de Sentimientos
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#practicas">
-     Prácticas
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evaluacion">
-   Evaluación
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Teoría
+    <a class="reference internal nav-link" href="#descripcion">
+     Descripción
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Prácticas
+    <a class="reference internal nav-link" href="#ejemplos-demostrativos">
+     Ejemplos demostrativos
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#utilidades">
-     Utilidades
+    <a class="reference internal nav-link" href="#ejercicios">
+     Ejercicios
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicio-1">
+       Ejercicio 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicio-2">
+       Ejercicio 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejercicios-adicionales">
+       Ejercicios adicionales
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criterios-a-tener-en-cuenta-para-la-practica">
+     Criterios a tener en cuenta para la práctica:
     </a>
    </li>
   </ul>
@@ -386,58 +410,71 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="aplicaciones-de-la-mineria-de-textos">
-<span id="label-aplicaciones"></span><h1>Aplicaciones de la minería de textos<a class="headerlink" href="#aplicaciones-de-la-mineria-de-textos" title="Permalink to this headline">#</a></h1>
-<p>Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamiento del lenguaje natural. El profesor encargado de este bloque es <a class="reference external" href="https://cvnet.cpd.ua.es/curriculum-breve/es/gutierrez-vazquez-yoan/49618">Yoan Gutiérrez</a>. Colaboradores: <a class="reference external" href="https://scholar.google.es/citations?user=62u6KEkAAAAJ&amp;hl=es">José I. Abbreu Salas</a>, <a class="reference external" href="https://cvnet.cpd.ua.es/curriculum-breve/es/fernandez-martinez-javier/321">Javier Fernández Martínez</a>, <a class="reference external" href="https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690">Eduardo Grande Ruiz</a> <a class="reference external" href="https://cvnet.cpd.ua.es/curriculum-breve/es/consuegra-ayala-juan-pablo/550467">Juan Pablo Consuegra</a>.</p>
-<section id="temario">
-<h2>Temario<a class="headerlink" href="#temario" title="Permalink to this headline">#</a></h2>
-<section id="teoria">
-<h3>Teoría<a class="headerlink" href="#teoria" title="Permalink to this headline">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="p3-ensemble-de-pipelines">
+<h1>P3. Ensemble de pipelines<a class="headerlink" href="#p3-ensemble-de-pipelines" title="Permalink to this headline">#</a></h1>
+<div class="note admonition">
+<p class="admonition-title">Nota</p>
+<p>Lee con atención la práctica 3 del bloque 3. Realiza los ejercicios y una entrega unificada (práctica 2 y 3), la cual se anunciará en la introducción de la asignatura y a través del uaCloud.</p>
+<p>Tiempo de dedicación: 3 horas (asíncrona) + 3 horas trabajo independiente</p>
+</div>
+<section id="clase-practica">
+<h2><strong>Clase práctica.</strong><a class="headerlink" href="#clase-practica" title="Permalink to this headline">#</a></h2>
+<section id="ensemble-de-pipelines-caso-de-estudio-de-analisis-de-sentimientos">
+<h3>Ensemble de pipelines: Caso de estudio de Análisis de Sentimientos<a class="headerlink" href="#ensemble-de-pipelines-caso-de-estudio-de-analisis-de-sentimientos" title="Permalink to this headline">#</a></h3>
+<!-- **Autores:**
+
+- [Yoan Gutiérrez Vázquez][yoan]
+- [José Ignacio Abreu Salas][abreu] -->
+</section>
+<section id="descripcion">
+<h3>Descripción<a class="headerlink" href="#descripcion" title="Permalink to this headline">#</a></h3>
+<p>En esta clase práctica estudiaremos cómo diseñar distintos sistemas de clasificación textual que alimentan un meta ensamblador que se comporta como un sistema de votación.
+Se orientarán ejercicios a resolver en los que el estudiante deberá proponer y diseñar sistemas de análisis de sentimientos teniendo en cuenta lo estudiado en esta práctica.</p>
+<p>Las entregas de ejercicios se han de hacer a través del UAcloud&gt;Evaluación&gt;[Nombre de la práctica].</p>
+</section>
+<section id="ejemplos-demostrativos">
+<h3>Ejemplos demostrativos<a class="headerlink" href="#ejemplos-demostrativos" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html">T1. Aplicaciones generales del PLN (areas generales)</a></p></li>
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t2_subaplicaciones-benchmarks.html">T2. Aplicaciones específicas y Benchmacks</a></p></li>
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t2.1_analisis_sentimientos.html">T2.1. Caso de estudio Análisis de Sentimientos</a></p></li>
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html">T3. Métricas de Evaluación</a></p></li>
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html">T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados</a></p></li>
+<li><p><strong><a class="reference external" href="https://github.com/gplsi/Cuadernos/blob/main/promptTuning.ipynb">06-News-PromptTuning</a></strong></p></li>
+<li><p><strong><a class="reference external" href="https://github.com/gplsi/Cuadernos/blob/main/instructionTuning.ipynb">07-News-PromptTuning</a></strong></p></li>
 </ul>
 </section>
-<section id="practicas">
-<h3>Prácticas<a class="headerlink" href="#practicas" title="Permalink to this headline">#</a></h3>
+<section id="ejercicios">
+<h3>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">#</a></h3>
+<section id="ejercicio-1">
+<h4>Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permalink to this headline">#</a></h4>
+<p>Basándose en los ejemplos anteriores haga uso del siguiente dataset y diseñe su propio sistema para el análisis de sentimientos. Se disponibilizan unas funciones python para la limpieza y carga de dataset.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_p1_SA-Pipeline-Reviews.html">P1. Creación de baseline con Sklearn. Caso de uso Clasificación de Documentos</a></p></li>
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_p2_SA-Transformers-Basic.html">P1.2. Utilización de modelos transformers ya existentes como API. Caso de uso Clasificación de Documentos</a></p></li>
-</ul>
-<ul class="simple">
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_p4_SA-Transformers-Training-Custom.html">P2. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos</a></p></li>
-<li><p><a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_p6-SA-Generativos.html">P3. Modelos Generativos</a></p></li>
-<li><p>[P4. Consolidación de temario y trabajo en clase][]</p></li>
+<li><p>sample_data/ejercicio_tripadvisor.csv</p></li>
+<li><p>tripadvisor_Utils.py</p></li>
 </ul>
 </section>
-</section>
-<section id="evaluacion">
-<h2>Evaluación<a class="headerlink" href="#evaluacion" title="Permalink to this headline">#</a></h2>
-<section id="id1">
-<h3>Teoría<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<section id="ejercicio-2">
+<h4>Ejercicio 2<a class="headerlink" href="#ejercicio-2" title="Permalink to this headline">#</a></h4>
+<p>Basándose en los ejemplos anteriores haga uso del siguiente dataset y diseñe su propio sistema para el análisis de sentimientos. Se disponibilizan unas funciones python para la limpieza y carga de dataset.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://forms.gle/A9VANxkdBd99Ly5j9">T1.C1. Cuestionario de evaluación</a>. Apertura el 20/03/2025- Cierre 23:59 del 26/03/2025.</p></li>
-<li><p><a class="reference external" href="https://forms.gle/FtYfQjSa1n8tEpK6A">T2.C1. Cuestionario de evaluación</a>. Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.</p></li>
-<li><p><a class="reference external" href="https://forms.gle/hFoNUccvKW9RKP7z8">T2.1.C1. Cuestionario de evaluación</a>. Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.</p></li>
-<li><p><a class="reference external" href="https://forms.gle/DiDRZYNCHMxyumAp8">T3.C1. Cuestionario de evaluación</a>. Apertura el 03/04/2025- Cierre 23:59 del 09/04/2025.</p></li>
-<li><p><a class="reference external" href="https://forms.gle/St7f5jcVWgaczAgo6">T4.C1. Cuestionario de evaluación</a>. Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025.</p></li>
+<li><p>sample_data/ejercicio_bbc_train.csv</p></li>
+<li><p>sample_data/ejercicio_bbc_test.csv</p></li>
 </ul>
 </section>
-<section id="id2">
-<h3>Prácticas<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<section id="ejercicios-adicionales">
+<h4>Ejercicios adicionales<a class="headerlink" href="#ejercicios-adicionales" title="Permalink to this headline">#</a></h4>
+<p>Elige alguno de los siguientes datasets y conforma tu propio sistema de sentiment analysis.</p>
 <ul class="simple">
-<li><p>P.Ev1. <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun">Evaluación 1 (común)</a>. Apertura el 27/03/2025 - Cierre 23:59 del 10/04/2025.</p></li>
-<li><p>P.Ev2. <a class="reference external" href="https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva">Evaluación 2 (selectiva)</a>. Apertura el 10/04/2025 - Cierre 23:59 del <strike>22/05/2025</strike>  05/05/2024.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/search?q=sentiment+analysis+in%3Adatasets">SA Kaggle todos</a></p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/arbazkhan971/product-sentiment-analysis">Product review</a> (recomendado)</p></li>
+<li><p><a class="reference external" href="https://huggingface.co/datasets?search=sentiment">SA huggingface</a></p></li>
 </ul>
 </section>
-<section id="utilidades">
-<h3>Utilidades<a class="headerlink" href="#utilidades" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="criterios-a-tener-en-cuenta-para-la-practica">
+<h3>Criterios a tener en cuenta para la práctica:<a class="headerlink" href="#criterios-a-tener-en-cuenta-para-la-practica" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
-<li><p>Gestión de créditos y máquinas virtuales con Google Colab: <a class="reference external" href="https://jaspock.github.io/mtextos2425/doc_utils/creditosColab/web.html">Instrucciones</a></p></li>
-<li><p>Gestión de entornos Google Colab conectados a máquinas virtuales locales de Docker. <a class="reference external" href="https://jaspock.github.io/mtextos2425/doc_utils/colabEntornoLocal/web.html">Instrucciones</a></p></li>
+<li><p>El cuaderno a entregar no debe tener errores de ejecución.</p></li>
+<li><p>Cada modificación de autor incorporada en cuaderno debe ser señalada con comentario. Por ejemplo ####Codigo NOMBRE_DEL_AUTOR ….#####.</p></li>
+<li><p>Se deben comentar y describir los aportes realizados por el autor, y explicar los motivos</p></li>
+<li><p>Se deben evaluar varias opciones de experimentación (i.e. preprocesamiento, configuraciones, tecnologías, modelos) y explicarlas.</p></li>
+<li><p>Se deben describir discusiones y conclusiones del estudio.</p></li>
 </ul>
 </section>
 </section>
