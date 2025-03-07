@@ -9,7 +9,6 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
 
 ## Temario
 
-
 ### Teoría
 
 - [T1. Aplicaciones generales del PLN (areas generales)][t1]
@@ -17,16 +16,18 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
 - [T2.1. Caso de estudio Análisis de Sentimientos][t2.1]
 - [T3. Métricas de Evaluación][t3]
 - [T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados][t4]
-- [T5. AutoML. Descripción general y estado de la cuestión][t5]
-- [T5.1. AutoGOAL: Marco de trabajo para la generación de pipelines óptimos][t5.1]
+%- [T5. AutoML. Descripción general y estado de la cuestión][t5]
+%- [T5.1. AutoGOAL: Marco de trabajo para la generación de pipelines óptimos][t5.1]
 
 ### Prácticas
 
 - [P1. Creación de baseline con Sklearn. Caso de uso Clasificación de Documentos][p1]
 - [P1.2. Utilización de modelos transformers ya existentes como API. Caso de uso Clasificación de Documentos][p2]
-- [P2. Transformer fine-tunnig. Caso de uso Clasificación de Documentos][p3]
-- [P3. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos][p4]
- - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
+%- [P2. Transformer fine-tunnig. Caso de uso Clasificación de Documentos][p3]
+- [P2. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos][p4]
+- [P3. Modelos Generativos][p7]
+- [P4. Consolidación de temario y trabajo en clase][]
+% - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
 % - [P5. Utilización de técnicas de AutoML, libreria AutoGOAL.  Caso de uso Clasificación de Documentos][p6]
 
 
