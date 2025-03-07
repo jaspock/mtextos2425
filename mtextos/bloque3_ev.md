@@ -10,7 +10,7 @@ Para la evaluación de este bloque el estudiante deberá realizar **DOS entregas
 
 ### Entrega 2 (selectiva)
 
-* **Opción A** (*para optar por una nota máxima de 8pts*): Seleccionar **UNO** de los ejercicios relizados en las [Práctica 2][p3], [3][p4], [4][p5] y entregarlo. Ajustarse a los criterios de evaluación descritos al final de este documento.
+* **Opción A** (*para optar por una nota máxima de 8pts*): Seleccionar **UNO** de los ejercicios relizados en las [Práctica 2][p4] y [3][p7] y entregarlo. Ajustarse a los criterios de evaluación descritos al final de este documento.
 
 * **Opción B** (*para optar por una nota máxima de 10pts*): 
   - Seleccionar un **problema propio** de su entorno profesional o de mayor interés personal. Se requerirá la aplicación de técnicas de PLN orientadas a **resolver tareas finales del mundo real**. Se debe ajustar a los criterios descritos al final de este documento.
@@ -36,9 +36,10 @@ Se entragará la tarea (paquete de trabajo) mediante una **entrega en UAcloud** 
 
 
 
-[p1]: https://jaspock.github.io/mtextos2324/bloque3_p1_SA-Pipeline-Reviews.html
-[p2]: https://jaspock.github.io/mtextos2324/bloque3_p2_SA-Transformers-Basic.html
-[p3]: https://jaspock.github.io/mtextos2324/bloque3_p3_SA-Transformers-Training-FineTuning.html
-[p4]: https://jaspock.github.io/mtextos2324/bloque3_p4_SA-Transformers-Training-Custom.html
-[p5]: https://jaspock.github.io/mtextos2324/bloque3_p5-SA-Ensemble.html
+[p1]: https://jaspock.github.io/mtextos2425/bloque3_p1_SA-Pipeline-Reviews.html
+[p2]: https://jaspock.github.io/mtextos2425/bloque3_p2_SA-Transformers-Basic.html
+[p3]: https://jaspock.github.io/mtextos2425/bloque3_p3_SA-Transformers-Training-FineTuning.html
+[p4]: https://jaspock.github.io/mtextos2425/bloque3_p4_SA-Transformers-Training-Custom.html
+[p5]: https://jaspock.github.io/mtextos2425/bloque3_p5-SA-Ensemble.html
 [p6]: https://machinelearningmastery.com/random-oversampling-and-undersampling-for-imbalanced-classification/
+[p7]: https://jaspock.github.io/mtextos2425/bloque3_p6-SA-Generativos.html

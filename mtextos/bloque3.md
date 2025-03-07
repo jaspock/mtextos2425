@@ -16,8 +16,9 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
 - [T2.1. Caso de estudio Análisis de Sentimientos][t2.1]
 - [T3. Métricas de Evaluación][t3]
 - [T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados][t4]
-%- [T5. AutoML. Descripción general y estado de la cuestión][t5]
-%- [T5.1. AutoGOAL: Marco de trabajo para la generación de pipelines óptimos][t5.1]
+
+% - [T5. AutoML. Descripción general y estado de la cuestión][t5]
+% - [T5.1. AutoGOAL: Marco de trabajo para la generación de pipelines óptimos][t5.1]
 
 ### Prácticas
 
@@ -45,32 +46,33 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
  
 
 ### Prácticas
- - P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2324/bloque3_ev.html#entrega-1-comun). Apertura el 22/02/2024 - Cierre 23:59 del 08/03/2024 - Fuera de plazo hasta 13/03/24.
-- P.Ev2. [Evaluación 2 (selectiva)](https://jaspock.github.io/mtextos2324/bloque3_ev.html#entrega-2-selectiva). Apertura el 14/03/24 - Cierre 23:59 del <strike>29/04/2023 - - Fuera de plazo hasta 28/04/2023</strike>  05/05/2024. - Fuera de plazo hasta 10/05/2024.
+ - P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun). Apertura el 27/03/2025 - Cierre 23:59 del 10/04/2025.
+- P.Ev2. [Evaluación 2 (selectiva)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva). Apertura el 10/04/2025 - Cierre 23:59 del <strike>22/05/2025</strike>  05/05/2024.
 
 
 ### Utilidades
-- Gestión de créditos y máquinas virtuales con Google Colab: [Instrucciones](https://jaspock.github.io/mtextos2324/doc_utils/creditosColab/web.html)
-- Gestión de entornos Google Colab conectados a máquinas virtuales locales de Docker. [Instrucciones](https://jaspock.github.io/mtextos2324/doc_utils/colabEntornoLocal/web.html)
+- Gestión de créditos y máquinas virtuales con Google Colab: [Instrucciones](https://jaspock.github.io/mtextos2425/doc_utils/creditosColab/web.html)
+- Gestión de entornos Google Colab conectados a máquinas virtuales locales de Docker. [Instrucciones](https://jaspock.github.io/mtextos2425/doc_utils/colabEntornoLocal/web.html)
 
 
 [abreu url]: https://scholar.google.es/citations?user=62u6KEkAAAAJ&hl=es
 [javi url]: https://cvnet.cpd.ua.es/curriculum-breve/es/fernandez-martinez-javier/321
 [yoan url]: https://cvnet.cpd.ua.es/curriculum-breve/es/gutierrez-vazquez-yoan/49618  
 
-[t1]: https://jaspock.github.io/mtextos2324/bloque3_t1_aplicaciones.html
-[t2]: https://jaspock.github.io/mtextos2324/bloque3_t2_subaplicaciones-benchmarks.html
-[t2.1]: https://jaspock.github.io/mtextos2324/bloque3_t2.1_analisis_sentimientos.html
-[t3]: https://jaspock.github.io/mtextos2324/bloque3_t3.1_metricas.html
-[t4]: https://jaspock.github.io/mtextos2324/bloque3_t4_centralizacion.html
-[t5]: https://jaspock.github.io/mtextos2324/bloque3_t5_automl.html
-[t5.1]: https://jaspock.github.io/mtextos2324/bloque3_t5.1_autogoal.html
+[t1]: https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html
+[t2]: https://jaspock.github.io/mtextos2425/bloque3_t2_subaplicaciones-benchmarks.html
+[t2.1]: https://jaspock.github.io/mtextos2425/bloque3_t2.1_analisis_sentimientos.html
+[t3]: https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html
+[t4]: https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html
+[t5]: https://jaspock.github.io/mtextos2425/bloque3_t5_automl.html
+[t5.1]: https://jaspock.github.io/mtextos2425/bloque3_t5.1_autogoal.html
 
-[p1]: https://jaspock.github.io/mtextos2324/bloque3_p1_SA-Pipeline-Reviews.html
-[p2]: https://jaspock.github.io/mtextos2324/bloque3_p2_SA-Transformers-Basic.html
-[p3]: https://jaspock.github.io/mtextos2324/bloque3_p3_SA-Transformers-Training-FineTuning.html
-[p4]: https://jaspock.github.io/mtextos2324/bloque3_p4_SA-Transformers-Training-Custom.html
-[p5]: https://jaspock.github.io/mtextos2324/bloque3_p5-SA-Ensemble.html
-[p6]: https://jaspock.github.io/mtextos2324/bloque3_p6_SA-AutoGOAL.html
+[p1]: https://jaspock.github.io/mtextos2425/bloque3_p1_SA-Pipeline-Reviews.html
+[p2]: https://jaspock.github.io/mtextos2425/bloque3_p2_SA-Transformers-Basic.html
+[p3]: https://jaspock.github.io/mtextos2425/bloque3_p3_SA-Transformers-Training-FineTuning.html
+[p4]: https://jaspock.github.io/mtextos2425/bloque3_p4_SA-Transformers-Training-Custom.html
+[p5]: https://jaspock.github.io/mtextos2425/bloque3_p5-SA-Ensemble.html
+[p6]: https://jaspock.github.io/mtextos2425/bloque3_p6_SA-AutoGOAL.html
+[p7]: https://jaspock.github.io/mtextos2425/bloque3_p6-SA-Generativos.html
 
-[ev1]: https://jaspock.github.io/mtextos2324/bloque3_ev.html
+[ev1]: https://jaspock.github.io/mtextos2425/bloque3_ev.html
