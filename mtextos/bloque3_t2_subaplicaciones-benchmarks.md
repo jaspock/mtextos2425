@@ -676,6 +676,27 @@ La librería Transformers **proporciona**:
 - **API para descargar y usar** rápidamente esos **modelos previamente entrenados**
 - está **respaldado/integrado** por librerías como [**PyTorch**](https://pytorch.org/) y [**TensorFlow**](https://www.tensorflow.org/)
 
+##### [Open LLM Leaderboard](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) [tabla de rankings]
+
+El **Open LLM Leaderboard** es una plataforma colaborativa desarrollada por Huggingface que permite comparar el rendimiento de modelos de lenguaje abiertos de última generación en una amplia gama de tareas estándar. Esta herramienta proporciona un espacio transparente y accesible para que investigadores, desarrolladores y organizaciones evalúen sus modelos utilizando métricas consistentes y datos reproducibles. Al integrar modelos alojados localmente y APIs comerciales, el Leaderboard fomenta la innovación al tiempo que garantiza la comparabilidad entre soluciones. Además, su enfoque en la transparencia y la reproducibilidad lo ha convertido en un recurso fundamental para la comunidad de inteligencia artificial, promoviendo avances en la evaluación y el desarrollo de modelos de lenguaje.
+
+![Open LLM Leaderboard](images/bloque3/t2/open-llm-leaderboard.png)
+Figura 16. Open LLM Leaderboard.
+
+##### [Language Model Evaluation Harness](https://github.com/EleutherAI/lm-evaluation-harness) [Tool for standardized evaluation of language models]
+
+El **LM Evaluation Harness** es la tecnología base que impulsa el popular [Open LLM Leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard) de Huggingface. Ha sido utilizado en [cientos de publicaciones académicas](https://scholar.google.com/scholar?oi=bibs&hl=en&authuser=2&cites=15052937328817631261,4097184744846514103,1520777361382155671,17476825572045927382,18443729326628441434,14801318227356878622,7890865700763267262,12854182577605049984,15641002901115500560,5104500764547628290) y adoptado internamente por docenas de organizaciones, incluyendo NVIDIA, Cohere, BigScience, BigCode, Nous Research y Mosaic ML. Su amplia aceptación tanto en la academia como en la industria refleja su utilidad y confiabilidad como herramienta para evaluar modelos de lenguaje generativo.
+
+Características principales:
+- **Más de 60 benchmarks académicos estándar para LLMs**, que incluyen cientos de subtareas y variantes ya implementadas.
+- **Compatibilidad con modelos** cargados mediante [transformers](https://github.com/huggingface/transformers/) (incluyendo cuantización con [GPTQModel](https://github.com/ModelCloud/GPTQModel) y [AutoGPTQ](https://github.com/PanQiWei/AutoGPTQ)), [GPT-NeoX](https://github.com/EleutherAI/gpt-neox) y [Megatron-DeepSpeed](https://github.com/microsoft/Megatron-DeepSpeed/), utilizando una interfaz flexible independiente del tokenizador.
+- **Soporte para inferencia rápida y eficiente en memoria** con [vLLM](https://github.com/vllm-project/vllm).
+- **Integración con APIs comerciales** como [OpenAI](https://openai.com) y [TextSynth](https://textsynth.com/).
+- **Evaluación de adaptadores** (por ejemplo, LoRA) mediante la biblioteca [PEFT de HuggingFace](https://github.com/huggingface/peft).
+- **Compatibilidad con modelos locales y benchmarks personalizados.**
+- **Evaluación reproducible:** Se utilizan prompts públicos, lo que garantiza comparabilidad entre trabajos de investigación.
+- **Facilidad para personalizar prompts y métricas de evaluación.**
+
 #### [Extreme](https://sites.research.google/xtreme) [tabla de rankings, conjunto de datos, códigos fuente, papers, modelos]
 
 **TRansfer Evaluation of Multilingual Encoders** ([Extreme](https://github.com/google-research/xtreme)) es un benckmark para la **evaluación** de la capacidad de **generalización** entre **idiomas de modelos multilingües** previamente entrenados. Cubre **40 idiomas** tipológicamente diversos (que abarcan 12 familias de idiomas) e incluye **nueve tareas** que colectivamente requieren razonamiento sobre diferentes niveles de sintaxis y semántica.

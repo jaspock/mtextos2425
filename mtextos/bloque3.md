@@ -3,12 +3,11 @@
 Aplicaciones de la minería de textos
 ====================================
 
-Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamiento del lenguaje natural. El profesor encargado de este bloque es [Yoan Gutiérrez][yoan url]. Colaboradores: [José I. Abbreu Salas][abreu url], [Javier Fernández Martínez][javi url], [Eduardo Grande Ruiz](https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690) y [Ernesto Luis Estevanell]().
+Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamiento del lenguaje natural. El profesor encargado de este bloque es [Yoan Gutiérrez][yoan url]. Colaboradores: [José I. Abbreu Salas][abreu url], [Javier Fernández Martínez][javi url], [Eduardo Grande Ruiz](https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690) [Juan Pablo Consuegra](https://cvnet.cpd.ua.es/curriculum-breve/es/consuegra-ayala-juan-pablo/550467).
 
 
 
 ## Temario
-
 
 ### Teoría
 
@@ -16,29 +15,31 @@ Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamien
 - [T2. Aplicaciones específicas y Benchmacks][t2]
 - [T2.1. Caso de estudio Análisis de Sentimientos][t2.1]
 - [T3. Métricas de Evaluación][t3]
-- [T4. Centralización de modelos, datasets y tecnologías de generación][t4]
-- [T5. AutoML. Descripción general y estado de la cuestión][t5]
-- [T5.1. AutoGOAL: Marco de trabajo para la generación de pipelines óptimos][t5.1]
+- [T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados][t4]
+%- [T5. AutoML. Descripción general y estado de la cuestión][t5]
+%- [T5.1. AutoGOAL: Marco de trabajo para la generación de pipelines óptimos][t5.1]
 
 ### Prácticas
 
 - [P1. Creación de baseline con Sklearn. Caso de uso Clasificación de Documentos][p1]
 - [P1.2. Utilización de modelos transformers ya existentes como API. Caso de uso Clasificación de Documentos][p2]
-- [P2. Transformer fine-tunnig. Caso de uso Clasificación de Documentos][p3]
-- [P3. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos][p4]
- - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
+%- [P2. Transformer fine-tunnig. Caso de uso Clasificación de Documentos][p3]
+- [P2. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos][p4]
+- [P3. Modelos Generativos][p7]
+- [P4. Consolidación de temario y trabajo en clase][]
+% - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
 % - [P5. Utilización de técnicas de AutoML, libreria AutoGOAL.  Caso de uso Clasificación de Documentos][p6]
 
 
 ## Evaluación
 
 ### Teoría
- - [T1.C1. Cuestionario de evaluación](https://forms.gle/irLjzcb4S6sy4Frh8). Apertura el 16/02/2043- Cierre 23:59 del 21/02/2024.
- - [T2.C1. Cuestionario de evaluación](https://forms.gle/BNCNyzpiGxntCYL8A). Apertura el 22/02/2024- Cierre 23:59 del 28/02/2024.
- - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/dD4eSErz5LUWLMA86). Apertura el 22/02/2024- Cierre 23:59 del 28/02/2024.
- - [T3.C1. Cuestionario de evaluación](https://forms.gle/tEkSKBLQuBrrkEJj9). Apertura el 01/03/2024- Cierre 23:59 del 06/03/2023.
- - [T4.C1. Cuestionario de evaluación](https://forms.gle/miKS9bMyJTrKrxhD9). Apertura el 11/03/2024- Cierre 14:59 del 13/03/2023.
- - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
+ - [T1.C1. Cuestionario de evaluación](https://forms.gle/A9VANxkdBd99Ly5j9). Apertura el 20/03/2025- Cierre 23:59 del 26/03/2025.
+ - [T2.C1. Cuestionario de evaluación](https://forms.gle/FtYfQjSa1n8tEpK6A). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
+ - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/hFoNUccvKW9RKP7z8). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
+ - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 03/04/2025- Cierre 23:59 del 09/04/2025.
+ - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025.
+% - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
 
 % - [Cuestionario de setisfacción](https://forms.gle/sAobHzNaFSCu47ss8)
  

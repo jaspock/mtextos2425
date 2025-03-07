@@ -1,5 +1,5 @@
 
-T4. Centralización de datasets y modelos: Huggingface, OpenAI
+T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados
 ====================================
 
 ```{admonition} Nota
@@ -14,7 +14,7 @@ Contenidos:
 - [Huggingface: Introducción](#introduccion)
 - [Huggingface: Repositorio de Datasets](#repositorio-de-datasets)
 - [Huggingface: Repositorio de Modelos pre-entrenados](#repositorio-de-modelos-pre-entrenados)
-- [Tecnologías de Generación (GPT, Copilot, ChatGPT)](#tecnologias-de-generacion)
+- [Tecnologías de Generación](#tecnologias-de-generacion)
 
 ## Introducción
 
@@ -597,7 +597,7 @@ Entre las técnicas más populares de ingeniería de prompts tenemos las siguien
 
 Estas técnicas de ingeniería de prompts también se pueden emplear para construir prompts en vista a ser usadas en _prompt tuning_ (ver siguiente sección). Estos casos se suele hablar de _zero-shot learning_, _few-shot learning_ y _chain of thought learning_.
 
->  En [este cuaderno de trabajo]() se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.
+>  En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/shotTechn.ipynb) se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.
 
 #### Ajuste de prompts (_Prompt Tuning_)
 
@@ -608,7 +608,17 @@ Figura 8. Prompt Tuning ([fuente](https://arxiv.org/abs/2104.08691)).
 
 Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este [enlace](https://huggingface.co/docs/peft/en/package_reference/prompt_tuning).
 
-> En [este cuaderno de trabajo]() se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo [FLAN-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5) creado por Google.
+>  En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/promptTuning.ipynb) se muestra como realizar un prompt tuning sobre un gran modelo de lenguaje (LLM), concretamente, al modelo FLAN-T5 creado por Google..
+
+##### Diferencia entre ajuste de prompts y ajuste fino
+
+La diferencia principal entre el ajuste de prompts y el ajuste fino (que se explicará en detalle en la siguiente sección) radica tanto en el alcance de cada técnica como en su propósito.
+
+El ajuste fino permite una personalización profunda del modelo, modificando directamente todos los pesos de su estructura. Es ideal para aplicaciones específicas donde se necesita maximizar el rendimiento para una tarea concreta. Por otro lado, el ajuste de prompts adopta un enfoque más ágil al centrarse únicamente en aprender una representación más inteligente de la entrada, sin tocar los pesos del modelo. Esto lo convierte en una opción más liviana y flexible.
+
+Si bien es cierto que el ajuste fino puede optimizarse con técnicas modernas como LoRA (que se abordará más adelante), conceptualmente estas estrategias representan métodos distintos. El ajuste de prompts no busca alterar el modelo en su totalidad, sino mejorar la forma en que interpreta las entradas.
+
+> En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/instructionTuning.ipynb) se muestra como realizar un instruction tunning a un LLM, concretamente, al modelo [FLAN-T5](https://huggingface.co/docs/transformers/model_doc/flan-t5) creado por Google.
 
 #### Ajuste fino (_Fine-tuning_)
 
@@ -625,7 +635,7 @@ Por ejemplo, mientras que un ajuste fino podría usar un corpus médico para esp
 ![Continual pre-training](images/bloque3/t4/continual.png)
 Figura 8. Continual pre-training ([fuente](https://medium.com/@gilinachum/llm-domain-adaptation-using-continued-pre-training-part-1-3-e3d10fcfdae1)).
 
->  En [este cuaderno de trabajo]() se muestra como realizar un continual pre-training sobre un gran modelo de lenguaje (LLM), concretamente el modelo GPT-2.
+>  En [este cuaderno de trabajo](https://github.com/gplsi/Cuadernos/blob/main/continual.ipynb) se muestra como realizar un continual pre-training sobre un gran modelo de lenguaje (LLM), concretamente el modelo GPT-2.
 
 ##### Fine-tuning LoRA
 
@@ -657,6 +667,19 @@ En el siguiente artículo [<<*Instruction Tuning for Large Language Models: A Su
 
 ![Alt text](images/bloque3/t4/GPT_IT_ejemplo.png)
 Figura 11. Ejemplo de instrucciones GPT.
+
+#### Diferencia entre instrucción de modelos y ajuste de prompts
+
+El ajuste de prompts y la instrucción de modelos son enfoques utilizados para optimizar modelos de lenguaje, pero con objetivos y métodos distintos. Mientras que el ajuste de prompts busca mejorar el desempeño del modelo en tareas específicas al optimizar únicamente los vectores del prompt sin alterar los pesos del modelo base, la instrucción de modelos implica modificar los pesos del modelo mediante el entrenamiento con un gran conjunto de datos de instrucciones variadas, lo que amplía su capacidad de generalización a diversas tareas. Como se detalla en la tabla a continuación, el ajuste de prompts es menos complejo computacionalmente y requiere pocos ejemplos enfocados, pero su generalización es limitada. Por otro lado, la instrucción de modelos, aunque más costosa, habilita un mejor entendimiento y ejecución de una amplia gama de instrucciones.
+
+Aspecto | Prompt Tuning | Instruction Tuning
+--- | --- | ---
+Objetivo | Mejorar tareas específicas. | Mejorar la capacidad general de seguir instrucciones.
+Modificación del modelo | No se alteran los pesos del modelo base. | Se ajustan los pesos del modelo.
+Dataset requerido | Pocos ejemplos, enfocados en una tarea concreta. | Gran conjunto de datos diversos de instrucciones.
+Generalización | Limitada a la tarea para la cual se ajustó el prompt. | Amplia, con capacidad para responder a más tareas.
+Complejidad computacional | Menor (ajuste de vectores del prompt). | Mayor (entrenamiento de pesos del modelo).
+
 
 #### FLAN
 
