@@ -27,15 +27,15 @@ Las entregas de ejercicios se han de hacer a través del UAcloud>Evaluación>[No
 
 ### Ejemplos demostrativos
 
-- **[06-News-PromptTuning]**
-- **[07-News-PromptTuning]**
+- **[News-PromptTuning]**
+- **[News-PromptTuning]**
 
 
 ### Ejercicios
 
 #### Ejercicio 1
 
-Basándose en los ejemplos anteriores haga uso del siguiente dataset y diseñe su propio sistema para el análisis de sentimientos. Se disponibilizan unas funciones python para la limpieza y carga de dataset.
+Basándose en los ejemplos anteriores haga uso del siguiente dataset y diseñe su propio sistema para el análisis de sentimientos. Se disponibilizan unas funciones python para la limpieza y carga de dataset..
 
 - sample_data/ejercicio_tripadvisor.csv
 - tripadvisor_Utils.py
@@ -68,8 +68,8 @@ Elige alguno de los siguientes datasets y conforma tu propio sistema de sentimen
 [product]: https://www.kaggle.com/arbazkhan971/product-sentiment-analysis
 [kaggle]: https://www.kaggle.com/search?q=sentiment+analysis+in%3Adatasets
 
-[06-News-PromptTuning]: https://github.com/gplsi/Cuadernos/blob/main/promptTuning.ipynb
-[07-News-PromptTuning]: https://github.com/gplsi/Cuadernos/blob/main/instructionTuning.ipynb
+[News-PromptTuning]: https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/promptTuning.ipynb
+[News-InstructionTuning]: https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/instructionTuning.ipynb
 
 
 
