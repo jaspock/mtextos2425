@@ -6,7 +6,7 @@ T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados
 :class: note
 Lee con atención el tema 4 del bloque 3. Realiza las lecturas propuestas y finalmente contesta el cuestionario que encontrarás en la sección de evaluación relativo a este tema, el cual se encuentra en el índice del bloque 3.  En la clase presencial repasaremos los conceptos teóricos principales correspondientes a la sesión. **Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025** (el día anterior a la clase presencial).
 
-Tiempo de dedicación: 2 horas (asíncrona) + 2 horas trabajo independiente
+Tiempo de dedicación: 3 horas (asíncrona) + 2 horas trabajo independiente
 ```
 
 Contenidos:
@@ -290,7 +290,7 @@ GPT significa "Generative Pretrained Transformer". Es un modelo de lenguaje que 
 La arquietectura de GPT-1 es principalmente un conjunto de 12 bloques de transformadores decodificadores colocados uno tras otro (ej. 12x ver la imagen). Los datos de texto se codifican mediante una [codificación de pares de bytes](https://arxiv.org/pdf/1508.07909.pdf) adaptada a caracteres. La [incrustación de posición es aprendida, en lugar de la típica sinusoidal estática](https://arxiv.org/pdf/1706.03762.pdf). La longitud máxima para tokens consecutivos es 512. La capa superior es simplemente una capa softmax adaptada a la tarea de aprendizaje específica.
 - GPT-2: Es la segunda versión de GPT, con solo [1.5 mil millones de parámetros](https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf). Es capaz de generar texto coherente y a menudo convincente. GPT-2 tiene básicamente la misma arquitectura que GPT-1, pero el modelo más grande contiene 48 bloques(48x ver la imagen) de transformadores. La segunda capa de normalización se mueve a la primera posición en un bloque y el último bloque contiene una capa de normalización adicional. Los pesos se inicializan de forma ligeramente diferente y se aumenta el tamaño del vocabulario. El número de tokens consecutivos se incrementa a 1024.
 - [GPT-3](https://arxiv.org/abs/2005.14165): Es la tercera versión de GPT y es uno de los modelos de lenguaje más grandes y avanzados jamás entrenados. Tiene más de [175 mil millones de parámetros](https://arxiv.org/abs/2005.14165), lo que le permite generar texto muy convincente en una amplia variedad de contextos. GPT-3 tiene la misma arquitectura que GPT-2, pero el número de bloques aumentó a 96 en el modelo más grande y el tamaño del contexto (número de tokens consecutivos) aumentó a 2048. Las [capas de autoatención de varios cabezales se alternan entre los típicos densos los escasos y los dispersos](https://arxiv.org/pdf/1904.10509.pdf). 
-
+- ...
 
 GPT-1 se entrena de manera autosupervisada (aprende a predecir la siguiente palabra en datos de texto) y se ajusta de manera de aprendizaje supervisado. GPT-2 se entrena de forma totalmente autosupervisada, centrándose en la transferencia de *zero-shot* y GPT-3 se entrena previamente de manera autosupervisada explorando un poco más *few-shots fine-tuning*.  
 
@@ -335,31 +335,31 @@ GPT-3 API se encuentra disponible en el siguiente enlace: <https://platform.open
 
 #### Ventajas
 
-- Alto rendimiento en tareas de lenguaje natural: GPT está entrenado en una gran cantidad de texto en internet, lo que le permite desarrollar una comprensión profunda del lenguaje natural y su uso en diferentes contextos. Esto hace que mejore la capacidad de rendimiento y calidad en tareas como la traducción automática, la generación de texto y la respuesta a preguntas.
+- **Alto rendimiento en tareas de lenguaje natural:** GPT está entrenado en una gran cantidad de texto en internet, lo que le permite desarrollar una comprensión profunda del lenguaje natural y su uso en diferentes contextos. Esto hace que mejore la capacidad de rendimiento y calidad en tareas como la traducción automática, la generación de texto y la respuesta a preguntas.
 
-- Facilidad de uso: GPT es un modelo pre-entrenado, lo que significa que no es necesario entrenarlo desde cero para cada tarea específica. Esto significa que es más fácil de usar para los desarrolladores y requiere menos recursos de hardware y tiempo de entrenamiento.
+- **Facilidad de uso:** GPT es un modelo pre-entrenado, lo que significa que no es necesario entrenarlo desde cero para cada tarea específica. Esto significa que es más fácil de usar para los desarrolladores y requiere menos recursos de hardware y tiempo de entrenamiento.
 
-- Adaptabilidad: GPT puede ser finetuneado o adaptado a diferentes tareas y contextos específicos. Esto permite que el modelo se ajuste a los requisitos específicos de cada proyecto y mejore su rendimiento.
+- **Adaptabilidad:** GPT puede ser finetuneado o adaptado a diferentes tareas y contextos específicos. Esto permite que el modelo se ajuste a los requisitos específicos de cada proyecto y mejore su rendimiento.
 
-- Capacidad generativa: GPT es un modelo generativo, lo que significa que es capaz de generar texto de forma autónoma. Esto es útil en una variedad de aplicaciones, como la generación de contenido, la creación de diálogos virtuales y la respuesta a preguntas.
+- **Capacidad generativa:** GPT es un modelo generativo, lo que significa que es capaz de generar texto de forma autónoma. Esto es útil en una variedad de aplicaciones, como la generación de contenido, la creación de diálogos virtuales y la respuesta a preguntas.
 
 #### Desventajas
-- Bias y desigualdades: Al estar entrenado en una gran cantidad de texto en internet, GPT puede incorporar los sesgos y desigualdades presentes en la fuente de datos. 
+- **Bias y desigualdades:** Al estar entrenado en una gran cantidad de texto en internet, GPT puede incorporar los sesgos y desigualdades presentes en la fuente de datos. 
 
-- Inseguridad: GPT es un modelo de aprendizaje automático, lo que significa que su rendimiento puede ser afectado por la calidad y la representatividad de la fuente de datos utilizada para su entrenamiento. Además, el modelo puede ser **vulnerable a ataques y manipulaciones**, como la generación de texto falsificado o la respuesta a preguntas inapropiadas.
+- **Inseguridad:** GPT es un modelo de aprendizaje automático, lo que significa que su rendimiento puede ser afectado por la calidad y la representatividad de la fuente de datos utilizada para su entrenamiento. Además, el modelo puede ser **vulnerable a ataques y manipulaciones**, como la generación de texto falsificado o la respuesta a preguntas inapropiadas.
 
-- Costos computacionales: GPT es un modelo grande y complejo que requiere una gran cantidad de recursos computacionales para su entrenamiento y uso. Esto puede resultar en costos elevados para el hardware y la energía, lo que puede ser un obstáculo para algunos usuarios.
+- **Costos computacionales:** GPT es un modelo grande y complejo que requiere una gran cantidad de recursos computacionales para su entrenamiento y uso. Esto puede resultar en costos elevados para el hardware y la energía, lo que puede ser un obstáculo para algunos usuarios.
 
-- Limitaciones en la comprensión del contexto: Aunque GPT ha sido entrenado en una gran cantidad de texto, todavía puede tener dificultades para comprender el contexto en el que se utiliza el lenguaje natural. Esto puede resultar en respuestas poco precisas o inapropiadas en ciertos contextos.
+- **Limitaciones en la comprensión del contexto:** Aunque GPT ha sido entrenado en una gran cantidad de texto, todavía puede tener dificultades para comprender el contexto en el que se utiliza el lenguaje natural. Esto puede resultar en respuestas poco precisas o inapropiadas en ciertos contextos.
 
 #### Decodificación de GPT
 
 La decodificación de GPT es el proceso de generar texto a partir de un modelo de lenguaje pre-entrenado. 
 Existen dos estrategias: 
-- Determinísticas
-- Estocáticas
+- **Determinísticas**
+- **Estocáticas**
 
-En el siguiente material <<[Decoding Strategies of all Decoder only Models (GPT)](https://medium.com/@shravankoninti/decoding-strategies-of-all-decoder-only-models-gpt-631faa4c449a)>> se presenta un exaustiva expliación de cada una de ellas. Dicho material es se obligatorio estudio.
+**En el siguiente material <<[Decoding Strategies of all Decoder only Models (GPT)](https://medium.com/@shravankoninti/decoding-strategies-of-all-decoder-only-models-gpt-631faa4c449a)>> se presenta un exaustiva expliación de cada una de ellas. Dicho material es de obligatorio estudio.**
 
 ![Alt text](images/bloque3/t4/GPT_estrategias.png)
 Figura 6. Estrategias de decodificación modelos GPT.
@@ -367,7 +367,7 @@ Figura 6. Estrategias de decodificación modelos GPT.
 
 En el siguiente [cuaderno de trabajo](https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/decoderGPT.ipynb) se utiliza GPT-2 para generar texto de diferentes alternativas de texto.
 
-Se resumen a continuación esas formas de decodificación:
+Se resumen a continuación esas **formas de decodificación:**
 - **Greedy Search**: En el método de búsqueda greedy (avaricioso), se selecciona la palabra con la probabilidad más alta en cada paso. Este método es rápido, pero puede generar texto que no es coherente o relevante. Este método elige la palabra con la probabilidad más alta en cada paso.
 - **Beam Search**: En el método de búsqueda de haz, se basa en la búsqueda avariciosa, pero en lugar de seleccionar la palabra con la probabilidad más alta en cada paso, se seleccionan las k palabras con la probabilidad más alta y se generan k secuencias parciales. Luego, se selecciona la secuencia parcial con la probabilidad más alta en cada paso. Se define el parámetro ``num_beams`` para controlar el número de secuencias parciales generadas en cada paso. Además, este método permite definir parámetros como ```no_repeat_ngram_size``` para evitar la repetición de n-gramas en el texto generado o ``num_return_sequences`` para controlar el número de secuencias generadas.
 - **Sampling**: El método de muestreo selecciona la palabra en cada paso de acuerdo con su probabilidad. Se define el parámetro ``temperature`` para controlar la aleatoriedad en la selección de palabras. Un valor más alto de ``temperature`` aumenta la aleatoriedad y un valor más bajo disminuye la aleatoriedad.
@@ -407,15 +407,15 @@ Copilot está diseñado para ayudarte a realizar muchas tareas cotidianas y resp
 - Puede **integrarse con otros servicios en línea** para proporcionar una experiencia de usuario más completa.
 
 #### Desventajas
-- Costo: Copilot es un producto de OpenAI (empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.
+- **Costo:** Copilot es un producto de OpenAI (empresa privada) y puede ser costoso pagar el uso de servicios para algunos usuarios, especialmente para aquellos que requieren una gran cantidad de uso o integraciones.
 
-- Accesibilidad limitada: **Solo está disponible como una API**, por lo que solo puede ser utilizado por desarrolladores y no está disponible directamente para el público en general.
+- **Accesibilidad limitada:** **Solo está disponible como una API**, por lo que solo puede ser utilizado por desarrolladores y no está disponible directamente para el público en general.
 
-- Capacidad limitada: Aunque Copilot está entrenado en una amplia gama de información, **todavía hay límites en su capacidad para comprender y responder** a todas las preguntas y tareas.
+- **Capacidad limitada:** Aunque Copilot está entrenado en una amplia gama de información, **todavía hay límites en su capacidad para comprender y responder** a todas las preguntas y tareas.
 
-- Confidencialidad y privacidad: Al usar Copilot, **debes compartir tus datos y preocuparte por la privacidad y seguridad de ellos**.
+- **Confidencialidad y privacidad:** Al usar Copilot, **debes compartir tus datos y preocuparte por la privacidad y seguridad de ellos**.
 
-- Requiere habilidades técnicas: Para **integrar esta tecnología** en tus aplicaciones y servicios, **debes tener habilidades** técnicas y conocimientos en programación.
+- **Requiere habilidades técnicas:** Para **integrar esta tecnología** en tus aplicaciones y servicios, **debes tener habilidades** técnicas y conocimientos en programación.
 
 #### Alternativas a Copilot
 
@@ -549,6 +549,9 @@ Algunas alternativas son:
 - [**PaLM de Google AI**](https://arxiv.org/pdf/2204.02311.pdf) - El más grande de todos: ¡540 billones de parámetros! Con capacidades innovadoras en aritmética y razonamiento de sentido común. Está entrenado en 780 mil millones de tokens provenientes de conversaciones en redes sociales multilingües, páginas web multilingües filtradas, libros, repositorios de GitHub, Wikipedia multilingüe y noticias.
 
 - [**HuggingChat**](https://huggingface.co/chat/) es una alternativa de código abierto a ChatGPT, desarrollada por Hugging Face. A diferencia de ChatGPT, HuggingChat está disponible para todos y se basa en los mejores modelos de chat de la comunidad. Su modelo actual es [mistralai/Mixtral-8x7B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1)
+- [**DeepSeek**](https://www.deepseek.com/) es un modelo de lenguaje grande (LLM) avanzado, diseñado para tareas de procesamiento de lenguaje natural con capacidades mejoradas en generación de texto, razonamiento y programación
+- [**Mistral**](https://chat.mistral.ai/) Mistral es un modelo de lenguaje grande (LLM) optimizado para eficiencia y rendimiento, destacando por su arquitectura ligera y su capacidad para generar texto de alta calidad con menor consumo computacional.
+- [**LLaMA (Large Language Model Meta AI)**](https://www.llama.com/) es una familia de modelos de lenguaje desarrollada por Meta, diseñada para ser eficiente y accesible, destacando en generación de texto, razonamiento y tareas de procesamiento del lenguaje natural, con un enfoque en la investigación y la escalabilidad.
 
 ### Métodos para Optimizar Modelos Preentrenados
 
