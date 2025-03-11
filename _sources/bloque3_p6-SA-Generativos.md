@@ -1,27 +1,29 @@
 
-P3. Ensemble de pipelines
+P3. Modelos gerativos
 ====================================
 
 ```{admonition} Nota
 :class: note
-Lee con atención la práctica 3 del bloque 3. Realiza los ejercicios y una entrega unificada (práctica 2 y 3), la cual se anunciará en la introducción de la asignatura y a través del uaCloud.
+Lee con atención la práctica 3 del bloque 3. Realiza los ejercicios y entrega la correspondiente prácica que se anunciará en la introducción de la asignatura y a través del uaCloud.
 
 Tiempo de dedicación: 3 horas (asíncrona) + 3 horas trabajo independiente
 ```
 
 ## **Clase práctica.**
 
-### Ensemble de pipelines: Caso de estudio de Análisis de Sentimientos
+### Modelos generativos: Caso de estudio de Clasificación de noticias
 
 <!-- **Autores:**
 
 - [Yoan Gutiérrez Vázquez][yoan]
-- [José Ignacio Abreu Salas][abreu] -->
+- [Eduardo Grande] Ruiz[grande] 
+- [Juan Pablo Consuegra Ayala] [consuegra]
+-->
 
 ### Descripción
 
-En esta clase práctica estudiaremos cómo diseñar distintos sistemas de clasificación textual que alimentan un meta ensamblador que se comporta como un sistema de votación.
-Se orientarán ejercicios a resolver en los que el estudiante deberá proponer y diseñar sistemas de análisis de sentimientos teniendo en cuenta lo estudiado en esta práctica.
+En esta clase práctica estudiaremos cómo diseñar distintos sistemas de clasificación textual utilizando modelos generativos.
+Se orientarán ejercicios a resolver en los que el estudiante deberá proponer y diseñar sistemas teniendo en cuenta lo estudiado en esta práctica.
 
 Las entregas de ejercicios se han de hacer a través del UAcloud>Evaluación>[Nombre de la práctica].
 
@@ -74,4 +76,5 @@ Elige alguno de los siguientes datasets y conforma tu propio sistema de sentimen
 
 
 [yoan]: https://orcid.org/0000-0002-4052-7427
-[abreu]: https://orcid.org/0000-0002-4637-4206
+[grande]: https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690
+[consuegra]: https://orcid.org/0000-0003-2009-393X
