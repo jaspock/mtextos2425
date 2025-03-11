@@ -1,5 +1,5 @@
 
-P3. Modelos gerativos
+P3. Modelos generativos
 ====================================
 
 ```{admonition} Nota
