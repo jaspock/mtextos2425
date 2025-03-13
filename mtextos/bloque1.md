@@ -63,4 +63,6 @@ Las actividades a realizar antes de clase son:
 
 En total, todo el trabajo previo a la clase te llevará alrededor de 4 horas 🕒️.
 
+**<span style="font-size: 1.15em">Contenidos para la sesión presencial del 13/03/2025</span>**
+La actividad práctica se centrará en explorar diferentes estrategias para la representación vectorial de textos. El trabajo a realizar se describe en  [el cuaderno CoLab](https://colab.research.google.com/drive/1kLEWK1kVXRJMY8v26Y4KeD1HcInDztOJ?usp=sharing) creado específicamente para esta sesión. Podéis utilizar este cuaderno para guiar vuestro trabajo en esta sesión, pero recordad que la entrega es un único informe en formato PDF que incluye la descripción del trabajo realizado en la sesión anterior y en esta. No necesitáis entregar el cuaderno de CoLab.
 
