@@ -29,7 +29,6 @@ Las entregas de ejercicios se han de hacer a través del UAcloud>Evaluación>[No
 
 ### Ejemplos demostrativos
 
-- **[News-PromptTuning]**
 - **[News-InstructionTuning]**
 
 
