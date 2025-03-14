@@ -598,7 +598,7 @@ Entre las técnicas más populares de ingeniería de prompts tenemos las siguien
   R: Pensemos paso a paso.
   ```
 
-Estas técnicas de ingeniería de prompts también se pueden emplear para construir prompts en vista a ser usadas en _prompt tuning_ (ver siguiente sección). Estos casos se suele hablar de _zero-shot learning_, _few-shot learning_ y _chain of thought learning_.
+Estas técnicas de ingeniería de prompts también se pueden emplear para construir prompts en vista a ser usadas en _prompt tuning_ (ver siguiente sección). Estos casos se suele hablar de **_zero-shot learning_**, **_few-shot learning_** y **_chain of thought learning_**.
 
 >  En [este cuaderno de trabajo](https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/shotTechn.ipynb) se ilustran estas tres técnicas aplicadas al modelo Falcon 7B en su versión instruida.
 
@@ -611,7 +611,7 @@ Figura 8. Prompt Tuning ([fuente](https://arxiv.org/abs/2104.08691)).
 
 Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este [enlace](https://huggingface.co/docs/peft/en/package_reference/prompt_tuning).
 
-La aplicación de las estrategias de prompt tunning se pueden realizar a través de cualquiera de las técnicas mencionadas anteriormente: _zero-shot learning_, _few-shot learning_ y _chain of thought learning_.
+La aplicación de las estrategias de prompt tunning se pueden realizar a través de cualquiera de las técnicas mencionadas anteriormente: **_zero-shot learning_**, **_few-shot learning_** y **_chain of thought learning_**.
 
 ##### Diferencia entre ajuste de prompts y ajuste fino
 
