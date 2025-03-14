@@ -611,7 +611,7 @@ Figura 8. Prompt Tuning ([fuente](https://arxiv.org/abs/2104.08691)).
 
 Para más detalles sobre cómo aplicar esta técnica usando la librería de transformers, consultar este [enlace](https://huggingface.co/docs/peft/en/package_reference/prompt_tuning).
 
->  En [este cuaderno de trabajo](https://github.com/TeachingTextMining/TextClassification/blob/main/07-SA-Gen/promptTuning.ipynb) se muestra como realizar un prompt tuning sobre un gran modelo de lenguaje (LLM), concretamente, al modelo FLAN-T5 creado por Google..
+La aplicación de las estrategias de prompt tunning se pueden realizar a través de cualquiera de las técnicas mencionadas anteriormente: _zero-shot learning_, _few-shot learning_ y _chain of thought learning_.
 
 ##### Diferencia entre ajuste de prompts y ajuste fino
 
