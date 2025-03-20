@@ -3,7 +3,7 @@
 Aplicaciones de la minería de textos
 ====================================
 
-Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamiento del lenguaje natural. El profesor encargado de este bloque es [Yoan Gutiérrez][yoan url]. Colaboradores: [José I. Abbreu Salas][abreu url], [Javier Fernández Martínez][javi url], [Eduardo Grande Ruiz](https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690) [Juan Pablo Consuegra](https://cvnet.cpd.ua.es/curriculum-breve/es/consuegra-ayala-juan-pablo/550467).
+Este tercer bloque analiza diversas aplicaciones de las técnicas de procesamiento del lenguaje natural. El profesor encargado de este bloque es [Yoan Gutiérrez][yoan url]. Colaboradores: [José I. Abbreu Salas][abreu url], [Javier Fernández Martínez][javi url], [Eduardo Grande Ruiz](https://cvnet.cpd.ua.es/curriculum-breve/es/grande-ruiz-eduardo/327690) y  [Juan Pablo Consuegra](https://cvnet.cpd.ua.es/curriculum-breve/es/consuegra-ayala-juan-pablo/550467).
 
 
 
