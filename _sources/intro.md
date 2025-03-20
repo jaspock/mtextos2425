@@ -23,7 +23,7 @@ Novedades
 * - 27 Ene 
   - Se ha publicado la primera versión de los materiales de la asignatura. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
 * - 20 Mar 
-  - Se ha publicado la primera versión de materiales del BLOQUE APLICACIONES. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
+  - Se ha publicado la primera versión de materiales del [BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3.html). Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
 
 `````
 
