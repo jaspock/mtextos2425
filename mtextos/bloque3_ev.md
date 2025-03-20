@@ -1,5 +1,5 @@
 
-Ev. Evaluación de prácticas del Bloque 2
+Ev. Evaluación de prácticas del Bloque 3
 ====================================
 
 Para la evaluación de este bloque el estudiante deberá realizar **DOS entregas** con las siguientes condiciones:
