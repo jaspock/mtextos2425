@@ -24,6 +24,10 @@ Novedades
   - Se ha publicado la primera versión de los materiales de la asignatura. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
 
 `````
+* - 20 Mar 
+  - Se ha publicado la primera versión de materiales del BLOQUE APLICACIONES. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
+
+`````
 
 <!--
 * - 14 May
@@ -39,9 +43,7 @@ Novedades
 (label_actividades_previas)=
 Actividades previas
 -------------------
-:::warning
-- Antes de la clase del 22/02/2023: lee el [Tema  1 del bloque 3](https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html); a continuación, contesta este [test][testb3.1] (plazo límite: 23:59 horas del 26/03/2025).
-:::
+- **Antes de la clase del 22/02/2023: lee el [Tema  1 del BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html); a continuación, contesta este [test][testb3.1] (plazo límite: 23:59 horas del 26/03/2025).**
 - Antes de la clase del 13/03/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase en la [pàgina de introducción][introduccion] a la minería de textos y el procesamiento del lenguaje natural; a continuación, realiza este [test][test22] (plazo límite: 23:59 del 12/03/2025). Accede al test con tu cuenta de `gcloud.ua.es`.
 - Antes de la clase del 06/03/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase en la [pàgina de introducción][introduccion] a la minería de textos y el procesamiento del lenguaje natural; a continuación, realiza este [test][test21] (plazo límite: 23:59 del 05/03/2025). Accede al test con tu cuenta de `gcloud.ua.es`.
 - Antes de la clase del 27/02/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase de la [página de técnicas][tecnicas] para la minería de textos; a continuación, realiza este [test][test13] (plazo límite: 23:59 del 26/02/2025).
