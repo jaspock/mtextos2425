@@ -1,5 +1,5 @@
 
-Ev. Evaluación de prácticas del Bloque 3
+Ev. Evaluación de prácticas del BLOQUE APLICACIONES
 ====================================
 
 Para la evaluación de este bloque el estudiante deberá realizar **DOS entregas** con las siguientes condiciones:
