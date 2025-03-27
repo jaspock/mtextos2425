@@ -55,8 +55,8 @@ parts:
 #  - file: notebooks
 - caption: Utilidades
   chapters: 
-  - file: doc_utils/creditosColab/web 
-  - file: doc_utils/colabEntornoLocal/web
+ # - file: doc_utils/creditosColab/web 
+   - file: doc_utils/colabEntornoLocal/web
   #  - file: notebooks
 
 
