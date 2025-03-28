@@ -14,9 +14,9 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 ### Teoría
 
 - [T1. Aplicaciones generales del PLN (areas generales)][t1]
-<!--
 - [T2. Aplicaciones específicas y Benchmacks][t2]
 - [T2.1. Caso de estudio Análisis de Sentimientos][t2.1]
+<!--
 - [T3. Métricas de Evaluación][t3]
 - [T4. Repositorios y Tecnologías de Modelos (Generativos) Preentrenados][t4]
 
@@ -28,9 +28,9 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 
 - [P1. Creación de baseline con Sklearn. Caso de uso Clasificación de Documentos][p1] 
 - [P1.2. Utilización de modelos transformers ya existentes como API. Caso de uso Clasificación de Documentos][p2]
-<!--
 % - [P2. Transformer fine-tunnig. Caso de uso Clasificación de Documentos][p3]
 - [P2. Composición de características auxiliándose de transformers y otras tecnicas de extracción de  características. Caso de uso Clasificación de Documentos][p4]
+<!--
 - [P3. Modelos Generativos][p7]
 - [P4. Consolidación de temario y trabajo en clase]()
    % - [P4. Ensembler de classificadores, entre ellos trasnformers, SMV, etc.  Caso de uso Clasificación  de Documentos][p5]
@@ -42,9 +42,9 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 
 ### Teoría
  - [T1.C1. Cuestionario de evaluación](https://forms.gle/A9VANxkdBd99Ly5j9). Apertura el 20/03/2025- Cierre 23:59 del 26/03/2025.
-<!-- 
  - [T2.C1. Cuestionario de evaluación](https://forms.gle/FtYfQjSa1n8tEpK6A). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
  - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/hFoNUccvKW9RKP7z8). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
+<!-- 
  - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 03/04/2025- Cierre 23:59 del 09/04/2025.
  - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025.
  % - [T5.C1. Cuestionario de evaluación](https://forms.gle/G3AsHGFw4MXfMV2v9). Apertura el 15/03/2024- Cierre 23:59 del 17/04/2023.
