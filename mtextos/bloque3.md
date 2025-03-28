@@ -42,8 +42,8 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
 
 ### Teoría
  - [T1.C1. Cuestionario de evaluación](https://forms.gle/A9VANxkdBd99Ly5j9). Apertura el 20/03/2025- Cierre 23:59 del 26/03/2025.
- - [T2.C1. Cuestionario de evaluación](https://forms.gle/FtYfQjSa1n8tEpK6A). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
- - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/hFoNUccvKW9RKP7z8). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
+ - [T2.C1. Cuestionario de evaluación](https://forms.gle/LKLfipcuPSk6J9qt6). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
+ - [T2.1.C1. Cuestionario de evaluación](https://forms.gle/576ddPgDEfcrYmS1A). Apertura el 27/03/2025- Cierre 23:59 del 02/04/2025.
 <!-- 
  - [T3.C1. Cuestionario de evaluación](https://forms.gle/DiDRZYNCHMxyumAp8). Apertura el 03/04/2025- Cierre 23:59 del 09/04/2025.
  - [T4.C1. Cuestionario de evaluación](https://forms.gle/St7f5jcVWgaczAgo6). Apertura el 10/04/2025- Cierre 23:59 del 07/05/2025.
