@@ -32,7 +32,7 @@ Para la evaluación de este bloque el estudiante deberá realizar **DOS entregas
 - Se deben **describir discusiones** y **conclusiones del estudio.**
 - Se tendrá en cuenta en la puntuación la complejidad de la propuesta.
 
-Se entragará la tarea (paquete de trabajo) mediante una **entrega en UAcloud** que se habilitará para ello. El paquete deberá comprimirse en un ``.zip`` y tener la siguiente estructura: ``[nombreEstudiante]-mtextos-bloque2-23-24.zip``. Además entregar el enlace de Colab donde se encuentra el cuaderno.
+Se entragará la tarea (paquete de trabajo) mediante una **entrega en UAcloud** que se habilitará para ello. El paquete deberá comprimirse en un ``.zip`` y tener la siguiente estructura: ``[nombreEstudiante]-mtextos-bloque3-2425.zip``. Además entregar el enlace de Colab donde se encuentra el cuaderno.
 
 
 
