@@ -43,7 +43,7 @@ Novedades
 (label_actividades_previas)=
 Actividades previas
 -------------------
-- **Antes de la clase del 03/04/2023: lee el [Tema  3](https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html); a continuación, contesta estos tests: [test][testb3.2] (plazo límite: 23:59 horas del 23:59 del 09/04/2025).**
+- **Antes de la clase del 10/04/2023: lee el [Tema  3](https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html); a continuación, contesta estos tests: [test][testb3.2] (plazo límite: 23:59 horas del 23:59 del 09/04/2025).**
 - Antes de la clase del 03/04/2023: lee el [Tema  2](https://jaspock.github.io/mtextos2425/bloque3_t2_subaplicaciones-benchmarks.html) y [Tema  2.1 del BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_t2.1_analisis_sentimientos.html); a continuación, contesta estos tests: [test1][testb3.2]  y [test2][testb3.2.1] (plazo límite: 23:59 horas del 02/04/2025).
 - Antes de la clase del 22/03/2023: lee el [Tema  1 del BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html); a continuación, contesta este [test][testb3.1] (plazo límite: 23:59 horas del 26/03/2025).
 - Antes de la clase del 13/03/2025: lee los contenidos que se detallan en el apartado correspondiente a esta clase en la [pàgina de introducción][introduccion] a la minería de textos y el procesamiento del lenguaje natural; a continuación, realiza este [test][test22] (plazo límite: 23:59 del 12/03/2025). Accede al test con tu cuenta de `gcloud.ua.es`.
