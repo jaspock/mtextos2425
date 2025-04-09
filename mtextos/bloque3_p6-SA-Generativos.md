@@ -36,17 +36,17 @@ Las entregas de ejercicios se han de hacer a través del UAcloud>Evaluación>[No
 
 #### Ejercicio 1
 
-Basándose en los ejemplos anteriores haga uso del siguiente dataset y diseñe su propio sistema para el análisis de sentimientos. Se disponibilizan unas funciones python para la limpieza y carga de dataset..
-
-- sample_data/ejercicio_tripadvisor.csv
-- tripadvisor_Utils.py
-
-#### Ejercicio 2
-
 Basándose en los ejemplos anteriores haga uso del siguiente dataset y diseñe su propio sistema para el análisis de sentimientos. Se disponibilizan unas funciones python para la limpieza y carga de dataset.
 
 - sample_data/ejercicio_bbc_train.csv
 - sample_data/ejercicio_bbc_test.csv
+
+#### Ejercicio 2
+
+Basándose en los ejemplos anteriores haga uso del siguiente dataset y diseñe su propio sistema para el análisis de sentimientos. Se disponibilizan unas funciones python para la limpieza y carga de dataset..
+
+- sample_data/ejercicio_tripadvisor.csv
+- tripadvisor_Utils.py
 
 #### Ejercicios adicionales
 
