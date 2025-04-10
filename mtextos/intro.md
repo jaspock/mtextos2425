@@ -24,7 +24,7 @@ Novedades
   - Se ha publicado la primera versión de los materiales de la asignatura. Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan.
 * - 20 Mar 
   - Se ha publicado la primera versión de materiales del [BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3.html). Estos materiales pueden pueden ir cambiando antes de la clase en la que se impartan. **La dinámica de las sesiones prácticas se gestionarán por el siguiente canal de [Discord](https://discord.gg/jS8FV3Fg)**.
-* - 10 Abr 
+* - 13 Abr 
   - **Primera entrega de prácticas del [BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun) disponible en UACloud/Evaluaciones.**.
 * - 25 May 
   - **Segunda entrega de prácticas del [BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva) disponible en UACloud/Evaluaciones.**.
