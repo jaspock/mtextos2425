@@ -54,7 +54,7 @@ La dinámica de las sesiones prácticas se gestionarán por el siguiente canal d
  
 
 ### Prácticas
- - P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun). Apertura el 27/03/2025 - ~~Cierre 23:59 del 10/04/2025~~ Cierre 23:59 del 13/04/2025.
+ - P.Ev1. [Evaluación 1 (común)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-1-comun). Apertura el 27/03/2025 - ~Cierre 23:59 del 10/04/2025~ Cierre 23:59 del 13/04/2025.
 - P.Ev2. [Evaluación 2 (selectiva)](https://jaspock.github.io/mtextos2425/bloque3_ev.html#entrega-2-selectiva). Apertura el 10/04/2025 - Cierre 23:59 del 22/05/2025.
 <!-- 
 -->
