@@ -44,7 +44,7 @@ Novedades
 (label_actividades_previas)=
 Actividades previas
 -------------------
-- Antes de la clase del 08/05/2023: lee el [Tema  4](https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html); a continuación, contesta estos tests: [test][testb3.4] (plazo límite: 23:59 horas del 23:59 del 07/05/2025).
+- **Antes de la clase del 08/05/2023: lee el [Tema  4](https://jaspock.github.io/mtextos2425/bloque3_t4_centralizacion.html); a continuación, contesta estos tests: [test][testb3.4] (plazo límite: 23:59 horas del 23:59 del 07/05/2025).**
 - Antes de la clase del 10/04/2023: lee el [Tema  3](https://jaspock.github.io/mtextos2425/bloque3_t3.1_metricas.html); a continuación, contesta estos tests: [test][testb3.3] (plazo límite: 23:59 horas del 23:59 del 09/04/2025).
 - Antes de la clase del 03/04/2023: lee el [Tema  2](https://jaspock.github.io/mtextos2425/bloque3_t2_subaplicaciones-benchmarks.html) y [Tema  2.1 del BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_t2.1_analisis_sentimientos.html); a continuación, contesta estos tests: [test1][testb3.2]  y [test2][testb3.2.1] (plazo límite: 23:59 horas del 02/04/2025).
 - Antes de la clase del 22/03/2023: lee el [Tema  1 del BLOQUE APLICACIONES](https://jaspock.github.io/mtextos2425/bloque3_t1_aplicaciones.html); a continuación, contesta este [test][testb3.1] (plazo límite: 23:59 horas del 26/03/2025).
